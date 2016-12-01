@@ -5,14 +5,14 @@
 }
 
 .navigator .left {
-  height: 55px;
+  height: 60px;
   float:left;
 }
 
 .nav-title {
   display: inline-block;
   vertical-align: middle;
-  line-height: 55px;
+  line-height: 60px;
   font-size: 23px;
 }
 
@@ -48,19 +48,19 @@
 .navigator .right ul {
   float: left;
   list-style: none;
-  height: 55px;
+  height: 60px;
   
 }
 
 .navigator .right ul li.active {
   
-  height: 55px;
+  height: 60px;
   float: left;
   
 }
 
 .navigator .right ul li.no-active {
   color: #1B1C1D;
-  height: 55px;
+  height: 60px;
   float: left;
 }

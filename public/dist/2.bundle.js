@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([2],{
 
-/***/ 302:
+/***/ 303:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17,6 +17,16 @@ webpackJsonp([2],{
 	var _react2 = _interopRequireDefault(_react);
 	
 	var _reactRouter = __webpack_require__(172);
+	
+	var _projects = __webpack_require__(304);
+	
+	var _projects2 = _interopRequireDefault(_projects);
+	
+	var _content = __webpack_require__(291);
+	
+	var _content2 = _interopRequireDefault(_content);
+	
+	var _reactRedux = __webpack_require__(261);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -38,69 +48,87 @@ webpackJsonp([2],{
 	  _createClass(Projects, [{
 	    key: 'render',
 	    value: function render() {
+	      var cont = _content2.default[this.props.language].projects;
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement('h3', null),
+	        { className: 'projects' },
 	        _react2.default.createElement(
 	          'p',
 	          null,
-	          'Linux From Scratch (LFS) is a project that provides you with step-by-step instructions for building your own custom Linux system, entirely from source code. Currently, the Linux From Scratch organization consists of the following subprojects:',
+	          '\u2003\u2003',
+	          cont.p1,
 	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/lfs' },
 	            'LFS'
 	          ),
-	          ' :: Linux From Scratch is the main book, the base from which all other projects are derived.',
+	          ' : ',
+	          cont.p2,
 	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/blfs' },
 	            'BLFS'
 	          ),
-	          ' :: Beyond Linux From Scratch helps you extend your finished LFS installation into a more customized and usable system.',
+	          ' : ',
+	          cont.p3,
 	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/alfs' },
 	            'ALFS'
 	          ),
-	          ' :: Automated Linux From Scratch provides tools for automating and managing LFS and BLFS builds.',
+	          ' : ',
+	          cont.p4,
 	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/clfs' },
 	            'CLFS'
 	          ),
-	          ' :: Cross Linux From Scratch provides the means to cross-compile an LFS system on many types of systems.',
+	          ' : ',
+	          cont.p5,
 	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/hlfs' },
 	            'HLFS'
 	          ),
-	          ' :: Hardened Linux From Scratch focuses on building an LFS system with heightened security.',
+	          ' : ',
+	          cont.p6,
 	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/hints' },
 	            'Hints'
 	          ),
-	          ' :: The Hints project is a collection of documents that explain how to enhance your LFS system in ways that are not included in the LFS or BLFS books.',
+	          ' : ',
+	          cont.p7,
+	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/livecd' },
 	            'LiveCD'
 	          ),
-	          ' :: The LiveCD project provides a CD that is useful as an LFS build host or as a general rescue CD.',
+	          ' : ',
+	          cont.p8,
 	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/patches' },
 	            'Patches'
 	          ),
-	          ' :: The Patches project serves as a central repository for all patches useful to an LFS user.',
+	          ' : ',
+	          cont.p9,
 	          _react2.default.createElement('br', null)
 	        )
 	      );
@@ -110,7 +138,61 @@ webpackJsonp([2],{
 	  return Projects;
 	}(_react.Component);
 	
-	exports.default = Projects;
+	var mapStateToProps = function mapStateToProps(state, prop) {
+	  return {
+	    language: state.common.language
+	  };
+	};
+	
+	var mapDispatchToProps = {
+	  //switLan : (lan) => navAction.switLan(lan),
+	  //switNavItem: (item) => navAction.switNavItem(item)
+	  //getUsrInf : comAction.getUsrInf()
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Projects);
+
+/***/ },
+
+/***/ 304:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(305);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(282)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(true) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept(305, function() {
+				var newContent = __webpack_require__(305);
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 305:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(281)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".projects {\r\n    position: absolute;\r\n    width: 100%;\r\n    top:0px;\r\n    bottom: 0px;\r\n    background: white;\r\n    padding: 50px 100px;\r\n}\r\n\r\n\r\n.projects a{\r\n    cursor: pointer;\r\n    color: grey;\r\n    \r\n}", ""]);
+	
+	// exports
+
 
 /***/ }
 

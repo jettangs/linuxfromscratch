@@ -1,16 +1,15 @@
 .sign{
     user-select:none;
     position: fixed;
-    height: 300px;
-    width:250px;
+    height: 350px;
+    width:300px;
     background: white;
     z-index: 13;
     top:100px;
     left:0px;
     right:0px;
     margin: auto;
-    border-radius: 10px;
-    border:2px solid #F0F0F0;
+    border:5px solid #F0F0F0;
 }
 
 .sign .content{

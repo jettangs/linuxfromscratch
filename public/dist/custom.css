@@ -4,33 +4,49 @@
   margin:0;
   padding: 0;
   cursor: default;
+  overflow: hidden;
 }
 
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
     width: 0px;
-}
+}*/
 
 input {
   font-family: "Microsoft YaHei";
 }
 
 body{
+  background: #F0F0F0;
   font-family: "Microsoft YaHei";
 }
 
 a {
   color:black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {
   list-style: none;
 }
 
+p {
+  font-size: 1rem;
+  margin: 0 0 1em;
+  line-height: 1.4rem;
+}
+
 @media only screen and (min-width: 241px) and (max-width: 320px){  
   html {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
+}.app-children {
+    width: 800px;
+    top: 65px;
+    bottom: 10px;
+    left:50%;
+    margin-left: -400px;
+    position: absolute;
 }
 i.language-en {
   cursor:pointer;
@@ -61,19 +77,20 @@ i.language-cn {
 
 }
 .navigator{
+  background: white;
   border-bottom: 5px solid #F0F0F0;
   height: 60px;
 }
 
 .navigator .left {
-  height: 60px;
+  height: 55px;
   float:left;
 }
 
 .nav-title {
   display: inline-block;
   vertical-align: middle;
-  line-height: 60px;
+  line-height: 55px;
   font-size: 23px;
 }
 
@@ -109,34 +126,33 @@ i.language-cn {
 .navigator .right ul {
   float: left;
   list-style: none;
-  height: 60px;
+  height: 55px;
   
 }
 
 .navigator .right ul li.active {
   
-  height: 60px;
+  height: 55px;
   float: left;
   
 }
 
 .navigator .right ul li.no-active {
   color: #1B1C1D;
-  height: 60px;
+  height: 55px;
   float: left;
 }.sign{
     user-select:none;
     position: fixed;
-    height: 300px;
-    width:250px;
+    height: 3500px;
+    width:300px;
     background: white;
     z-index: 13;
     top:100px;
     left:0px;
     right:0px;
     margin: auto;
-    border-radius: 10px;
-    border:2px solid #F0F0F0;
+    border:5px solid #F0F0F0;
 }
 
 .sign .content{
@@ -259,32 +275,79 @@ i.language-cn {
     background-color: grey;
     border-radius: 3px;
     font-size: 0.9rem;
-}.sidBarInd{
-    top: 46%;
-    cursor: pointer;
-    left: -20px;
-    width:40px; 
-    height:40px;
-    background: lightgrey;
-    border-radius: 50%;
-    position: fixed;
-    z-index: 13;
-    background-repeat:no-repeat;
-    background-position: 12px center;
-    background-size:32px;
-    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#ffffff' d='M761.055557 532.128047c0.512619-0.992555 1.343475-1.823411 1.792447-2.848649 8.800538-18.304636 5.919204-40.703346-9.664077-55.424808L399.935923 139.743798c-19.264507-18.208305-49.631179-17.344765-67.872168 1.888778-18.208305 19.264507-17.375729 49.631179 1.888778 67.872168l316.960409 299.839269L335.199677 813.631716c-19.071845 18.399247-19.648112 48.767639-1.247144 67.872168 9.407768 9.791372 21.984142 14.688778 34.560516 14.688778 12.000108 0 24.000215-4.479398 33.311652-13.439914l350.048434-337.375729c0.672598-0.672598 0.927187-1.599785 1.599785-2.303346 0.512619-0.479935 1.056202-0.832576 1.567101-1.343475C757.759656 538.879828 759.199462 535.391265 761.055557 532.128047z'/></svg>");
+}.sideBar{
+    top: 34.5%;
 
-}.sidBar{
-    top: 46%;
     cursor: pointer;
     width:50px; 
-    height:200px;
-    background: lightgrey;
-    border-radius: 50%;
+
+    background: white;
+
+    border-left: none;
     position: fixed;
     z-index: 12;
-    background-repeat:no-repeat;
-    background-position: 12px center;
-    background-size:32px;
+}
+
+.sideBar-hide {
+    display: none;
+}
+
+
+.sideBar ul li {
+    margin: 10px 10px 10px;
+
+    width: 30px;
+    height: 30px;
+    /*border-bottom: 2px solid #F0F0F0;*/
+}
+
+
+i.userInfo {
+    width: 28px;
+    height: 28px;
+    line-height: 40px;
+    background-position: center center;
+    float: left;
+    cursor: pointer;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M512 614.4C342.6304 614.4 204.8 476.637867 204.8 307.268267s137.8304-307.2 307.2-307.2S819.2 137.898667 819.2 307.268267 681.3696 614.4 512 614.4zM512 68.334933c-131.754667 0-238.933333 107.178667-238.933333 238.933333s107.178667 238.933333 238.933333 238.933333 238.933333-107.178667 238.933333-238.933333S643.754667 68.334933 512 68.334933zM921.6 1024c-18.8416 0-34.133333-15.223467-34.133333-34.133333C887.466667 744.2432 757.623467 614.4 512 614.4 266.376533 614.4 136.533333 744.2432 136.533333 989.866667 136.533333 1008.776533 121.2416 1024 102.4 1024S68.266667 1008.776533 68.266667 989.866667c0-282.0096 161.723733-443.665067 443.733333-443.665067S955.733333 707.857067 955.733333 989.866667C955.733333 1008.776533 940.4416 1024 921.6 1024z'/></svg>");
+}
+
+i.newPost {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-position: center center;
+    float: left;
+    cursor: pointer;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M800 960 224 960c-52.928 0-96-43.072-96-96L128 224c0-52.928 43.072-96 96-96l448 0c17.696 0 32 14.336 32 32s-14.304 32-32 32L224 192C206.368 192 192 206.368 192 224l0 640c0 17.664 14.368 32 32 32l576 0c17.664 0 32-14.336 32-32L832 352c0-17.664 14.304-32 32-32s32 14.336 32 32l0 512C896 916.928 852.928 960 800 960zM511.68 542.72c-8.256 0-16.512-3.168-22.752-9.504-12.416-12.576-12.32-32.832 0.256-45.248L907.488 74.24c12.608-12.448 32.832-12.288 45.248 0.256 12.448 12.576 12.32 32.832-0.256 45.248L534.176 533.472C527.936 539.648 519.808 542.72 511.68 542.72z'/></svg>");
+}
+
+i.message {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-position: center center;
+    float: left;
+    cursor: pointer;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M520 924q0-8-8-8-29.5 0-50.75-21.25t-21.25-50.75q0-8-8-8t-8 8q0 36.5 25.75 62.25t62.25 25.75q8 0 8-8zM187 780l650 0q-133-150-133-416 0-25.5-12-52.5t-34.5-51.5-60.75-40.25-84.75-15.75-84.75 15.75-60.75 40.25-34.5 51.5-12 52.5q0 266-133 416zM928 780q0 26-19 45t-45 19l-224 0q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5l-224 0q-26 0-45-19t-19-45q25-21 45.5-44t42.5-59.75 37.25-79.25 25-103 9.75-130q0-76 58.5-141.25t153.5-79.25q-4-9.5-4-19.5 0-20 14-34t34-14 34 14 14 34q0 10-4 19.5 95 14 153.5 79.25t58.5 141.25q0 69.5 9.75 130t25 103 37.25 79.25 42.5 59.75 45.5 44z'/></svg>");
+}
+
+i.logout {
+
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    background-position: center center;
+    float: left;
+    cursor: pointer;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M896.976 60.608 544.672 60.608c-70.672 0-128.112 50.864-128.112 113.424l0 141.76c0 15.664 14.336 28.352 32.048 28.352 17.68 0 32.016-12.704 32.016-28.352l0-141.76c0-31.28 28.752-56.72 64.048-56.72l352.304 0c35.344 0 64.032 25.456 64.032 56.72L961.008 854.56c0 31.216-28.688 56.688-64.032 56.688L544.672 911.248c-35.312 0-64.048-25.472-64.048-56.688l0-141.792c0-15.664-14.336-28.336-32.016-28.336-17.712 0-32.048 12.656-32.048 28.336l0 141.792c0 62.528 57.456 113.408 128.112 113.408l352.304 0c8.848 0 17.472-0.8 25.776-2.32 58.32-10.592 102.32-56.368 102.32-111.088L1025.072 174.032C1025.024 111.472 967.6 60.608 896.976 60.608zM294.144 679.984 109.696 516.656l567.712-0.048c8.848 0 16.88-3.136 22.64-8.256 5.824-5.184 9.376-12.272 9.376-20.064 0-15.664-14.336-28.352-32.016-28.352L110.88 460.096l186.592-164.464c6.112-5.408 10.032-13.216 10.032-22.016 0-16.304-13.216-29.52-29.52-29.52-7.824 0-14.912 3.104-20.192 8.08-1.648 1.008-3.296 2.224-4.944 3.68L9.872 468.112c-0.592 0.544-1.136 1.056-1.68 1.584-4.256 4.32-6.784 9.536-7.584 14.96-0.272 1.84-0.336 3.776-0.192 5.68 0.56 6.496 3.616 12.912 9.264 17.952 0 0 0.016 0.016 0.048 0.064l243.12 215.248c2.336 2.096 5.008 3.664 7.808 4.96 4.816 3.424 10.672 5.488 17.04 5.488 16.304 0 29.52-13.216 29.52-29.52C307.216 694.288 302.032 685.28 294.144 679.984z'/></svg>");
 }
 /*# sourceMappingURL=custom.css.map*/

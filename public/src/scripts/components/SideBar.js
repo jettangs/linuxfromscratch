@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import {connect} from 'react-redux'
-import sidBarSty from '../../styles/sidBar.css'
+import sideBarSty from '../../styles/sideBar.css'
 
-class SidBar extends Component {
+class SideBar extends Component {
 
   sidBarItClk(it) {
 
@@ -20,14 +20,6 @@ class SidBar extends Component {
    // let links = ['user','posting','message','session']
     let items = labels.map(
       (item,index) => {
-        if(index == 2) {
-          return (
-            <div key="intermedia-div">
-              <li key="intermedia-li" className="intermedia"></li>
-              <li key={item} onClick={this.sidBarItClk.bind(this,item)}><i className={item}></i></li>
-            </div>
-         )
-        }
         return  <li key={item} onClick={this.sidBarItClk.bind(this,item)}><i className={item}></i></li>
       }
     )
@@ -55,4 +47,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SidBar)
+)(SideBar)

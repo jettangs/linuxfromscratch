@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([1],{
 
-/***/ 301:
+/***/ 300:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20,7 +20,11 @@ webpackJsonp([1],{
 	
 	var _reactRedux = __webpack_require__(261);
 	
-	var _content = __webpack_require__(289);
+	var _home = __webpack_require__(301);
+	
+	var _home2 = _interopRequireDefault(_home);
+	
+	var _content = __webpack_require__(291);
 	
 	var _content2 = _interopRequireDefault(_content);
 	
@@ -44,25 +48,32 @@ webpackJsonp([1],{
 	  _createClass(Home, [{
 	    key: 'render',
 	    value: function render() {
-	      var pageContent = _content2.default[this.props.language].homePage;
+	      var cont = _content2.default[this.props.language].home;
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          pageContent.title
-	        ),
+	        { className: 'home' },
 	        _react2.default.createElement(
 	          'p',
-	          null,
-	          pageContent.p1,
+	          { className: 'home-title' },
+	          cont.title
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'homt-content' },
+	          '\u2003\u2003',
+	          cont.p1,
+	          ' ',
+	          _react2.default.createElement('br', null),
+	          '\u2003\u2003',
+	          cont.p2,
+	          '\xA0',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { to: '/projects' },
-	            pageContent.p2
+	            cont.p3
 	          ),
-	          pageContent.p3
+	          '\xA0',
+	          cont.p4
 	        )
 	      );
 	    }
@@ -84,6 +95,48 @@ webpackJsonp([1],{
 	};
 	
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Home);
+
+/***/ },
+
+/***/ 301:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(302);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(282)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(true) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept(302, function() {
+				var newContent = __webpack_require__(302);
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 302:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(281)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".home {\r\n    position: absolute;\r\n    width: 100%;\r\n    top:0px;\r\n    bottom: 0px;\r\n    background: white;\r\n    padding: 20px 100px;\r\n}\r\n\r\n.home-title{\r\n    margin:40px auto 20px;\r\n    text-align: center;\r\n    font-size: 1.3rem;\r\n}\r\n\r\n.homt-content {\r\n    line-height: 25px;\r\n}\r\n\r\n.homt-content a{\r\n    cursor: pointer;\r\n    color: grey;\r\n}", ""]);
+	
+	// exports
+
 
 /***/ }
 

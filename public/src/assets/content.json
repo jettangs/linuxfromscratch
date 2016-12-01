@@ -4,7 +4,7 @@
         "home": {
             "title": "Welcome to Linux From Scratch!",
             "p1": "Currently, the Linux From Scratch organization consists of the following subprojects: ",
-            "p2":"LFS,BLFS,ALFS,CLFS,HLFS,Hints,LiveCD and Patches,you can visit",
+            "p2":"LFS, BLFS, ALFS, CLFS, HLFS, Hints, LiveCD and Patches, you can visit",
             "p3": "project",
             "p4": "page for details."
         },

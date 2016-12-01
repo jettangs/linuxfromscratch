@@ -85,7 +85,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cdd0239f784d0f3639fe"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "6fb459d58cc5de0e39bc"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30126,7 +30126,7 @@
 	  path: 'home',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(1, function (require) {
-	      return cb(null, __webpack_require__(301).default);
+	      return cb(null, __webpack_require__(300).default);
 	    });
 	  }
 	};
@@ -30135,7 +30135,7 @@
 	  path: 'projects',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(2, function (require) {
-	      return cb(null, __webpack_require__(302).default);
+	      return cb(null, __webpack_require__(303).default);
 	    });
 	  }
 	};
@@ -30144,7 +30144,7 @@
 	  path: 'tutorials',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(3, function (require) {
-	      return cb(null, __webpack_require__(303).default);
+	      return cb(null, __webpack_require__(306).default);
 	    });
 	  }
 	};
@@ -30153,7 +30153,7 @@
 	  path: 'lfs',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(4, function (require) {
-	      return cb(null, __webpack_require__(304).default);
+	      return cb(null, __webpack_require__(307).default);
 	    });
 	  }
 	};
@@ -30162,7 +30162,7 @@
 	  path: 'alfs',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(5, function (require) {
-	      return cb(null, __webpack_require__(305).default);
+	      return cb(null, __webpack_require__(308).default);
 	    });
 	  }
 	};
@@ -30171,7 +30171,7 @@
 	  path: 'blfs',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(6, function (require) {
-	      return cb(null, __webpack_require__(306).default);
+	      return cb(null, __webpack_require__(309).default);
 	    });
 	  }
 	};
@@ -30180,7 +30180,7 @@
 	  path: 'clfs',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(7, function (require) {
-	      return cb(null, __webpack_require__(307).default);
+	      return cb(null, __webpack_require__(310).default);
 	    });
 	  }
 	};
@@ -30189,7 +30189,7 @@
 	  path: 'hlfs',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(8, function (require) {
-	      return cb(null, __webpack_require__(308).default);
+	      return cb(null, __webpack_require__(311).default);
 	    });
 	  }
 	};
@@ -30198,7 +30198,7 @@
 	  path: 'hints',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(9, function (require) {
-	      return cb(null, __webpack_require__(309).default);
+	      return cb(null, __webpack_require__(312).default);
 	    });
 	  }
 	};
@@ -30207,7 +30207,7 @@
 	  path: 'livecd',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(10, function (require) {
-	      return cb(null, __webpack_require__(310).default);
+	      return cb(null, __webpack_require__(313).default);
 	    });
 	  }
 	};
@@ -30216,7 +30216,7 @@
 	  path: 'patches',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(11, function (require) {
-	      return cb(null, __webpack_require__(808).default);
+	      return cb(null, __webpack_require__(811).default);
 	    });
 	  }
 	};
@@ -30225,16 +30225,19 @@
 	  path: 'posting/:id',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(12, function (require) {
-	      return cb(null, __webpack_require__(809).default);
+	      return cb(null, __webpack_require__(812).default);
 	    });
 	  }
 	};
 	
 	var Community = {
 	  path: 'community',
+	  indexRoute: { onEnter: function onEnter(nextState, replace) {
+	      return replace('/community/posting/b1c98675-8b29-481e-8b94-a86ef15ed8cc');
+	    } },
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(13, function (require) {
-	      return cb(null, __webpack_require__(814).default);
+	      return cb(null, __webpack_require__(818).default);
 	    });
 	  },
 	
@@ -30245,7 +30248,7 @@
 	  path: '*',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(14, function (require) {
-	      return cb(null, __webpack_require__(818).default);
+	      return cb(null, __webpack_require__(822).default);
 	    });
 	  }
 	};
@@ -30291,29 +30294,29 @@
 	
 	var _main2 = _interopRequireDefault(_main);
 	
-	var _icon = __webpack_require__(283);
+	var _app = __webpack_require__(283);
+	
+	var _app2 = _interopRequireDefault(_app);
+	
+	var _icon = __webpack_require__(285);
 	
 	var _icon2 = _interopRequireDefault(_icon);
 	
-	var _navigator = __webpack_require__(285);
+	var _navigator = __webpack_require__(287);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _Navigator = __webpack_require__(286);
+	var _Navigator = __webpack_require__(288);
 	
 	var _Navigator2 = _interopRequireDefault(_Navigator);
 	
-	var _Sign = __webpack_require__(291);
+	var _Sign = __webpack_require__(293);
 	
 	var _Sign2 = _interopRequireDefault(_Sign);
 	
-	var _SidBarInd = __webpack_require__(295);
+	var _SideBar = __webpack_require__(297);
 	
-	var _SidBarInd2 = _interopRequireDefault(_SidBarInd);
-	
-	var _SidBar = __webpack_require__(298);
-	
-	var _SidBar2 = _interopRequireDefault(_SidBar);
+	var _SideBar2 = _interopRequireDefault(_SideBar);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -30355,8 +30358,17 @@
 	    value: function componentWillReceiveProps(_ref) {
 	      var location = _ref.location;
 	
-	      var navit = location.pathname.substr(1, location.length);
-	      this.props.actvNavIt != navit && "home|projects|community|tutorials".indexOf(navit) >= 0 && this.props.switNavItem(navit);
+	      var pana = location.pathname;
+	      console.log(pana);
+	      if (pana.indexOf("home") >= 0) {
+	        this.props.switNavItem("home");
+	      } else if (pana.indexOf("projects") >= 0) {
+	        this.props.switNavItem("projects");
+	      } else if (pana.indexOf("community") >= 0) {
+	        this.props.switNavItem("community");
+	      } else if (pana.indexOf("tutorials") >= 0) {
+	        this.props.switNavItem("tutorials");
+	      }
 	    }
 	  }, {
 	    key: 'render',
@@ -30365,10 +30377,13 @@
 	        'div',
 	        null,
 	        this.props.dispSignBox && _react2.default.createElement(_Sign2.default, null),
-	        _react2.default.createElement(_SidBarInd2.default, null),
-	        _react2.default.createElement(_SidBar2.default, null),
+	        _react2.default.createElement(_SideBar2.default, null),
 	        _react2.default.createElement(_Navigator2.default, null),
-	        this.props.children
+	        _react2.default.createElement(
+	          'div',
+	          { className: 'app-children' },
+	          this.props.children
+	        )
 	      );
 	    }
 	  }]);
@@ -30718,6 +30733,13 @@
 /* 285 */
 /***/ function(module, exports) {
 
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 286 */,
+/* 287 */
+/***/ function(module, exports) {
+
 	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
@@ -30733,7 +30755,7 @@
 	exports.default = { switNavItem: switNavItem };
 
 /***/ },
-/* 286 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30752,19 +30774,19 @@
 	
 	var _reactRedux = __webpack_require__(261);
 	
-	var _navigator = __webpack_require__(287);
+	var _navigator = __webpack_require__(289);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _content = __webpack_require__(289);
+	var _content = __webpack_require__(291);
 	
 	var _content2 = _interopRequireDefault(_content);
 	
-	var _common = __webpack_require__(290);
+	var _common = __webpack_require__(292);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
-	var _navigator3 = __webpack_require__(285);
+	var _navigator3 = __webpack_require__(287);
 	
 	var _navigator4 = _interopRequireDefault(_navigator3);
 	
@@ -30799,11 +30821,6 @@
 	    key: 'componentWillMount',
 	    value: function componentWillMount() {
 	      this.props.switNavItem(this.props.actvNavIt);
-	    }
-	  }, {
-	    key: 'componentWillReceiveProps',
-	    value: function componentWillReceiveProps() {
-	      console.log("componentWillReceiveProps");
 	    }
 	  }, {
 	    key: 'lanIconClick',
@@ -30880,14 +30897,14 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Navigator);
 
 /***/ },
-/* 287 */
+/* 289 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 288 */,
-/* 289 */
+/* 290 */,
+/* 291 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -30898,11 +30915,23 @@
 				"Community",
 				"Tutorials"
 			],
-			"homePage": {
+			"home": {
 				"title": "Welcome to Linux From Scratch!",
-				"p1": "Currently, the Linux From Scratch organization consists of the following subprojects:<br/>LFS,BLFS,ALFS,CLFS,HLFS,Hints,LiveCD and Patches,you can visit",
-				"p2": "project",
-				"p3": "page for details."
+				"p1": "Currently, the Linux From Scratch organization consists of the following subprojects: ",
+				"p2": "LFS, BLFS, ALFS, CLFS, HLFS, Hints, LiveCD and Patches, you can visit",
+				"p3": "project",
+				"p4": "page for details."
+			},
+			"projects": {
+				"p1": "Linux From Scratch (LFS) is a project that provides you with step-by-step instructions for building your own custom Linux system, entirely from source code. Currently, the Linux From Scratch organization consists of the following subprojects:",
+				"p2": "Linux From Scratch is the main book, the base from which all other projects are derived.",
+				"p3": "Beyond Linux From Scratch helps you extend your finished LFS installation into a more customized and usable system.",
+				"p4": "Automated Linux From Scratch provides tools for automating and managing LFS and BLFS builds.",
+				"p5": "Cross Linux From Scratch provides the means to cross-compile an LFS system on many types of systems.",
+				"p6": "Hardened Linux From Scratch focuses on building an LFS system with heightened security.",
+				"p7": "The Hints project is a collection of documents that explain how to enhance your LFS system in ways that are not included in the LFS or BLFS books.",
+				"p8": "The LiveCD project provides a CD that is useful as an LFS build host or as a general rescue CD.",
+				"p9": "The Patches project serves as a central repository for all patches useful to an LFS user."
 			}
 		},
 		"cn": {
@@ -30912,17 +30941,29 @@
 				"社区",
 				"教程"
 			],
-			"homePage": {
+			"home": {
 				"title": "欢迎来到 Linux From Scratch!",
-				"p1": "目前, Linux From Scratch 由以下子项目组成:<br/>LFS,BLFS,ALFS,CLFS,HLFS,Hints,LiveCD 和 Patches,你可以浏览",
-				"p2": "项目板块",
-				"p3": "查看详情"
+				"p1": "目前，Linux From Scratch 由以下子项目组成：",
+				"p2": "LFS，BLFS，ALFS，CLFS，HLFS，Hints，LiveCD 和 Patches，你可以浏览",
+				"p3": "项目板块",
+				"p4": "查看详情"
+			},
+			"projects": {
+				"p1": "Linux From Scratch (LFS) 教你如何一步一步从源码建造自制的linux系统，目前Linux From Scratch由以下子项目组成：",
+				"p2": "Linux From Scratch，这是最重要的，是其他项目的基础。",
+				"p3": "Beyond Linux From Scratch，帮助扩展你的linux系统， 使得功能更丰富，更好用。",
+				"p4": "Automated Linux From Scratch，提供一些工具自动管理LFS和BLFS。",
+				"p5": "Cross Linux From Scratch，为跨平台编译linux成为可能。",
+				"p6": "Hardened Linux From Scratch，专注打造安全可靠的系统。",
+				"p7": "提供文档扩展你的LFS系统，这些内容并不包含在LFS或者BLFS的资料中。",
+				"p8": "教你如何制作CD光盘，以备不时之需。",
+				"p9": "一些有用的补丁。"
 			}
 		}
 	};
 
 /***/ },
-/* 290 */
+/* 292 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -30930,35 +30971,35 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var switLan = exports.switLan = function switLan(lan) {
+	var switLan = function switLan(lan) {
 	  return {
 	    type: "switLan",
 	    data: lan
 	  };
 	};
 	
-	var dispSignBox = exports.dispSignBox = function dispSignBox(dat) {
+	var dispSignBox = function dispSignBox(dat) {
 	  return {
 	    type: "dispSignBox",
 	    data: dat
 	  };
 	};
 	
-	var setUsrIsSgi = exports.setUsrIsSgi = function setUsrIsSgi(dat) {
+	var setUsrIsSgi = function setUsrIsSgi(dat) {
 	  return {
 	    type: "setUsrIsSgi",
 	    data: dat
 	  };
 	};
 	
-	var setUsrInf = exports.setUsrInf = function setUsrInf(dat) {
+	var setUsrInf = function setUsrInf(dat) {
 	  return {
 	    type: "setUsrInf",
 	    data: dat
 	  };
 	};
 	
-	var getUsrInf = exports.getUsrInf = function getUsrInf(cb) {
+	var getUsrInf = function getUsrInf(cb) {
 	  return function (dispatch) {
 	    fetch("/session", {
 	      credentials: 'include',
@@ -30976,7 +31017,7 @@
 	exports.default = { switLan: switLan, dispSignBox: dispSignBox, getUsrInf: getUsrInf, setUsrIsSgi: setUsrIsSgi, setUsrInf: setUsrInf };
 
 /***/ },
-/* 291 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30995,15 +31036,15 @@
 	
 	var _reactRedux = __webpack_require__(261);
 	
-	var _sign = __webpack_require__(292);
+	var _sign = __webpack_require__(294);
 	
 	var _sign2 = _interopRequireDefault(_sign);
 	
-	var _sign3 = __webpack_require__(294);
+	var _sign3 = __webpack_require__(296);
 	
 	var _sign4 = _interopRequireDefault(_sign3);
 	
-	var _common = __webpack_require__(290);
+	var _common = __webpack_require__(292);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
@@ -31353,14 +31394,14 @@
 	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Sign);
 
 /***/ },
-/* 292 */
+/* 294 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 293 */,
-/* 294 */
+/* 295 */,
+/* 296 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -31417,7 +31458,7 @@
 	exports.default = { signup: signup, signin: signin };
 
 /***/ },
-/* 295 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -31436,9 +31477,9 @@
 	
 	var _reactRedux = __webpack_require__(261);
 	
-	var _sidBarInd = __webpack_require__(296);
+	var _sideBar = __webpack_require__(298);
 	
-	var _sidBarInd2 = _interopRequireDefault(_sidBarInd);
+	var _sideBar2 = _interopRequireDefault(_sideBar);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -31448,96 +31489,51 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var SidBarInd = function (_Component) {
-	  _inherits(SidBarInd, _Component);
+	var SideBar = function (_Component) {
+	  _inherits(SideBar, _Component);
 	
-	  function SidBarInd() {
-	    _classCallCheck(this, SidBarInd);
+	  function SideBar() {
+	    _classCallCheck(this, SideBar);
 	
-	    return _possibleConstructorReturn(this, (SidBarInd.__proto__ || Object.getPrototypeOf(SidBarInd)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (SideBar.__proto__ || Object.getPrototypeOf(SideBar)).apply(this, arguments));
 	  }
 	
-	  _createClass(SidBarInd, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('div', { className: 'sidBarInd' });
+	  _createClass(SideBar, [{
+	    key: 'sidBarItClk',
+	    value: function sidBarItClk(it) {}
+	  }, {
+	    key: 'getSidBarSty',
+	    value: function getSidBarSty() {
+	      //return this.props.usrIsSgi == true ? "sideBar-disp" : "sideBar-hide"
+	      return "sideBar";
 	    }
-	  }]);
-	
-	  return SidBarInd;
-	}(_react.Component);
-	
-	var mapStateToProps = function mapStateToProps(state) {
-	  return {
-	    dispSignBox: state.common.dispSignBox,
-	    actvNavIt: state.navigator.actvNavIt
-	  };
-	};
-	
-	var mapDispatchToProps = {};
-	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SidBarInd);
-
-/***/ },
-/* 296 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 297 */,
-/* 298 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _reactDom = __webpack_require__(34);
-	
-	var _reactRedux = __webpack_require__(261);
-	
-	var _sidBar = __webpack_require__(299);
-	
-	var _sidBar2 = _interopRequireDefault(_sidBar);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var SidBar = function (_Component) {
-	  _inherits(SidBar, _Component);
-	
-	  function SidBar() {
-	    _classCallCheck(this, SidBar);
-	
-	    return _possibleConstructorReturn(this, (SidBar.__proto__ || Object.getPrototypeOf(SidBar)).apply(this, arguments));
-	  }
-	
-	  _createClass(SidBar, [{
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
+	      var labels = ['userInfo', 'newPost', 'message', 'logout'];
+	      // let links = ['user','posting','message','session']
+	      var items = labels.map(function (item, index) {
+	        return _react2.default.createElement(
+	          'li',
+	          { key: item, onClick: _this2.sidBarItClk.bind(_this2, item) },
+	          _react2.default.createElement('i', { className: item })
+	        );
+	      });
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        'SideBar'
+	        { className: this.getSidBarSty() },
+	        _react2.default.createElement(
+	          'ul',
+	          null,
+	          items
+	        )
 	      );
 	    }
 	  }]);
 	
-	  return SidBar;
+	  return SideBar;
 	}(_react.Component);
 	
 	var mapStateToProps = function mapStateToProps(state) {
@@ -31553,10 +31549,10 @@
 	  }
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SidBar);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(SideBar);
 
 /***/ },
-/* 299 */
+/* 298 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

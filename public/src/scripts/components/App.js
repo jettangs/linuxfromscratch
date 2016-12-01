@@ -11,8 +11,7 @@ import navAction from '../actions/navigator'
 
 import Navigator from './Navigator'
 import Sign from './Sign'
-import SidBarInd from './SidBarInd'
-import SidBar from './SidBar'
+import SideBar from './SideBar'
 
 // export default ({ children }) => {
 //     return (
@@ -51,8 +50,7 @@ class App extends Component {
     return (
       <div>
         {this.props.dispSignBox && <Sign/>}
-        {<SidBarInd/>}
-        {<SidBar/>}
+        <SideBar/>
         <Navigator/>
         <div className="app-children">
           {this.props.children}
