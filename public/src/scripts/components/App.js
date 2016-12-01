@@ -5,6 +5,7 @@ import { createHashHistory } from 'history'
 import {connect} from 'react-redux'
 
 import main from '../../styles/main.css'
+import app from '../../styles/app.css'
 import icon from '../../styles/icon.css'
 import navAction from '../actions/navigator'
 
@@ -33,8 +34,17 @@ class App extends Component {
   }
   
   componentWillReceiveProps({ location }) {
-    let navit = location.pathname.substr(1,location.length)
-    this.props.actvNavIt != navit && "home|projects|community|tutorials".indexOf(navit) >= 0 && this.props.switNavItem(navit)
+    let pana = location.pathname
+    console.log(pana)
+    if(pana.indexOf("home") >= 0) {
+      this.props.switNavItem("home")
+    }else if(pana.indexOf("projects") >= 0) {
+      this.props.switNavItem("projects")
+    }else if(pana.indexOf("community") >= 0) {
+      this.props.switNavItem("community")
+    }else if(pana.indexOf("tutorials") >= 0) {
+      this.props.switNavItem("tutorials")
+    } 
   }
 
   render() {
@@ -44,7 +54,9 @@ class App extends Component {
         {<SidBarInd/>}
         {<SidBar/>}
         <Navigator/>
-        {this.props.children}
+        <div className="app-children">
+          {this.props.children}
+        </div>
       </div> 
     )
   }

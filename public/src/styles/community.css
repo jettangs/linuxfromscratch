@@ -1,37 +1,30 @@
-
-
-.postList-part-left {
-    top: 60px;
-    bottom: 0;
-    width: 450px;
+.community {
+    width: 100%;
+    top:0px;
+    bottom: 0px;
+    background: white;
     position: absolute;
-    left:50px;
+}
+
+.postList {
+    width: 350px;
+    position: absolute;
     border-left: 5px solid #F0F0F0;
     background-color: white;
 }
 
-.postList-all-left {
-    top: 60px;
-    bottom: 0;
-    width: 505px;
-    position: absolute;
-    background-color: white;
-}
 
 .postContent {
+    top: 0;
     overflow: hidden;
-    top: 60px;
     right: 0px;
+    left: 350px;
     bottom: 0;
-    left:505px;
     position: absolute;
-    border-left: 5px solid #F0F0F0;
+    border-left: 10px solid #F0F0F0;
 }
 
-.community {
-    height: 100%;
-    width: 100%;
-}
+
 
 .community .row:first-child {
     padding-top: 5px;

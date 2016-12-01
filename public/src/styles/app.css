@@ -1,0 +1,8 @@
+.app-children {
+    width: 800px;
+    top: 65px;
+    bottom: 10px;
+    left:50%;
+    margin-left: -400px;
+    position: absolute;
+}

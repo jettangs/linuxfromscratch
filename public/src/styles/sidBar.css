@@ -5,8 +5,7 @@
     width:50px; 
     height:200px;
     background: white;
-    border-radius: 10px;
-    border:2px solid lightgrey;
+
     border-left: none;
     position: fixed;
     z-index: 12;

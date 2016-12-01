@@ -8,10 +8,6 @@ import comAction from '../actions/common'
 
 class Community extends Component{
 
-  getPostListSty() {
-    return this.props.usrIsSgi == true ? "postList-part-left" : "postList-all-left"
-  }
-
   componentDidMount() {
     this.props.getUsrInf(data => {
       this.props.setUsrIsSgi(data.code == 10000? true : false)
@@ -37,12 +33,11 @@ class Community extends Component{
 
     return (
       <div className="community">
-        <div className={this.getPostListSty()}>
+        <div className="postList">
           {postingList}
         </div>
         <div className="postContent" ref="postContent">
           {this.props.children}
-
         </div>
       </div>
     )

@@ -3,7 +3,7 @@
   margin:0;
   padding: 0;
   cursor: default;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 
 /*::-webkit-scrollbar {
@@ -15,12 +15,14 @@ input {
 }
 
 body{
+  background: #F0F0F0;
   font-family: "Microsoft YaHei";
 }
 
 a {
   color:black;
   text-decoration: none;
+  cursor: pointer;
 }
 
 li {

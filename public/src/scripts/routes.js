@@ -114,6 +114,7 @@ const Posting = {
 
 const Community = {
   path:'community',
+  indexRoute: { onEnter: (nextState, replace) => replace('/community/posting/b1c98675-8b29-481e-8b94-a86ef15ed8cc') },
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/Community').default)

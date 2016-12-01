@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import {connect} from 'react-redux'
-
+import homeSty from '../../styles/home.css'
 import content from '../../assets/content.json'
 
 class Home extends Component{
   render() {
-    let pageContent = content[this.props.language].homePage
+    let cont = content[this.props.language].home
     return (
-      <div>
-          <h3>{pageContent.title}</h3>
-          <p>
-            {pageContent.p1}
-            <Link to="/projects">{pageContent.p2}</Link> 
-            {pageContent.p3}
-          </p>
+      <div className="home">
+          <p className="home-title">{cont.title}</p>
+          <div className="homt-content">
+            &emsp;&emsp;{cont.p1} <br/>
+            &emsp;&emsp;{cont.p2}
+            &nbsp;<Link to="/projects">{cont.p3}</Link>&nbsp;
+           {cont.p4}
+          </div>
       </div>
     )
   }

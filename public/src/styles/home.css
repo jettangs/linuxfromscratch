@@ -1,0 +1,23 @@
+.home {
+    position: absolute;
+    width: 100%;
+    top:0px;
+    bottom: 0px;
+    background: white;
+    padding: 20px 100px;
+}
+
+.home-title{
+    margin:40px auto 20px;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.homt-content {
+    line-height: 25px;
+}
+
+.homt-content a{
+    cursor: pointer;
+    color: grey;
+}
