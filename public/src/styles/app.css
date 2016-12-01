@@ -1,8 +1,55 @@
-.app-children {
-    width: 800px;
-    top: 65px;
-    bottom: 10px;
-    left:50%;
-    margin-left: -400px;
-    position: absolute;
+@media only screen and (min-width: 1201px) {
+    body{
+        background: black;
+    }
+    .app-children {
+        width: 1200px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -600px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    body{
+        background: blue;
+    }
+    .app-children {
+        width: 900px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -450px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    body{
+        background: yellow;
+    }
+    .app-children {
+        width: 600px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -300px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+    body{
+        background: green;
+    }
+    .app-children {
+        width: 300px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -150px;
+        position: absolute;
+    }
 }

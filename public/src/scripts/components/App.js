@@ -50,7 +50,7 @@ class App extends Component {
     return (
       <div>
         {this.props.dispSignBox && <Sign/>}
-        <SideBar/>
+        {this.props.usrIsSgi && <SideBar/>}
         <Navigator/>
         <div className="app-children">
           {this.props.children}
@@ -63,8 +63,8 @@ class App extends Component {
 const mapStateToProps = (state)=>{
     return {
       dispSignBox:state.common.dispSignBox,
-      actvNavIt: state.navigator.actvNavIt
-      
+      actvNavIt: state.navigator.actvNavIt,
+      usrIsSgi: state.common.usrIsSgi 
     }
 }
 

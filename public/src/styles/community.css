@@ -1,3 +1,4 @@
+
 .community {
     width: 100%;
     top:0px;
@@ -7,9 +8,8 @@
 }
 
 .postList {
-    width: 350px;
+    width: 40%;
     position: absolute;
-    border-left: 5px solid #F0F0F0;
     background-color: white;
 }
 
@@ -18,7 +18,7 @@
     top: 0;
     overflow: hidden;
     right: 0px;
-    left: 350px;
+    left: 40%;
     bottom: 0;
     position: absolute;
     border-left: 10px solid #F0F0F0;

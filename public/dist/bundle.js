@@ -85,7 +85,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "6fb459d58cc5de0e39bc"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a1284fd29ea97e00b046"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30377,7 +30377,7 @@
 	        'div',
 	        null,
 	        this.props.dispSignBox && _react2.default.createElement(_Sign2.default, null),
-	        _react2.default.createElement(_SideBar2.default, null),
+	        this.props.usrIsSgi && _react2.default.createElement(_SideBar2.default, null),
 	        _react2.default.createElement(_Navigator2.default, null),
 	        _react2.default.createElement(
 	          'div',
@@ -30394,8 +30394,8 @@
 	var mapStateToProps = function mapStateToProps(state) {
 	  return {
 	    dispSignBox: state.common.dispSignBox,
-	    actvNavIt: state.navigator.actvNavIt
-	
+	    actvNavIt: state.navigator.actvNavIt,
+	    usrIsSgi: state.common.usrIsSgi
 	  };
 	};
 	

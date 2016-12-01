@@ -40,21 +40,48 @@ p {
   html {
     font-size: 1rem;
   }
-}.app-children {
-    width: 800px;
-    top: 65px;
-    bottom: 10px;
-    left:50%;
-    margin-left: -400px;
-    position: absolute;
+}@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    .app-children {
+        width: 800px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -400px;
+        position: absolute;
+    }
 }
+
+@media only screen and (min-width: 501px) and (max-width: 900px) {
+    .app-children {
+        width: 600px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -300px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 500px) {
+    .app-children {
+        width: 300px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -150px;
+        position: absolute;
+    }
+}
+
+
+
 i.language-en {
   cursor:pointer;
   vertical-align: middle;
   float: right;
   margin: 0 10px 0;
   width: 30px;
-  height:65px;
+  height:60px;
   line-height: 60px;
   background-repeat:no-repeat;
   display:inline-block;
@@ -68,7 +95,7 @@ i.language-cn {
   float: right;
   margin: 0 10px 0;
   width: 30px;
-  height:65px;
+  height: 60px;
   line-height: 60px;
   background-repeat:no-repeat;
   display:inline-block;
@@ -79,18 +106,18 @@ i.language-cn {
 .navigator{
   background: white;
   border-bottom: 5px solid #F0F0F0;
-  height: 60px;
+  height: 65px;
 }
 
 .navigator .left {
-  height: 55px;
+  height: 60px;
   float:left;
 }
 
 .nav-title {
   display: inline-block;
   vertical-align: middle;
-  line-height: 55px;
+  line-height: 60px;
   font-size: 23px;
 }
 
@@ -101,6 +128,7 @@ i.language-cn {
 }
 
 .navigator .right {
+  font-size: 1.05rem;
   float:right;
   height: 60px;
   line-height: 60px;
@@ -126,25 +154,25 @@ i.language-cn {
 .navigator .right ul {
   float: left;
   list-style: none;
-  height: 55px;
+  height: 60px;
   
 }
 
 .navigator .right ul li.active {
   
-  height: 55px;
+  height: 60px;
   float: left;
   
 }
 
 .navigator .right ul li.no-active {
   color: #1B1C1D;
-  height: 55px;
+  height: 60px;
   float: left;
 }.sign{
     user-select:none;
     position: fixed;
-    height: 3500px;
+    height: 350px;
     width:300px;
     background: white;
     z-index: 13;
