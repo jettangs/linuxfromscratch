@@ -1,0 +1,94 @@
+
+
+.postList-part-left {
+    top: 60px;
+    bottom: 0;
+    width: 450px;
+    position: absolute;
+    left:50px;
+    border-left: 5px solid #F0F0F0;
+    background-color: white;
+}
+
+.postList-all-left {
+    top: 60px;
+    bottom: 0;
+    width: 505px;
+    position: absolute;
+    background-color: white;
+}
+
+.postContent {
+    overflow: hidden;
+    top: 60px;
+    right: 0px;
+    bottom: 0;
+    left:505px;
+    position: absolute;
+    border-left: 5px solid #F0F0F0;
+}
+
+.community {
+    height: 100%;
+    width: 100%;
+}
+
+.community .row:first-child {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.community .row {
+    padding-bottom: 5px;
+    margin: 0 5px 5px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.community .post-title {
+    margin-left: 5px;
+}
+
+.community .post-title a:hover{
+    color:gray;
+}
+
+.community .post-buttom {
+    margin-top: 2px;
+}
+
+.community .post-buttom .help {
+    margin-left: 5px;
+    color: orange;
+    font-size: 0.8rem;
+    padding: 1px;
+    border-radius: 4px;
+    border:1px solid orange;
+}
+
+.community .post-buttom .solve {
+    margin-left: 5px;
+    color: limegreen;
+    font-size: 0.8rem;
+    padding: 1px;
+    border-radius: 4px;
+    border:1px solid limegreen;
+}
+
+.community .post-buttom .author {
+    margin-top: 5px;
+    margin-right: 5px;
+    color: grey;
+    float: right;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.community .post-buttom .answers-views {
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    float: right;
+    color: deepskyblue;
+}

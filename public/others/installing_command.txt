@@ -1,0 +1,11 @@
+cnpm install --save-dev  semantic-ui-react react react-dom  react-router react-transform-hmr babel-core babel-loader babel-plugin-react-transform babel-preset-es2015 babel-preset-stage-0 babel-preset-react webpack webpack-dev-server extract-text-webpack-plugin html-webpack-plugin postcss-loader autoprefixer style-loader css-loader json-loader
+
+
+
+
+rename b.babelrc .babelrc
+
+rd /p/s node_modules
+
+
+

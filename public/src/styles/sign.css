@@ -1,0 +1,136 @@
+.sign{
+    user-select:none;
+    position: fixed;
+    height: 300px;
+    width:250px;
+    background: white;
+    z-index: 13;
+    top:100px;
+    left:0px;
+    right:0px;
+    margin: auto;
+    border-radius: 10px;
+    border:2px solid #F0F0F0;
+}
+
+.sign .content{
+    margin: 0 auto;
+    width:160px;
+    height: 300px;
+}
+
+.sign .sign-in-up{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 35px auto 0;
+    text-align:center;
+    width:180px;
+    height: 40px;
+    color: grey;
+    line-height: 40px;
+}
+
+.sign .username{
+    font-size:0.9rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.sign .username span{
+    font-size:0.7rem;
+    color: #CFCFDA;
+}
+
+.sign .password{
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+}
+
+.sign .password-pointer{
+    cursor: pointer;
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+}
+
+.sign .password-pointer .select{
+    cursor: pointer;
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+}
+
+.sign .password-pointer .no-select{
+    cursor: pointer;
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+    color: #CFCFDA;
+}
+
+.sign .otherSignWay{
+    user-select:none;
+    float:left;
+    cursor: pointer;
+    color: grey;
+    font-size:0.9rem;
+    margin-right:20px;
+}
+
+.sign .inputName{
+    text-align:center;
+}
+
+.sign .inputUsername input{
+    width:100%;
+    margin: 0 auto 15px;
+    border-radius: 3px;
+    height: 30px;
+    outline: none;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+.sign .inputPassword {
+    margin-top: 7px;
+
+}
+
+.sign .inputPassword input{
+    width:100%;
+    margin: 0 auto 15px;
+    border-radius: 3px;
+    height: 30px;
+    outline: none;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+.sign .close{
+    cursor: pointer;
+    margin-left:3px;
+    margin-top:3px;
+    width:20px;
+    height:20px;
+    float:right;
+    background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M176.661601 817.172881C168.472798 825.644055 168.701706 839.149636 177.172881 847.338438 185.644056 855.527241 199.149636 855.298332 207.338438 846.827157L826.005105 206.827157C834.193907 198.355983 833.964998 184.850403 825.493824 176.661601 817.02265 168.472798 803.517069 168.701706 795.328267 177.172881L176.661601 817.172881ZM795.328267 846.827157C803.517069 855.298332 817.02265 855.527241 825.493824 847.338438 833.964998 839.149636 834.193907 825.644055 826.005105 817.172881L207.338438 177.172881C199.149636 168.701706 185.644056 168.472798 177.172881 176.661601 168.701706 184.850403 168.472798 198.355983 176.661601 206.827157L795.328267 846.827157Z'/></svg>");
+}
+
+.sign .submit{
+    float:right;
+    color:white;
+    cursor: pointer;
+
+    padding: 2px 3px;
+    background-color: grey;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}

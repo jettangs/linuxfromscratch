@@ -1,0 +1,10 @@
+导航栏底部改为1px
+
+
+懒加载
+页脚高度自适应
+pagenotfound返回上一个页面
+登录注册框placeholder提示对应email或password
+前台验证
+用户名中有字符@，点击后无反应
+后台用户密码不发送

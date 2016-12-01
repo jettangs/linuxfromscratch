@@ -1,0 +1,65 @@
+.navigator{
+  border-bottom: 5px solid #F0F0F0;
+  height: 60px;
+}
+
+.navigator .left {
+  height: 55px;
+  float:left;
+}
+
+.nav-title {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 55px;
+  font-size: 23px;
+}
+
+.logo{
+  width: 50px;
+  vertical-align: middle;
+  margin: 0 10px 0;
+}
+
+.navigator .right {
+  float:right;
+  height: 60px;
+  line-height: 60px;
+}
+
+.navigator .right ul li a {
+  cursor: pointer;
+  display: block;
+  padding:0 15px 0;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.navigator .right ul li.active a {
+  color:grey;
+}
+
+.navigator .right ul li.no-active a {
+  color: #1B1C1D;
+}
+
+.navigator .right ul {
+  float: left;
+  list-style: none;
+  height: 60px;
+  
+}
+
+.navigator .right ul li.active {
+  
+  height: 60px;
+  float: left;
+  
+}
+
+.navigator .right ul li.no-active {
+  color: #1B1C1D;
+  height: 60px;
+  float: left;
+}

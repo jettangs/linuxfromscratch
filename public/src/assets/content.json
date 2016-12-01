@@ -1,0 +1,20 @@
+{
+    "en":{
+        "navItem": ["Home","Projects","Community","Tutorials"],
+        "homePage": {
+            "title": "Welcome to Linux From Scratch!",
+            "p1": "Currently, the Linux From Scratch organization consists of the following subprojects:<br/>LFS,BLFS,ALFS,CLFS,HLFS,Hints,LiveCD and Patches,you can visit",
+            "p2": "project",
+            "p3": "page for details."
+        }
+    },
+    "cn":{
+        "navItem": ["首页","项目","社区","教程"],
+        "homePage": {
+            "title": "欢迎来到 Linux From Scratch!",
+            "p1": "目前, Linux From Scratch 由以下子项目组成:<br/>LFS,BLFS,ALFS,CLFS,HLFS,Hints,LiveCD 和 Patches,你可以浏览",
+            "p2": "项目板块",
+            "p3": "查看详情"
+        }
+    }
+}

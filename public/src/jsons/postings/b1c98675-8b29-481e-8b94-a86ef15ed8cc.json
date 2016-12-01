@@ -1,0 +1,15 @@
+{
+    "id":"b1c98675-8b29-481e-8b94-a86ef15ed8cc",
+    "title":"Speed up the process for creating the performance report",
+    "author":"AndroidEnthusiastic",
+    "head_img":"https://cdn.v2ex.co/avatar/f9dc/e56d/63937_normal.png?m=1428140854",
+    "reward":"50",
+    "solved":"true",
+    "views":"8",
+    "answer_count":"1",
+    "content":"Using ADB top command i fetch cpu logs in command prompt mode. txt file automatically saved in SD card path.i get that logs and split the values Using Excel i split those values using text to columns options. Is there any automation script (or) macro to speed up the process",
+    "type":"help",
+    "date":"2016-01-01 10:11:11.000",
+    "lastModified":"2016-01-02 12:16:41.000",
+    "lastReply":"2016-05-03 15:36:13.000"
+}
