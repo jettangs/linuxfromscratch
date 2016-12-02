@@ -26,23 +26,20 @@ class Profile extends Component{
               <div className="signature-lbl">最怕脑子不好使</div>
               <div className="signature-icon"></div>
             </div>
-            
-            <div className="gold-img">
-              <img src="../../assets/gold.png"/>
-            </div>
-            <div className="gold-num">
-              63
-            </div>
-            <div className="fav">
-              <div className="fav-img">
-                  <img src="../../assets/fav.png"/>
-                </div>
-              <div className="fav-num">
-                  238
-              </div>
+            <div className="gold-fav">
+              <ul>
+                <li className="gold-icon"></li>
+                <li className="gold-num">
+                  63
+                </li>
+                <li className="vertical-line"></li>
+                <li className="fav-icon"></li>
+                <li className="fav-num">
+                    238
+                </li>
+              </ul>
             </div>
             <div className="circles">
-              <div className="circles-lbl">Circles</div>
               <ul>
                 <li className="weibo"></li>
                 <li className="github"></li>
@@ -51,16 +48,25 @@ class Profile extends Component{
               </ul>
             </div>
             <div className="teams">
-              <div className="team-lbl">teams</div>
+              <div className="team-lbl">Teams</div>
               <ul>
-                <li className="weibo"></li>
-                <li className="github"></li>
-                <li className="zhihu"></li>
-                <li className="twitter"></li>
+                <li className="a">
+                  <img src="../../assets/teams/a.png"/>
+                </li>
+                <li className="b">
+                  <img src="../../assets/teams/b.png"/>
+                </li>
+                <li className="c">
+                  <img src="../../assets/teams/c.png"/>
+                </li>
+                <li className="d">
+                  <img src="../../assets/teams/d.png"/>
+                </li>
               </ul>
             </div>
             <div className="blog">
-              <div className="blog-lbl">blog</div>
+              <span className="blog-lbl">blog</span>
+              <span className="blog-addr">www.jettangs.com</span>
             </div>
             <div className="joined">
               <div className="joined-lbl">joined</div>
