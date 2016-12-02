@@ -23,7 +23,6 @@
 
 .scrollBarContainer.animated .scrollBar{
     transition: 2s opacity ease;
-
     opacity: 0;
 }
 

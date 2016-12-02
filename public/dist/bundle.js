@@ -85,7 +85,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "a1284fd29ea97e00b046"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f7d0417c4acf3fcb321f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30244,11 +30244,32 @@
 	  childRoutes: [Posting]
 	};
 	
-	var PageNotFound = {
-	  path: '*',
+	var Profile = {
+	  path: 'profile',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(14, function (require) {
 	      return cb(null, __webpack_require__(822).default);
+	    });
+	  },
+	
+	  childRoutes: [ProfileDetail]
+	};
+	
+	//修改资料 
+	var ProfileDetail = {
+	  path: 'profileDetail',
+	  getComponent: function getComponent(nextState, cb) {
+	    !/* require.ensure */(function (require) {
+	      return cb(null, __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./pages/ProfileDetail\""); e.code = 'MODULE_NOT_FOUND'; throw e; }())).default);
+	    }(__webpack_require__));
+	  }
+	};
+	
+	var PageNotFound = {
+	  path: '*',
+	  getComponent: function getComponent(nextState, cb) {
+	    __webpack_require__.e/* nsure */(15, function (require) {
+	      return cb(null, __webpack_require__(825).default);
 	    });
 	  }
 	};

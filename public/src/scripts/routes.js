@@ -123,6 +123,27 @@ const Community = {
   childRoutes: [Posting]
 }
 
+
+const ProfileInfor = {
+  path:'infor',
+  getComponent(nextState, cb) {
+    require.ensure([], (require) => {
+      return cb(null, require('./pages/ProfileInfor').default)
+    }) 
+  },
+}
+
+const Profile = {
+  path:'profile',
+  getComponent(nextState, cb) {
+    require.ensure([], (require) => {
+      return cb(null, require('./pages/Profile').default)
+    }) 
+  },
+  //注意childRoutes必须在前面定义
+  childRoutes: [ProfileInfor]
+}
+
 const PageNotFound = {
   path: '*',
   getComponent(nextState, cb) {
@@ -149,6 +170,7 @@ const routes = {
         Hints,
         LiveCD,
         Patches,
+        Profile,   
         PageNotFound
       ]
 }
