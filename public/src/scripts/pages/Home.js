@@ -1,19 +1,30 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import {connect} from 'react-redux'
-import homeSty from '../../styles/home.css'
+import { connect } from 'react-redux'
+import { wrap } from 'react-bounds'
+import CSSModules from 'react-css-modules';
+
+import reactCSS from 'reactcss'
+import styles from '../../styles/home.css'
+
 import content from '../../assets/content.json'
 
-class Home extends Component{
+
+class Home extends React.Component{
+
   render() {
     let cont = content[this.props.language].home
+
     return (
-      <div className="home">
-          <p className="home-title">{cont.title}</p>
-          <div className="homt-content">
+      <div className='home'>
+          <p className='title'>
+            {this.props.activeBounds}
+            
+          </p>
+          <div className='content'>
             &emsp;&emsp;{cont.p1} <br/>
             &emsp;&emsp;{cont.p2}
-            &nbsp;<Link to="/projects">{cont.p3}</Link>&nbsp;
+            &nbsp;<Link className='link' to="/projects">{cont.p3}</Link>&nbsp;
            {cont.p4}
           </div>
       </div>
@@ -36,4 +47,13 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Home)
+)(wrap(Home))
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(wrap(CSSModules(Home, styles)))
+
+// export default wrap(Home)
+
+

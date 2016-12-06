@@ -1,0 +1,43 @@
+@media only screen and (min-width: 1201px) {
+    .app-children {
+        width: 1200px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -600px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    .app-children {
+        width: 900px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -450px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .app-children {
+        width: 600px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -300px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 301px) and (max-width: 600px) {
+    .app-children {
+        width: 300px;
+        top: 70px;
+        bottom: 10px;
+        left:50%;
+        margin-left: -150px;
+        position: absolute;
+    }
+}

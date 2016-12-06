@@ -1,0 +1,5 @@
+mongoexport -d shaying -c users -o D:/users.json  
+mongoexport -d shaying -c products -o D:/products.json  
+
+mongoimport -d shaying -c users ~/users.json  
+mongoimport -d shaying -c products ~/products.json  

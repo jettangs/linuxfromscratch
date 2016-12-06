@@ -10,13 +10,15 @@ module.exports = {
     publicPath: "/",
     filename: "bundle.js"
   },
-
+//{ test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
   module: {
     loaders: [
       { test: /\.json$/, loader: "json" },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
+    //{ test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+
       //{ test: /\.css$/, loader: 'style!css?modules!postcss' },
-      { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
+     { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')},
       { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=2048&name=assets/[name].[ext]'}
       //{ test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: ExtractTextPlugin.extract('',  "file-loader")}
     ]

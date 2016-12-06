@@ -2,9 +2,10 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 import profSty from '../../styles/profile.css'
 import { connect } from 'react-redux'
-
+import comAction from '../actions/common'
 
 class Profile extends Component{
+
   render() {
     return (
       <div className="profile">
@@ -17,7 +18,7 @@ class Profile extends Component{
             jettang
           </div>
           <div className="lv">
-            <i>Lv.17</i>
+            Lv.17
           </div>
           <div className="location-icon"></div>
           <div className="location-name">广州</div>
@@ -47,43 +48,24 @@ class Profile extends Component{
                 <li className="twitter"></li>
               </ul>
             </div>
-            <div className="teams">
-              <div className="team-lbl">Teams</div>
-              <ul>
-                <li className="a">
-                  <img src="../../assets/teams/a.png"/>
-                </li>
-                <li className="b">
-                  <img src="../../assets/teams/b.png"/>
-                </li>
-                <li className="c">
-                  <img src="../../assets/teams/c.png"/>
-                </li>
-                <li className="d">
-                  <img src="../../assets/teams/d.png"/>
-                </li>
-              </ul>
-            </div>
             <div className="blog">
-              <span className="blog-lbl">blog</span>
-              <span className="blog-addr">www.jettangs.com</span>
-            </div>
-            <div className="joined">
-              <div className="joined-lbl">joined</div>
+              www.jettangs.com
             </div>
             <div className="follow">
-              <div className="followers">
-                <div className="followers-num">14</div>
-                <div className="followers-lbl">Followers</div>
-              </div>
-              <div className="followers">
-                <div className="following-num">8</div>
-                <div className="following-lbl">Following</div>
-              </div>
-              <div className="postings">
-                <div className="postings-num">26</div>
-                <div className="postings-lbl">Postings</div>
-              </div>
+              <ul className="content">
+                <li className="followers">
+                  <div className="num">14</div>
+                  <div className="lbl">Followers</div>
+                </li>
+                <li className="following">
+                  <div className="num">8</div>
+                  <div className="lbl">Following</div>
+                </li>
+                <li className="postings">
+                  <div className="num">26</div>
+                  <div className="lbl">Postings</div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -97,14 +79,13 @@ class Profile extends Component{
 
 const mapStateToProps = (state,prop)=>{
     return {
-      language: state.common.language,
+       usrIsSgi: state.common.usrIsSgi
     }
 }
 
 const mapDispatchToProps = {
-    //switLan : (lan) => navAction.switLan(lan),
-    //switNavItem: (item) => navAction.switNavItem(item)
-    //getUsrInf : comAction.getUsrInf()
+    setUsrIsSgi : (val) => comAction.setUsrIsSgi(val),
+    dispSignBox: (bool) => comAction.dispSignBox(bool),
 }
 
 export default connect(

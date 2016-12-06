@@ -1,43 +1,49 @@
-@media only screen and (min-width: 1201px) {
-    .app-children {
+@value phone from './breakpoints.css'
+@value tablet-portrait from './breakpoints.css'
+@value tablet-landscape from './breakpoints.css'
+@value desktop from './breakpoints.css'
+@value big-desktop from './breakpoints.css'
+
+.children {
+    top: 70px;
+    bottom: 10px;
+    left:50%;
+    position: absolute;
+}
+
+
+@media(phone) {
+    .children {
         width: 1200px;
-        top: 70px;
-        bottom: 10px;
-        left:50%;
         margin-left: -600px;
-        position: absolute;
     }
 }
 
-@media only screen and (min-width: 901px) and (max-width: 1200px) {
-    .app-children {
-        width: 900px;
-        top: 70px;
-        bottom: 10px;
-        left:50%;
-        margin-left: -450px;
-        position: absolute;
+@media(tablet-portrait) {
+    .children {
+        width: 1200px;
+        margin-left: -600px;
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 900px) {
-    .app-children {
-        width: 600px;
-        top: 70px;
-        bottom: 10px;
-        left:50%;
-        margin-left: -300px;
-        position: absolute;
+@media(tablet-landscape) {
+    .children {
+        width: 1200px;
+        margin-left: -600px;
     }
 }
 
-@media only screen and (min-width: 301px) and (max-width: 600px) {
-    .app-children {
-        width: 300px;
-        top: 70px;
-        bottom: 10px;
-        left:50%;
-        margin-left: -150px;
-        position: absolute;
+@media(desktop) {
+    .children {
+        width: 1200px;
+        margin-left: -600px;
     }
 }
+
+@media(big-desktop) {
+    .children {
+        width: 1200px;
+        margin-left: -600px;
+    }
+}
+

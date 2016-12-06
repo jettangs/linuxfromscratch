@@ -125,7 +125,7 @@ const Community = {
 
 
 const ProfileInfor = {
-  path:'infor',
+  path:'information',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/ProfileInfor').default)
@@ -135,6 +135,7 @@ const ProfileInfor = {
 
 const Profile = {
   path:'profile',
+  indexRoute: { onEnter: (nextState, replace) => replace('/profile/information') },
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/Profile').default)

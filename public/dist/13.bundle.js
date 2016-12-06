@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([13],{
 
-/***/ 818:
+/***/ 838:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20,15 +20,15 @@ webpackJsonp([13],{
 	
 	var _reactRedux = __webpack_require__(261);
 	
-	var _community = __webpack_require__(819);
+	var _community = __webpack_require__(839);
 	
 	var _community2 = _interopRequireDefault(_community);
 	
-	var _posting = __webpack_require__(821);
+	var _posting = __webpack_require__(841);
 	
 	var _posting2 = _interopRequireDefault(_posting);
 	
-	var _common = __webpack_require__(292);
+	var _common = __webpack_require__(457);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
@@ -148,23 +148,23 @@ webpackJsonp([13],{
 
 /***/ },
 
-/***/ 819:
+/***/ 839:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(820);
+	var content = __webpack_require__(840);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(282)(content, {});
+	var update = __webpack_require__(287)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(true) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept(820, function() {
-				var newContent = __webpack_require__(820);
+			module.hot.accept(840, function() {
+				var newContent = __webpack_require__(840);
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -175,10 +175,10 @@ webpackJsonp([13],{
 
 /***/ },
 
-/***/ 820:
+/***/ 840:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(281)();
+	exports = module.exports = __webpack_require__(286)();
 	// imports
 	
 	
@@ -190,7 +190,7 @@ webpackJsonp([13],{
 
 /***/ },
 
-/***/ 821:
+/***/ 841:
 /***/ function(module, exports) {
 
 	module.exports = [

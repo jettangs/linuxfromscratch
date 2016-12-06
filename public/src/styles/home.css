@@ -7,17 +7,17 @@
     padding: 20px 100px;
 }
 
-.home-title{
+.title{
     margin:40px auto 20px;
     text-align: center;
     font-size: 1.3rem;
 }
 
-.homt-content {
+.content {
     line-height: 25px;
 }
 
-.homt-content a{
+.link{
     cursor: pointer;
     color: grey;
 }

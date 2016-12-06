@@ -1,3 +1,8 @@
+@value phone from './breakpoints.css';
+@value tablet-portrait from './breakpoints.css';
+@value tablet-landscape from './breakpoints.css';
+@value desktop from './breakpoints.css';
+
 .navigator{
   background: white;
   height: 60px;

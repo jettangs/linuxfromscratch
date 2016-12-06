@@ -11,7 +11,7 @@ class Sign extends Component{
     state = {passwdEmail:"password",signWay:"signin"}
     
     close() {
-        this.props.closeSignBox()
+        this.props.dispSignBox(false)
     }
 
     dispUsnaHod(str) {
@@ -146,9 +146,9 @@ class Sign extends Component{
 
         if(signWay == "signin") {
             this.password = this.getPwdEmInp()
-            console.log(this.username)
-            console.log(this.signInEmail)
-            console.log(this.password)
+            // console.log(this.username)
+            // console.log(this.signInEmail)
+            // console.log(this.password)
             
             if(!this.getPwdEmInp()) {
                 this.dispPwdEmHod("password not null")
@@ -255,7 +255,7 @@ const mapDispatchToProps = {
     signup : (data,cb) => signAction.signup(data,cb),
     signin : (data,cb) => signAction.signin(data,cb),
     setUsrIsSgi : (val) => comAction.setUsrIsSgi(val),
-    closeSignBox: () => comAction.dispSignBox(false),
+    dispSignBox: (bool) => comAction.dispSignBox(bool),
     getUsrInf : () => comAction.getUsrInf()
 }
 

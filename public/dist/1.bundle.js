@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([1],{
 
-/***/ 300:
+/***/ 470:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20,11 +20,19 @@ webpackJsonp([1],{
 	
 	var _reactRedux = __webpack_require__(261);
 	
-	var _home = __webpack_require__(301);
+	var _reactBounds = __webpack_require__(279);
+	
+	var _reactcss = __webpack_require__(291);
+	
+	var _reactcss2 = _interopRequireDefault(_reactcss);
+	
+	var _home = __webpack_require__(471);
 	
 	var _home2 = _interopRequireDefault(_home);
 	
-	var _content = __webpack_require__(291);
+	var _bounds = __webpack_require__(458);
+	
+	var _content = __webpack_require__(462);
 	
 	var _content2 = _interopRequireDefault(_content);
 	
@@ -36,8 +44,8 @@ webpackJsonp([1],{
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Home = function (_Component) {
-	  _inherits(Home, _Component);
+	var Home = function (_React$Component) {
+	  _inherits(Home, _React$Component);
 	
 	  function Home() {
 	    _classCallCheck(this, Home);
@@ -49,17 +57,34 @@ webpackJsonp([1],{
 	    key: 'render',
 	    value: function render() {
 	      var cont = _content2.default[this.props.language].home;
+	      var styles = (0, _reactcss2.default)({
+	        'default': {
+	          body: {
+	            background: 'white'
+	          }
+	        },
+	        'middleScreen': {
+	          body: {
+	            background: 'green'
+	          }
+	        },
+	        'mobile': {
+	          body: {
+	            background: 'red'
+	          }
+	        }
+	      });
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'home' },
+	        { style: styles.body },
 	        _react2.default.createElement(
 	          'p',
-	          { className: 'home-title' },
+	          { style: _home2.default.title },
 	          cont.title
 	        ),
 	        _react2.default.createElement(
 	          'div',
-	          { className: 'homt-content' },
+	          { style: _home2.default.content },
 	          '\u2003\u2003',
 	          cont.p1,
 	          ' ',
@@ -69,7 +94,7 @@ webpackJsonp([1],{
 	          '\xA0',
 	          _react2.default.createElement(
 	            _reactRouter.Link,
-	            { to: '/projects' },
+	            { style: _home2.default.link, to: '/projects' },
 	            cont.p3
 	          ),
 	          '\xA0',
@@ -77,10 +102,31 @@ webpackJsonp([1],{
 	        )
 	      );
 	    }
+	  }], [{
+	    key: 'bounds',
+	    value: function bounds() {
+	      return {
+	        'largeScreen': {
+	          minWidth: 1201
+	        },
+	        'middleScreen': {
+	          minWidth: 901,
+	          maxwidth: 1200
+	        },
+	        'smallScreen': {
+	          minWidth: 601,
+	          maxWidth: 900
+	        },
+	        'mobile': {
+	          minWidth: 301,
+	          maxWidth: 600
+	        }
+	      };
+	    }
 	  }]);
 	
 	  return Home;
-	}(_react.Component);
+	}(_react2.default.Component);
 	
 	var mapStateToProps = function mapStateToProps(state, prop) {
 	  return {
@@ -94,49 +140,62 @@ webpackJsonp([1],{
 	  //getUsrInf : comAction.getUsrInf()
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(Home);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactBounds.wrap)(Home));
+	
+	// export default wrap(Home)
 
 /***/ },
 
-/***/ 301:
+/***/ 471:
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
+	'use strict';
 	
-	// load the styles
-	var content = __webpack_require__(302);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(282)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(true) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept(302, function() {
-				var newContent = __webpack_require__(302);
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 302:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(281)();
-	// imports
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
 	
+	var _reactcss = __webpack_require__(291);
 	
-	// module
-	exports.push([module.id, ".home {\r\n    position: absolute;\r\n    width: 100%;\r\n    top:0px;\r\n    bottom: 0px;\r\n    background: white;\r\n    padding: 20px 100px;\r\n}\r\n\r\n.home-title{\r\n    margin:40px auto 20px;\r\n    text-align: center;\r\n    font-size: 1.3rem;\r\n}\r\n\r\n.homt-content {\r\n    line-height: 25px;\r\n}\r\n\r\n.homt-content a{\r\n    cursor: pointer;\r\n    color: grey;\r\n}", ""]);
+	var _reactcss2 = _interopRequireDefault(_reactcss);
 	
-	// exports
-
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = (0, _reactcss2.default)({
+	    'default': {
+	        body: {
+	            position: 'absolute',
+	            width: '100%',
+	            top: '0px',
+	            bottom: '0px',
+	            background: 'white',
+	            padding: '20px 100px'
+	        },
+	        title: {
+	            margin: '40px auto 20px',
+	            textAlign: 'center',
+	            fontSize: '1.3rem'
+	        },
+	        content: {
+	            textAlign: 'center',
+	            lineHeight: '25px'
+	        },
+	        link: {
+	            cursor: 'pointer',
+	            color: 'grey'
+	        }
+	    },
+	    'mobile': {
+	        body: {
+	            position: 'absolute',
+	            width: '100%',
+	            top: '0px',
+	            bottom: '0px',
+	            background: 'red',
+	            padding: '20px 30px'
+	        }
+	    }
+	});
 
 /***/ }
 

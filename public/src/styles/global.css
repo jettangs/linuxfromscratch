@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  cursor: default;
+  overflow: hidden;
+}
+
+/*::-webkit-scrollbar {
+    width: 0px;
+}*/
+
+input {
+  font-family: "Microsoft YaHei";
+}
+
+body{
+  background: #F0F0F0;
+  font-family: "Microsoft YaHei";
+}
+
+a {
+  color:black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+
+html {
+  font-size: 1rem;
+}

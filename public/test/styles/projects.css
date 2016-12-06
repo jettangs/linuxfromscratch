@@ -1,0 +1,15 @@
+.projects {
+    position: absolute;
+    width: 100%;
+    top:0px;
+    bottom: 0px;
+    background: white;
+    padding: 50px 100px;
+}
+
+
+.projects a{
+    cursor: pointer;
+    color: grey;
+    
+}

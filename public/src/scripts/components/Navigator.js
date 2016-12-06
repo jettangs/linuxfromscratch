@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import {connect} from 'react-redux'
+import { cont } from 'react-redux'
 
 import nav from '../../styles/navigator.css'
 import content from '../../assets/content.json'
@@ -26,7 +26,7 @@ class Navigator extends Component{
   }
 
   render() {
-    let navItem = content[this.props.language].navItem
+    let navItem = cont[this.props.language].navItem
     let labels = ['home','projects','community','tutorials']
     let items = labels.map(
       //首次加载时会调用render方法 因此每个li会调用一次getItemStyle，之后每当其中一个li被点击后会导致重绘，因此所有的li都会调用一次getItemStyle
@@ -34,7 +34,7 @@ class Navigator extends Component{
     )
 
     return (
-      <div className="navigator">
+      <div className={nav.navigator}>
         <div className="left">
           <img className="logo" src="../../assets/lfs-logo.png"/>
           <span className="nav-title">LFS</span>
