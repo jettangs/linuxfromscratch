@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
-import {connect} from 'react-redux'
-import sideBarSty from '../../styles/sideBar.css'
 import { Link } from 'react-router'
+import { connect } from 'react-redux'
+import CSSModules from 'react-css-modules-simply'
+
+import styles from '../../styles/sideBar.css'
 import comAction from '../actions/common'
 
 class SideBar extends Component {
@@ -24,14 +26,16 @@ class SideBar extends Component {
   render() {
 
     return (
-      <div className="sideBar">
-        <ul>
-          <Link to='/profile' onEnter={this.chkUsrSgi()}><li><i className='userInfo'></i></li></Link>
-          <Link to='/newPost' onEnter={this.chkUsrSgi()}><li><i className='newPost'></i></li></Link>
-          <Link to='/message' onEnter={this.chkUsrSgi()}><li><i className='message'></i></li></Link>
-          <li onClick={this.sgoClk.bind(this)}><i className='logout'></i></li>
-        </ul>
-      </div> 
+      // <div className=>
+       // <ul>
+       <div style="sideBar">
+          <Link to='/profile' style="profile" onClick={this.chkUsrSgi.bind(this)}></Link>
+          <Link to='/newPost' style="post" onClick={this.chkUsrSgi.bind(this)}></Link>
+          <Link to='/message' style="message" onClick={this.chkUsrSgi.bind(this)}></Link>
+          <div style='logout' onClick={this.sgoClk.bind(this)}></div>
+       </div>
+       // </ul>
+     // </div> 
     )
   }
 }
@@ -51,4 +55,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SideBar)
+)(CSSModules(SideBar,styles))

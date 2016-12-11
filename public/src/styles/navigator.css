@@ -2,70 +2,144 @@
 @value tablet-portrait from './breakpoints.css';
 @value tablet-landscape from './breakpoints.css';
 @value desktop from './breakpoints.css';
+@value nav-lan-cn from './icon.css';
+@value nav-lan-en from './icon.css';
+@value navigator-menu from './icon.css';
 
-.navigator{
+.navigator * {
+  margin:0;
+  padding: 0;
+}
+
+.navigator {
+  position: absolute;
+  width: 100%;
   background: white;
   height: 60px;
+  border-color: red;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
 }
 
-.navigator .left {
+.logo-title {
   height: 60px;
-  float:left;
+  float: left;
 }
 
-.nav-title {
+.title {
   display: inline-block;
   vertical-align: middle;
   line-height: 60px;
   font-size: 23px;
+  font-weight: 700;
+  opacity: .7;
 }
 
-.logo{
+@media tablet-portrait {
+    .title{
+      display: none;
+    }
+}
+
+.logo {
   width: 50px;
   vertical-align: middle;
   margin: 0 10px 0;
 }
 
-.navigator .right {
+@media tablet-portrait {
+    .logo{
+      margin-top: 5px; 
+    }
+}
+
+.menu {
+  margin-right: 10px;
   font-size: 1.05rem;
-  float:right;
+  float: right;
   height: 60px;
   line-height: 60px;
 }
 
-.navigator .right ul li a {
+@media phone {
+    .menu {
+      display: none;
+    }
+}
+
+.link {
   cursor: pointer;
   display: block;
-  padding:0 15px 0;
+  padding: 0 15px 0;
   height: 60px;
   line-height: 60px;
   text-align: center;
 }
 
-.navigator .right ul li.active a {
-  color:grey;
-}
-
-.navigator .right ul li.no-active a {
-  color: #1B1C1D;
-}
-
-.navigator .right ul {
+.ul {
   float: left;
   list-style: none;
   height: 60px;
-  
+  font-weight: 700;
 }
 
-.navigator .right ul li.active {
-  
+
+
+.navItem {
+  width: 120px;
   height: 60px;
   float: left;
-  
-}
-
-.navigator .right ul li.no-active {
   color: #1B1C1D;
+  font-size: 1rem;
+}
+
+.navItem:first-child{
+  width: 80px;
+}
+
+
+
+.nav-active a {
+  opacity: .7;
+}
+
+.nav-no-active a {
+  opacity: .5;
+}
+
+.icon-in-right {
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 10px 0;
+  width: 30px;
   height: 60px;
-  float: left;
+  line-height: 60px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center center;
+  font-weight: 700;
+}
+
+.nav-lan-en {
+  composes:icon-in-right;
+  background-image: nav-lan-en;
+}
+
+.nav-lan-cn {
+  composes:icon-in-right;
+  background-image: nav-lan-cn;
+}
+
+.menu-button {
+  composes:icon-in-right;
+  width: 25px;
+  display: none;
+}
+
+@media phone {
+    .menu-button {
+      position: static;
+      float: right;
+      display: inline-block;
+      background-image: navigator-menu;
+    }
 }

@@ -1,67 +1,68 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import sty from '../../styles/profileInfor'
-import stycss from '../../styles/profileInfor.css'
 import { connect } from 'react-redux'
+import CSSModules from 'react-css-modules-simply'
+
+import style from '../../styles/profileInfor.css'
 
 class ProfileInfor extends Component{
   render() {
     return (
-      <div className="profileInfor" style={sty.body}>
-        <div style={sty.row}>
-          <span style={sty.lbl}>Username</span>
-          <span style={sty.text}>jettang</span>
+      <div className="profileInfor" style="body">
+        <div style="row">
+          <span style="lbl">Username</span>
+          <span style="text">jettang</span>
         </div>
-        <div style={sty.row}>
-          <span style={sty.lbl}>Password</span>
-          <span style={sty.link}>Change</span>
+        <div style="row">
+          <span style='lbl'>Password</span>
+          <span style="link">Change</span>
         </div>
-        <div style={sty.row}>
-          <span style={sty.lbl}>Email</span>
-          <span style={sty.text}>625436194@163.com</span>
+        <div style="row">
+          <span style="lbl">Email</span>
+          <span style="text">625436194@163.com</span>
         </div>
-        <div style={sty.row}>
-          <span style={sty.lbl}>Circles</span>
-          <span style={sty.text}>
-            <ul style={sty.ul}>
-              <li style={sty.li}>weibo</li>
-              <li style={sty.li}>github</li>
-              <li style={sty.li}>zhihu</li>
+        <div style="row">
+          <span style="lbl">Circles</span>
+          <span style="text">
+            <ul style="ul">
+              <li style="li">weibo</li>
+              <li style="li">github</li>
+              <li style="li">zhihu</li>
             </ul>
           </span>
         </div>
-        <div style={sty.row}>
-          <span style={sty.lbl}>Blog</span>
-          <span style={sty.link}>Add</span>
+        <div style="row">
+          <span style="lbl">Blog</span>
+          <span style="link">Add</span>
         </div>
-        <div style={sty.row}>
-          <span style={sty.lbl}>Publicity</span>
-          <div style={sty.pub}>
-            <div style={sty.pubLeft}>
-              <div style={sty.fstRowPubIt}>
+        <div style="row">
+          <span style="lbl">Publicity</span>
+          <div style="pub">
+            <div style="pubLeft">
+              <div style="fstRowPubIt">
                 <label>
                   <input type="checkbox" name="Location"/>
-                  <span style={sty.span}></span>Location
+                  <span style="span"></span>Location
                 </label>
               </div>
-              <div style={sty.secRowPubIt}>
+              <div style="secRowPubIt">
                 <label>
                   <input type="checkbox" name="Dynamics"/>
-                  <span style={sty.span}></span>Dynamics
+                  <span style="span"></span>Dynamics
                 </label>
               </div>
             </div>
-            <div style={sty.pubRight}>
-              <div style={sty.fstRowPubIt}>
+            <div style="pubRight">
+              <div style="fstRowPubIt">
                 <label>
                   <input type="checkbox" name="Teams"/>
-                  <span style={sty.span}></span>Teams
+                  <span style="span"></span>Teams
                 </label>
               </div>
-              <div style={sty.secRowPubIt}>
+              <div style="secRowPubIt">
                 <label>
                   <input type="checkbox" name="Blog"/>
-                  <span style={sty.span}></span>Blog
+                  <span style="span"></span>Blog
                 </label>
               </div>
             </div>
@@ -87,4 +88,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ProfileInfor)
+)(CSSModules(ProfileInfor,style))

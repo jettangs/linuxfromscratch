@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 import {connect} from 'react-redux'
+import CSSModules from 'react-css-modules-simply'
 
-import sgStyle from '../../styles/sign.css'
+import styles from '../../styles/sign.css'
 import signAction from '../actions/sign'
 import comAction from '../actions/common'
 
@@ -118,8 +119,8 @@ class Sign extends Component{
 
     //调用this.refs.pwdLabel.click()方法会导致执行流程异常
     actv(sel,nosel,lbl) {
-        sel.className = "select"
-        nosel.className = "no-select"
+        sel.style = "select"
+        nosel.style = "no-select"
         this.setPwdEmInp("")
         
         this.setState({passwdEmail: lbl})
@@ -146,10 +147,6 @@ class Sign extends Component{
 
         if(signWay == "signin") {
             this.password = this.getPwdEmInp()
-            // console.log(this.username)
-            // console.log(this.signInEmail)
-            // console.log(this.password)
-            
             if(!this.getPwdEmInp()) {
                 this.dispPwdEmHod("password not null")
             }
@@ -212,32 +209,35 @@ class Sign extends Component{
     render() {
         let signWay = this.state.signWay
         return (
-            <div className="sign">
-                <div onClick={this.close.bind(this)} className="close"></div>
-                <div className="content">
-                    <div className="sign-in-up">
-                        {signWay=="signin" ? "Sign in" : "Sign up"}
-                    </div>
-                    <div className="username">
-                        Username 
-                        <span>{signWay=="signin" ? " or email address" : ""} </span>
-                    </div>
-                    <div className="inputUsername">
-                        <input ref="usernameInput" type="text"/>
-                    </div>
-                    <div className={signWay=="signin" ? "password" : "password-pointer"}>
-                        <span ref="pwdLabel" onClick={this.switPwdOrEmail.bind(this,"password")} className={this.state.passwdEmail == "password"? "select" : "no-select"}>Password</span>
-                        <span>{signWay=="signin" ? "" : " / "}</span>
-                        <span ref="emailLabel" onClick={this.switPwdOrEmail.bind(this,"email")} className={this.state.passwdEmail == "email"? "select" : "no-select"}>{signWay == "signup" ? "Email" : ""} </span>
-                    </div>
-                    <div className="inputPassword">
-                        <input ref="passwdEmailInput" type={this.state.passwdEmail == "password"? "password" : "text"}/>
-                    </div>
-                    <div onClick={this.switSignWay.bind(this)} className="otherSignWay">
-                        {signWay=="signin" ? "Sign up" : "Sign in"}
-                    </div>
-                    <div onClick={this.submit.bind(this,signWay)} className="submit">
-                        OK
+            <div>
+                <div style="sign-frame"></div>
+                <div style="sign">
+                    <div onClick={this.close.bind(this)} style="close"></div>
+                    <div style="content">
+                        <div style="sign-in-up">
+                            {signWay=="signin" ? "Sign in" : "Sign up"}
+                        </div>
+                        <div style="username">
+                            Username 
+                            <span>{signWay=="signin" ? " or email address" : ""} </span>
+                        </div>
+                        <div style="inputUsername">
+                            <input ref="usernameInput" type="text"/>
+                        </div>
+                        <div style={signWay=="signin" ? "password" : "password-pointer"}>
+                            <span ref="pwdLabel" onClick={this.switPwdOrEmail.bind(this,"password")} style={this.state.passwdEmail == "password"? "select" : "no-select"}>Password</span>
+                            <span>{signWay=="signin" ? "" : " / "}</span>
+                            <span ref="emailLabel" onClick={this.switPwdOrEmail.bind(this,"email")} style={this.state.passwdEmail == "email"? "select" : "no-select"}>{signWay == "signup" ? "Email" : ""} </span>
+                        </div>
+                        <div style="inputPassword">
+                            <input ref="passwdEmailInput" type={this.state.passwdEmail == "password"? "password" : "text"}/>
+                        </div>
+                        <div onClick={this.switSignWay.bind(this)} style="otherSignWay">
+                            {signWay=="signin" ? "Sign up" : "Sign in"}
+                        </div>
+                        <div onClick={this.submit.bind(this,signWay)} style="submit">
+                            OK
+                        </div>
                     </div>
                 </div>
             </div>
@@ -262,4 +262,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Sign)
+)(CSSModules(Sign,styles))

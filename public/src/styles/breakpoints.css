@@ -4,6 +4,8 @@
 
 @value tablet-landscape: (min-width: 1000px) and (max-width: 1299px);
 
-@value desktop: (min-width: 1800px)
+@value desktop: (min-width: 1300px) and (max-width: 1799px);
+
+@value big-desktop: (min-width: 1800px)
 
 

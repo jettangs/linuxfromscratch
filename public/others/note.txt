@@ -1,0 +1,6 @@
+
+在npm包中 可以直接用../..引用导出的主文件
+如：
+var Markdown = require('../../src/react-markdown.js');
+等于
+var Markdown = require('../../');

@@ -1,49 +1,48 @@
-@value phone from './breakpoints.css'
-@value tablet-portrait from './breakpoints.css'
-@value tablet-landscape from './breakpoints.css'
-@value desktop from './breakpoints.css'
-@value big-desktop from './breakpoints.css'
+@value phone from './breakpoints.css';
+@value tablet-portrait from './breakpoints.css';
+@value tablet-landscape from './breakpoints.css';
+@value desktop from './breakpoints.css';
+@value big-desktop from './breakpoints.css';
 
 .children {
-    top: 70px;
-    bottom: 10px;
+    top: 90px;
     left:50%;
+    bottom: 0;
     position: absolute;
 }
 
-
-@media(phone) {
+@media phone {
     .children {
-        width: 1200px;
-        margin-left: -600px;
+        width: 300px;
+        margin-left: -150px;
     }
 }
 
-@media(tablet-portrait) {
+@media tablet-portrait {
     .children {
-        width: 1200px;
-        margin-left: -600px;
+        width: 540px;
+        margin-left: -270px;
     }
 }
 
-@media(tablet-landscape) {
+@media tablet-landscape {
     .children {
-        width: 1200px;
-        margin-left: -600px;
+        width: 940px;
+        margin-left: -470px;
     }
 }
 
-@media(desktop) {
+@media desktop {
     .children {
-        width: 1200px;
-        margin-left: -600px;
+        width: 1240px;
+        margin-left: -620px;
     }
 }
 
-@media(big-desktop) {
+@media big-desktop {
     .children {
-        width: 1200px;
-        margin-left: -600px;
+        width: 1740px;
+        margin-left: -870px;
     }
 }
 

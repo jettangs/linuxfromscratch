@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import projSty from '../../styles/projects.css'
-import content from '../../assets/content.json'
+import content from '../../jsons/global.json'
 import {connect} from 'react-redux'
 
 class Projects extends Component{

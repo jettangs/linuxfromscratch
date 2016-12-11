@@ -11,11 +11,11 @@ const Home = {
   }
 }
 
-const Projects = {
-  path: 'projects',
+const News = {
+  path: 'home/news/:id',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
-      return cb(null, require('./pages/Projects').default)
+      return cb(null, require('./pages/News').default)
     }) 
   }
 }
@@ -32,7 +32,7 @@ const Tutorials = {
 
 
 const LFS = {
-  path: 'lfs',
+  path: 'projects/lfs',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/LFS').default)
@@ -41,7 +41,7 @@ const LFS = {
 }
 
 const ALFS = {
-  path: 'alfs',
+  path: 'projects/alfs',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/ALFS').default)
@@ -50,7 +50,7 @@ const ALFS = {
 }
 
 const BLFS = {
-  path: 'blfs',
+  path: 'projects/blfs',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/BLFS').default)
@@ -59,7 +59,7 @@ const BLFS = {
 }
 
 const CLFS = {
-  path: 'clfs',
+  path: 'projects/clfs',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/CLFS').default)
@@ -68,7 +68,7 @@ const CLFS = {
 }
 
 const HLFS = {
-  path: 'hlfs',
+  path: 'projects/hlfs',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/HLFS').default)
@@ -77,7 +77,7 @@ const HLFS = {
 }
 
 const Hints = {
-  path: 'hints',
+  path: 'projects/hints',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/Hints').default)
@@ -86,7 +86,7 @@ const Hints = {
 }
 
 const LiveCD = {
-  path: 'livecd',
+  path: 'projects/livecd',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/LiveCD').default)
@@ -95,13 +95,24 @@ const LiveCD = {
 }
 
 const Patches = {
-  path: 'patches',
+  path: 'projects/patches',
   getComponent(nextState, cb) {
     require.ensure([], (require) => {
       return cb(null, require('./pages/Patches').default)
     }) 
   }
 }
+
+const Projects = {
+  path: 'projects',
+  getComponent(nextState, cb) {
+    require.ensure([], (require) => {
+      return cb(null, require('./pages/Projects').default)
+    }) 
+  }
+
+}
+
 
 const Posting = {
   path: 'posting/:id',
@@ -154,12 +165,24 @@ const PageNotFound = {
   }
 }
 
-const routes = {
+const Dashboard = {
+  path: '/admin',
+  getComponent(nextState, cb) {
+    require.ensure([], (require) => {
+      return cb(null, require('./pages/admin/Dashboard').default)
+    }) 
+  }
+}
+
+const routes = 
+[
+  {
       path: '/',
       component: App,
       indexRoute: { onEnter: (nextState, replace) => replace('/home') },
       childRoutes: [
         Home,
+        News,
         Projects,
         Tutorials,
         Community,
@@ -171,11 +194,12 @@ const routes = {
         Hints,
         LiveCD,
         Patches,
-        Profile,   
-        PageNotFound
+        Profile
       ]
-}
-
+  },
+  Dashboard,
+  PageNotFound
+]
 
 
 export default routes

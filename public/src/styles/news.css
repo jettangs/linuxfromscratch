@@ -1,0 +1,92 @@
+@value phone from './breakpoints.css';
+@value tablet-portrait from './breakpoints.css';
+@value tablet-landscape from './breakpoints.css';
+@value desktop from './breakpoints.css';
+@value big-desktop from './breakpoints.css';
+
+
+.news {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+    background: white;
+    border-radius: 5px;
+    margin-left: -50%;
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    left: 50%;
+    overflow: visible;
+}
+
+.news code {
+    font-size: 0.9rem;
+    background: white;
+}
+
+
+/*---------------news img-------------*/
+
+@media phone {
+    .news img {
+        width:100%;
+    }
+}
+
+@media tablet-portrait {
+    .news img {
+        width:100%;
+    }
+}
+
+.title {
+    text-align: center;
+    margin: 50px auto 30px;
+    font-size: 1.4rem;
+    color: #1B1C1D;
+}
+
+.author-date {
+    display: inline-block;
+}
+
+.author {
+    margin-left: 20px;
+    float:left;
+    color:grey;
+    font-size: 0.9rem;
+}
+
+.refName {
+    display: block;
+    margin-left: 20px;
+    float:left;
+    color:grey;
+    font-size: 0.9rem;
+}
+
+.date {
+    margin-left: 20px;
+    float:left;
+    color:grey;
+    font-size: 0.9rem;
+}
+
+.content {
+    margin-top: 20px;
+    clear: both;
+}
+
+.result-pane {
+    top: 57px;
+    right: 0;
+    left: 50%;
+    bottom: 0;
+    overflow: auto;
+    padding: 10px;
+    padding-left: 20px;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+

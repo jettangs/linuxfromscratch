@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var values = require('postcss-modules-values');
 
 module.exports = {
   devtool: 'source-map',
@@ -15,16 +16,14 @@ module.exports = {
     loaders: [
       { test: /\.json$/, loader: "json" },
       { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-    //{ test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader") },
-
-      //{ test: /\.css$/, loader: 'style!css?modules!postcss' },
-     { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')},
-      { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=2048&name=assets/[name].[ext]'}
+      { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader')},
+      { test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: 'url-loader?limit=2048&name=assets/[name].[ext]'},
       //{ test: /\.(gif|jpg|png|woff|svg|eot|ttf)\??.*$/, loader: ExtractTextPlugin.extract('',  "file-loader")}
+       { test: /\.md$/, loaders: ['html-loader'] },
     ]
   },
   postcss: [
-    require('autoprefixer')
+    values
   ],
 
   plugins: [

@@ -2,15 +2,17 @@
 .community {
     width: 100%;
     top:0px;
-    bottom: 0px;
-    background: white;
+    bottom: 30px;
     position: absolute;
 }
 
 .postList {
     width: 40%;
+    height: 100%;
     position: absolute;
+    border-radius: 5px;
     background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
 }
 
 
@@ -18,67 +20,69 @@
     top: 0;
     overflow: hidden;
     right: 0px;
-    left: 40%;
+    left: 42%;
     bottom: 0;
     position: absolute;
-    border-left: 10px solid #F0F0F0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
 }
 
 
-
-.community .row:first-child {
+.row:first-child {
     padding-top: 5px;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
     border-bottom: 1px solid #F0F0F0;
 }
 
-.community .row {
-    padding-bottom: 5px;
-    margin: 0 5px 5px;
+.row {
+    padding-bottom: 15px;
+    margin: 10px 15px 5px;
     border-bottom: 1px solid #F0F0F0;
 }
 
-.community .post-title {
+.post-title {
+    font-size: 0.95rem;
+    display: block;
     margin-left: 5px;
 }
 
-.community .post-title a:hover{
+.post-title:hover{
     color:gray;
 }
 
-.community .post-buttom {
+.post-buttom {
     margin-top: 2px;
 }
 
-.community .post-buttom .help {
+.help {
     margin-left: 5px;
     color: orange;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 1px;
     border-radius: 4px;
     border:1px solid orange;
 }
 
-.community .post-buttom .solve {
+.solve {
     margin-left: 5px;
     color: limegreen;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     padding: 1px;
     border-radius: 4px;
     border:1px solid limegreen;
 }
 
-.community .post-buttom .author {
+.author {
     margin-top: 5px;
     margin-right: 5px;
     color: grey;
     float: right;
-    font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
-.community .post-buttom .answers-views {
+.answers-views {
     margin-left: 5px;
     margin-top: 6px;
     font-size: 0.8rem;

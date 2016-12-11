@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
 import {connect} from 'react-redux'
+import CSSModules from 'react-css-modules-simply'
 
-import ctStyle from '../../styles/community.css'
-import postings from '../../jsons/posting.json'
+import styles from '../../styles/community.css'
+import postings from '../../jsons/community/posting.json'
 import comAction from '../actions/common'
 
 class Community extends Component{
@@ -16,27 +17,25 @@ class Community extends Component{
 
   render() {
     let postingList = postings.map(
-      posting => <div className={"row"} key={posting.id}>
-            <div className="post-title">
-              <Link to={{pathname:"/community/posting/"+posting.id}}>
-                {posting.title} 
-              </Link>
-            </div>
-            <div className="post-buttom">
-              <span className="solve">solve</span> 
-              <span className="help">help</span>
-              <span className="answers-views">{posting.answers}/{posting.views}</span>
-              <span className="author">{posting.author}</span>
+      posting => <div style={"row"} key={posting._id}>
+            <Link style="post-title" to={{pathname:"/community/posting/"+posting._id}}>
+              {posting.title} 
+            </Link>
+            <div style="post-buttom">
+              <span style="solve">solve</span> 
+              <span style="help">help</span>
+              <span style="answers-views">{posting.answers}/{posting.views}</span>
+              <span style="author">{posting.author}</span>
             </div>
           </div>
     )
 
     return (
-      <div className="community">
-        <div className="postList">
+      <div style="community">
+        <div style="postList">
           {postingList}
         </div>
-        <div className="postContent" ref="postContent">
+        <div style="postContent" ref="postContent">
           {this.props.children}
         </div>
       </div>
@@ -60,4 +59,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Community)
+)(CSSModules(Community,styles))

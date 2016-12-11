@@ -3,12 +3,10 @@ import { render } from 'react-dom'
 import ReactRouter, {Router, Route, Link, IndexRedirect, useRouterHistory, hashHistory, history } from 'react-router'
 import { createHashHistory } from 'history'
 import { connect } from 'react-redux'
-import CSSModules from 'react-css-modules';
+import CSSModules from 'react-css-modules-simply'
 
 import global from '../../styles/global.css'
-import icon from '../../styles/icon.css'
-
-import styles from '../../styles/app.css'
+import style from '../../styles/app.css'
 import navAction from '../actions/navigator'
 import comAction from '../actions/common'
 
@@ -31,7 +29,6 @@ class App extends Component {
       this.props.dispSignBox(true)
       return
     }
-    console.log(this.props.dispSignBox)
     pana = pana.substr(1,pana.length)
     //处理类似http://localhost:3000/#/community/posting/b1c98675-8b29-4的情况
     if(pana.indexOf('/') >= 0) pana = pana.substr(0,pana.indexOf('/'))
@@ -51,7 +48,6 @@ class App extends Component {
     }else {
       this.props.switNavItem(null)
     }
-    console.log(this.props)
   }
 
   render() {
@@ -60,7 +56,7 @@ class App extends Component {
         {this.props.signBoxIsDisp && <Sign/>}
         {this.props.usrIsSgi && <SideBar/>}
         <Navigator/>
-        <div styleName="children">
+        <div style="children">
           {this.props.children}
         </div>
       </div> 
@@ -84,4 +80,4 @@ const mapDispatchToProps = {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CSSModules(App,styles))
+)(CSSModules(App,style))
