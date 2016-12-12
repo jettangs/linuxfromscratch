@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([9],{
 
-/***/ 515:
+/***/ 527:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26,16 +26,16 @@ webpackJsonp([9],{
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var Hints = function (_Component) {
-	  _inherits(Hints, _Component);
+	var PageNotFound = function (_Component) {
+	  _inherits(PageNotFound, _Component);
 	
-	  function Hints() {
-	    _classCallCheck(this, Hints);
+	  function PageNotFound() {
+	    _classCallCheck(this, PageNotFound);
 	
-	    return _possibleConstructorReturn(this, (Hints.__proto__ || Object.getPrototypeOf(Hints)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (PageNotFound.__proto__ || Object.getPrototypeOf(PageNotFound)).apply(this, arguments));
 	  }
 	
-	  _createClass(Hints, [{
+	  _createClass(PageNotFound, [{
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
@@ -45,16 +45,16 @@ webpackJsonp([9],{
 	        _react2.default.createElement(
 	          'h3',
 	          null,
-	          'Hints'
+	          '404'
 	        )
 	      );
 	    }
 	  }]);
 	
-	  return Hints;
+	  return PageNotFound;
 	}(_react.Component);
 	
-	exports.default = Hints;
+	exports.default = PageNotFound;
 
 /***/ }
 

@@ -1,0 +1,40 @@
+@value phone from '../../global/styles/breakpoints.css';
+@value tablet-portrait from '../../global/styles/breakpoints.css';
+@value tablet-landscape from '../../global/styles/breakpoints.css';
+@value desktop from '../../global/styles/breakpoints.css';
+@value big-desktop from '../../global/styles/breakpoints.css';
+
+.children {
+    margin: 30px auto;
+}
+
+@media phone {
+    .children {
+        width: 300px;
+    }
+}
+
+@media tablet-portrait {
+    .children {
+        width: 540px;
+    }
+}
+
+@media tablet-landscape {
+    .children {
+        width: 940px;
+    }
+}
+
+@media desktop {
+    .children {
+        width: 1240px;
+    }
+}
+
+@media big-desktop {
+    .children {
+        width: 1740px;
+    }
+}
+

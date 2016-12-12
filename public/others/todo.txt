@@ -8,3 +8,7 @@ pagenotfound返回上一个页面
 前台验证
 用户名中有字符@，点击后无反应
 后台用户密码不发送
+
+project的路由
+CLFS.md的表格
+community phone布局

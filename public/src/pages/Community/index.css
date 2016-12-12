@@ -1,0 +1,102 @@
+@value phone from '../../global/styles/breakpoints.css';
+@value tablet-portrait from '../../global/styles/breakpoints.css';
+@value tablet-landscape from '../../global/styles/breakpoints.css';
+@value desktop from '../../global/styles/breakpoints.css';
+@value big-desktop from '../../global/styles/breakpoints.css';
+
+.community {
+    width: 100%;
+    height: 600px;
+}
+
+.postList {
+    width: 40%;
+    height: 100%;
+    float: left;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+@media phone {
+    .postList {
+        width: 100%;
+    }
+}
+
+.postContent {
+    overflow: hidden;
+    width: 58%;
+    height: 100%;
+    float: right;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+@media phone {
+    .postContent {
+        display: none;
+    }
+}
+
+.row:first-child {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.row {
+    padding-bottom: 15px;
+    margin: 10px 15px 5px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.post-title {
+    font-size: 0.95rem;
+    display: block;
+    margin-left: 5px;
+}
+
+.post-title:hover{
+    color:gray;
+}
+
+.post-buttom {
+    margin-top: 2px;
+}
+
+.help {
+    margin-left: 5px;
+    color: orange;
+    font-size: 0.7rem;
+    padding: 1px;
+    border-radius: 4px;
+    border:1px solid orange;
+}
+
+.solve {
+    margin-left: 5px;
+    color: limegreen;
+    font-size: 0.7rem;
+    padding: 1px;
+    border-radius: 4px;
+    border:1px solid limegreen;
+}
+
+.author {
+    margin-top: 5px;
+    margin-right: 5px;
+    color: grey;
+    float: right;
+    font-size: 0.8rem;
+}
+
+.answers-views {
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    float: right;
+    color: deepskyblue;
+}

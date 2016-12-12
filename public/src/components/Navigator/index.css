@@ -1,0 +1,147 @@
+@value path: '../../global/styles/';
+@value phone from '../../global/styles/breakpoints.css';
+@value tablet-portrait from '../../global/styles/breakpoints.css';
+@value tablet-landscape from '../../global/styles/breakpoints.css';
+@value desktop from '../../global/styles/breakpoints.css';
+@value big-desktop from '../../global/styles/breakpoints.css';
+
+@value lan-cn from '../../global/styles/icon.css';
+@value lan-en from '../../global/styles/icon.css';
+@value menu from '../../global/styles/icon.css';
+
+.navigator * {
+  margin:0;
+  padding: 0;
+}
+
+.navigator {
+  width: 100%;
+  background: white;
+  height: 60px;
+  border-color: red;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+.logo-title {
+  height: 60px;
+  float: left;
+}
+
+.title {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 60px;
+  font-size: 23px;
+  font-weight: 700;
+  opacity: .7;
+}
+
+@media tablet-portrait {
+    .title{
+      display: none;
+    }
+}
+
+.logo {
+  width: 50px;
+  vertical-align: middle;
+  margin: 0 10px 0;
+}
+
+@media tablet-portrait {
+    .logo{
+      margin-top: 5px; 
+    }
+}
+
+.menu {
+  margin-right: 10px;
+  font-size: 1.05rem;
+  float: right;
+  height: 60px;
+  line-height: 60px;
+}
+
+@media phone {
+    .menu {
+      display: none;
+    }
+}
+
+.link {
+  cursor: pointer;
+  display: block;
+  padding: 0 15px 0;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.ul {
+  float: left;
+  list-style: none;
+  height: 60px;
+  font-weight: 700;
+}
+
+
+
+.navItem {
+  width: 120px;
+  height: 60px;
+  float: left;
+  color: #1B1C1D;
+  font-size: 1rem;
+}
+
+.navItem:first-child{
+  width: 80px;
+}
+
+
+
+.nav-active a {
+  opacity: .7;
+}
+
+.nav-no-active a {
+  opacity: .5;
+}
+
+.icon-in-right {
+  cursor: pointer;
+  vertical-align: middle;
+  margin: 0 10px 0;
+  width: 30px;
+  height: 60px;
+  line-height: 60px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-position: center center;
+  font-weight: 700;
+}
+
+.lan-en {
+  composes:icon-in-right;
+  background-image: lan-en;
+}
+
+.lan-cn {
+  composes:icon-in-right;
+  background-image: lan-cn;
+}
+
+.menu-button {
+  composes:icon-in-right;
+  width: 25px;
+  display: none;
+}
+
+@media phone {
+    .menu-button {
+      position: static;
+      float: right;
+      display: inline-block;
+      background-image: menu;
+    }
+}

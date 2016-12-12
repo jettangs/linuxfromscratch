@@ -1,0 +1,145 @@
+@value close from '../../global/styles/icon.css';
+
+.sign-frame{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    background: #F0F0F0;
+    opacity: .8;
+    z-index: 12;
+}
+
+.sign{
+    user-select:none;
+    position: fixed;
+    height: 350px;
+    width:300px;
+    z-index: 13;
+    left:0;
+    right:0;
+    background: white;
+    margin: 130px auto auto;
+    border:5px solid grey;
+}
+
+.content{
+    margin: 0 auto;
+    width:180px;
+    height: 300px;
+}
+
+.sign .sign-in-up{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 35px auto 0;
+    text-align:center;
+    width:180px;
+    height: 40px;
+    color: grey;
+    line-height: 40px;
+}
+
+.sign .username{
+    font-size:0.9rem;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.sign .username span{
+    font-size:0.7rem;
+    color: #CFCFDA;
+}
+
+.sign .password{
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+}
+
+.sign .password-pointer{
+    cursor: pointer;
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+}
+
+.sign .password-pointer .select{
+    cursor: pointer;
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+}
+
+.sign .password-pointer .no-select{
+    cursor: pointer;
+    font-size:0.9rem;
+    margin-bottom: 7px;
+    font-weight: normal;
+    color: #CFCFDA;
+}
+
+.sign .otherSignWay{
+    user-select:none;
+    float:left;
+    cursor: pointer;
+    color: grey;
+    font-size:0.9rem;
+    margin-right:20px;
+}
+
+.sign .inputName{
+    text-align:center;
+}
+
+.sign .inputUsername input{
+    width:100%;
+    margin: 0 auto 15px;
+    border-radius: 3px;
+    height: 30px;
+    outline: none;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+.sign .inputPassword {
+    margin-top: 7px;
+
+}
+
+.sign .inputPassword input{
+    width:100%;
+    margin: 0 auto 15px;
+    border-radius: 3px;
+    height: 30px;
+    outline: none;
+    font-size: 14px;
+    padding-left: 5px;
+    line-height: 20px;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+}
+
+.sign .close{
+    cursor: pointer;
+    margin-left:3px;
+    margin-top:3px;
+    width:20px;
+    height:20px;
+    float:right;
+    background-image: close;
+}
+
+.sign .submit{
+    float:right;
+    color:white;
+    cursor: pointer;
+    padding: 2px 3px;
+    background-color: grey;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}

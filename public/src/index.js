@@ -6,8 +6,8 @@ import { createHashHistory } from 'history'
 import { createStore, applyMiddleware } from "redux"
 import { Provider,connect } from 'react-redux'
 import { syncHistoryWithStore } from 'react-router-redux'
-import reducers from "./scripts/reducers"
-import routes from './scripts/routes'
+import reducers from "./reducers"
+import routes from './global/scripts/routes'
 
 let store = createStore(reducers,applyMiddleware(thunkMiddleware))
 

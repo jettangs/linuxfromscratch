@@ -85,7 +85,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "fbaa94d8474be0d30978"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "57af4f4d21a5582a3f7f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -30166,7 +30166,7 @@
 	  path: 'home',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(1, function (require) {
-	      return cb(null, __webpack_require__(457).default);
+	      return cb(null, __webpack_require__(455).default);
 	    });
 	  }
 	};
@@ -30175,7 +30175,7 @@
 	  path: 'home/news/:id',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(2, function (require) {
-	      return cb(null, __webpack_require__(463).default);
+	      return cb(null, __webpack_require__(461).default);
 	    });
 	  }
 	};
@@ -30184,79 +30184,7 @@
 	  path: 'tutorials',
 	  getComponent: function getComponent(nextState, cb) {
 	    __webpack_require__.e/* nsure */(3, function (require) {
-	      return cb(null, __webpack_require__(509).default);
-	    });
-	  }
-	};
-	
-	var LFS = {
-	  path: 'projects/lfs',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(4, function (require) {
-	      return cb(null, __webpack_require__(510).default);
-	    });
-	  }
-	};
-	
-	var ALFS = {
-	  path: 'projects/alfs',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(5, function (require) {
-	      return cb(null, __webpack_require__(511).default);
-	    });
-	  }
-	};
-	
-	var BLFS = {
-	  path: 'projects/blfs',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(6, function (require) {
-	      return cb(null, __webpack_require__(512).default);
-	    });
-	  }
-	};
-	
-	var CLFS = {
-	  path: 'projects/clfs',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(7, function (require) {
-	      return cb(null, __webpack_require__(513).default);
-	    });
-	  }
-	};
-	
-	var HLFS = {
-	  path: 'projects/hlfs',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(8, function (require) {
-	      return cb(null, __webpack_require__(514).default);
-	    });
-	  }
-	};
-	
-	var Hints = {
-	  path: 'projects/hints',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(9, function (require) {
-	      return cb(null, __webpack_require__(515).default);
-	    });
-	  }
-	};
-	
-	var LiveCD = {
-	  path: 'projects/livecd',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(10, function (require) {
-	      return cb(null, __webpack_require__(516).default);
-	    });
-	  }
-	};
-	
-	var Patches = {
-	  path: 'projects/patches',
-	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(11, function (require) {
-	      return cb(null, __webpack_require__(1014).default);
+	      return cb(null, __webpack_require__(507).default);
 	    });
 	  }
 	};
@@ -30264,8 +30192,8 @@
 	var Projects = {
 	  path: 'projects',
 	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(12, function (require) {
-	      return cb(null, __webpack_require__(1015).default);
+	    __webpack_require__.e/* nsure */(4, function (require) {
+	      return cb(null, __webpack_require__(508).default);
 	    });
 	  }
 	};
@@ -30273,8 +30201,8 @@
 	var Posting = {
 	  path: 'posting/:id',
 	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(13, function (require) {
-	      return cb(null, __webpack_require__(1018).default);
+	    __webpack_require__.e/* nsure */(5, function (require) {
+	      return cb(null, __webpack_require__(511).default);
 	    });
 	  }
 	};
@@ -30285,19 +30213,19 @@
 	      return replace('/community/posting/b1c98675-8b29-481e-8b94-a86ef15ed8cc');
 	    } },
 	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(14, function (require) {
-	      return cb(null, __webpack_require__(1024).default);
+	    __webpack_require__.e/* nsure */(6, function (require) {
+	      return cb(null, __webpack_require__(517).default);
 	    });
 	  },
 	
 	  childRoutes: [Posting]
 	};
 	
-	var ProfileInfor = {
+	var ProfileDetail = {
 	  path: 'information',
 	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(15, function (require) {
-	      return cb(null, __webpack_require__(1028).default);
+	    __webpack_require__.e/* nsure */(7, function (require) {
+	      return cb(null, __webpack_require__(521).default);
 	    });
 	  }
 	};
@@ -30308,20 +30236,20 @@
 	      return replace('/profile/information');
 	    } },
 	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(16, function (require) {
-	      return cb(null, __webpack_require__(1031).default);
+	    __webpack_require__.e/* nsure */(8, function (require) {
+	      return cb(null, __webpack_require__(524).default);
 	    });
 	  },
 	
 	  //注意childRoutes必须在前面定义
-	  childRoutes: [ProfileInfor]
+	  childRoutes: [ProfileDetail]
 	};
 	
 	var PageNotFound = {
 	  path: '*',
 	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(17, function (require) {
-	      return cb(null, __webpack_require__(1034).default);
+	    __webpack_require__.e/* nsure */(9, function (require) {
+	      return cb(null, __webpack_require__(527).default);
 	    });
 	  }
 	};
@@ -30329,8 +30257,8 @@
 	var Dashboard = {
 	  path: '/admin',
 	  getComponent: function getComponent(nextState, cb) {
-	    __webpack_require__.e/* nsure */(18, function (require) {
-	      return cb(null, __webpack_require__(1035).default);
+	    __webpack_require__.e/* nsure */(10, function (require) {
+	      return cb(null, __webpack_require__(528).default);
 	    });
 	  }
 	};
@@ -30341,7 +30269,7 @@
 	  indexRoute: { onEnter: function onEnter(nextState, replace) {
 	      return replace('/home');
 	    } },
-	  childRoutes: [Home, News, Projects, Tutorials, Community, LFS, ALFS, BLFS, CLFS, HLFS, Hints, LiveCD, Patches, Profile]
+	  childRoutes: [Home, News, Projects, Tutorials, Community, Profile]
 	}, Dashboard, PageNotFound];
 	
 	exports.default = routes;
@@ -30376,31 +30304,31 @@
 	
 	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
 	
-	var _global = __webpack_require__(436);
+	var _main = __webpack_require__(436);
 	
-	var _global2 = _interopRequireDefault(_global);
+	var _main2 = _interopRequireDefault(_main);
 	
-	var _app = __webpack_require__(440);
+	var _index = __webpack_require__(440);
 	
-	var _app2 = _interopRequireDefault(_app);
+	var _index2 = _interopRequireDefault(_index);
 	
-	var _navigator = __webpack_require__(443);
+	var _navigator = __webpack_require__(442);
 	
 	var _navigator2 = _interopRequireDefault(_navigator);
 	
-	var _common = __webpack_require__(444);
+	var _common = __webpack_require__(443);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
-	var _Navigator = __webpack_require__(445);
+	var _Navigator = __webpack_require__(444);
 	
 	var _Navigator2 = _interopRequireDefault(_Navigator);
 	
-	var _Sign = __webpack_require__(450);
+	var _Sign = __webpack_require__(448);
 	
 	var _Sign2 = _interopRequireDefault(_Sign);
 	
-	var _SideBar = __webpack_require__(454);
+	var _SideBar = __webpack_require__(452);
 	
 	var _SideBar2 = _interopRequireDefault(_SideBar);
 	
@@ -30496,7 +30424,7 @@
 	  }
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(App, _app2.default));
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(App, _index2.default));
 
 /***/ },
 /* 285 */
@@ -36102,31 +36030,11 @@
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"phone":"(max-width: 600px)","tablet-portrait":"(min-width: 601px) and (max-width: 999px)","tablet-landscape":"(min-width: 1000px) and (max-width: 1299px)","desktop":"(min-width: 1300px) and (max-width: 1799px)","big-desktop":"(min-width: 1800px)","children":"app__children___1uy9t"};
+	module.exports = {"path":"'../../global/styles/'","phone":"from '../../global/styles/'+'breakpoints.css'","tablet-portrait":"from '../../global/styles/'+'breakpoints.css'","tablet-landscape":"from '../../global/styles/'+'breakpoints.css'","desktop":"from '../../global/styles/'+'breakpoints.css'","big-desktop":"from '../../global/styles/'+'breakpoints.css'","children":"index__children___3JPI5"};
 
 /***/ },
 /* 441 */,
 /* 442 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(438)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "\r\n\r\n\r\n", ""]);
-	
-	// exports
-	exports.locals = {
-		"phone": "(max-width: 600px)",
-		"tablet-portrait": "(min-width: 601px) and (max-width: 999px)",
-		"tablet-landscape": "(min-width: 1000px) and (max-width: 1299px)",
-		"desktop": "(min-width: 1300px) and (max-width: 1799px)",
-		"big-desktop": "(min-width: 1800px)"
-	};
-
-/***/ },
-/* 443 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36144,7 +36052,7 @@
 	exports.default = { switNavItem: switNavItem };
 
 /***/ },
-/* 444 */
+/* 443 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36198,7 +36106,7 @@
 	exports.default = { switLan: switLan, dispSignBox: dispSignBox, getUsrInf: getUsrInf, setUsrIsSgi: setUsrIsSgi, setUsrInf: setUsrInf };
 
 /***/ },
-/* 445 */
+/* 444 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36221,21 +36129,21 @@
 	
 	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
 	
-	var _navigator = __webpack_require__(446);
+	var _index = __webpack_require__(445);
 	
-	var _navigator2 = _interopRequireDefault(_navigator);
+	var _index2 = _interopRequireDefault(_index);
 	
-	var _global = __webpack_require__(449);
+	var _global = __webpack_require__(447);
 	
 	var _global2 = _interopRequireDefault(_global);
 	
-	var _common = __webpack_require__(444);
+	var _common = __webpack_require__(443);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
-	var _navigator3 = __webpack_require__(443);
+	var _navigator = __webpack_require__(442);
 	
-	var _navigator4 = _interopRequireDefault(_navigator3);
+	var _navigator2 = _interopRequireDefault(_navigator);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -36310,7 +36218,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { style: 'logo-title' },
-	          _react2.default.createElement('img', { style: 'logo', src: '../../assets/lfs-logo.png' }),
+	          _react2.default.createElement('img', { style: 'logo', src: '../../assets/images/lfs-logo.png' }),
 	          _react2.default.createElement(
 	            'span',
 	            { style: 'title' },
@@ -36347,23 +36255,22 @@
 	    return _common2.default.switLan(lan);
 	  },
 	  switNavItem: function switNavItem(item) {
-	    return _navigator4.default.switNavItem(item);
+	    return _navigator2.default.switNavItem(item);
 	  }
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(Navigator, _navigator2.default));
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(Navigator, _index2.default));
 
 /***/ },
-/* 446 */
+/* 445 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"phone":"(max-width: 600px)","tablet-portrait":"(min-width: 601px) and (max-width: 999px)","tablet-landscape":"(min-width: 1000px) and (max-width: 1299px)","desktop":"(min-width: 1300px) and (max-width: 1799px)","nav-lan-cn":"navigator__nav-lan-cn___3P2y_ navigator__icon-in-right___MuN2Q","nav-lan-en":"navigator__nav-lan-en___3_nXl navigator__icon-in-right___MuN2Q","navigator-menu":"url(\"data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M101.759103 239.067864l827.183426 0c43.916209 0 79.537498-35.604916 79.537498-79.536474 0-43.931558-35.621289-79.537498-79.537498-79.537498L101.759103 79.993892c-43.931558 0-79.536474 35.604916-79.536474 79.537498C22.222629 203.461925 57.828568 239.067864 101.759103 239.067864zM928.942529 429.956426 101.759103 429.956426c-43.931558 0-79.536474 35.604916-79.536474 79.536474 0 43.932582 35.604916 79.537498 79.536474 79.537498l827.183426 0c43.916209 0 79.537498-35.604916 79.537498-79.537498C1008.480027 465.561341 972.858738 429.956426 928.942529 429.956426zM928.942529 779.917936 101.759103 779.917936c-43.931558 0-79.536474 35.605939-79.536474 79.537498 0 43.932582 35.604916 79.537498 79.536474 79.537498l827.183426 0c43.916209 0 79.537498-35.604916 79.537498-79.537498C1008.480027 815.522852 972.858738 779.917936 928.942529 779.917936z'/></svg>\")","navigator":"navigator__navigator___3VbQE","logo-title":"navigator__logo-title___2rTRO","title":"navigator__title___3bJan","logo":"navigator__logo___39kmw","menu":"navigator__menu___179KU","link":"navigator__link___1tFt6","ul":"navigator__ul___3SOYO","navItem":"navigator__navItem___UiSMw","nav-active":"navigator__nav-active___24B5u","nav-no-active":"navigator__nav-no-active___2zNlT","icon-in-right":"navigator__icon-in-right___MuN2Q","menu-button":"navigator__menu-button___3g8Xc navigator__icon-in-right___MuN2Q"};
+	module.exports = {"path":"'../../global/styles/'","phone":"from '../../global/styles/'+'breakpoints.css'","tablet-portrait":"from '../../global/styles/'+'breakpoints.css'","tablet-landscape":"from '../../global/styles/'+'breakpoints.css'","desktop":"from '../../global/styles/'+'breakpoints.css'","big-desktop":"from '../../global/styles/'+'breakpoints.css'","nav-lan-cn":"index__nav-lan-cn___2ShXX index__icon-in-right___1IT6I","nav-lan-en":"index__nav-lan-en___-6bTF index__icon-in-right___1IT6I","navigator-menu":"from '../../global/styles/'+'icon.css'","navigator":"index__navigator___1rZZQ","logo-title":"index__logo-title___2U7TA","title":"index__title___2InRV","logo":"index__logo___117P9","menu":"index__menu___1H-iP","link":"index__link___3mLIm","ul":"index__ul___2qUEQ","navItem":"index__navItem___1RCv-","nav-active":"index__nav-active___2rx9w","nav-no-active":"index__nav-no-active___ra2Hj","icon-in-right":"index__icon-in-right___1IT6I","menu-button":"index__menu-button___Dy9Ja index__icon-in-right___1IT6I"};
 
 /***/ },
-/* 447 */,
-/* 448 */,
-/* 449 */
+/* 446 */,
+/* 447 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -36422,7 +36329,7 @@
 	};
 
 /***/ },
-/* 450 */
+/* 448 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36445,15 +36352,15 @@
 	
 	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
 	
+	var _index = __webpack_require__(449);
+	
+	var _index2 = _interopRequireDefault(_index);
+	
 	var _sign = __webpack_require__(451);
 	
 	var _sign2 = _interopRequireDefault(_sign);
 	
-	var _sign3 = __webpack_require__(453);
-	
-	var _sign4 = _interopRequireDefault(_sign3);
-	
-	var _common = __webpack_require__(444);
+	var _common = __webpack_require__(443);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
@@ -36785,10 +36692,10 @@
 	
 	var mapDispatchToProps = {
 	    signup: function signup(data, cb) {
-	        return _sign4.default.signup(data, cb);
+	        return _sign2.default.signup(data, cb);
 	    },
 	    signin: function signin(data, cb) {
-	        return _sign4.default.signin(data, cb);
+	        return _sign2.default.signin(data, cb);
 	    },
 	    setUsrIsSgi: function setUsrIsSgi(val) {
 	        return _common2.default.setUsrIsSgi(val);
@@ -36801,18 +36708,18 @@
 	    }
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(Sign, _sign2.default));
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(Sign, _index2.default));
 
 /***/ },
-/* 451 */
+/* 449 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"sign-frame":"sign__sign-frame___N_oYc","sign":"sign__sign___3mrbw","content":"sign__content___tcOmQ","sign-in-up":"sign__sign-in-up___1doL0","username":"sign__username___2O1hE","password":"sign__password___1szFF","password-pointer":"sign__password-pointer___y2Kdw","select":"sign__select___3-SaV","no-select":"sign__no-select___3o0R1","otherSignWay":"sign__otherSignWay___-sX-X","inputName":"sign__inputName___23p5x","inputUsername":"sign__inputUsername___2Mglk","inputPassword":"sign__inputPassword___DmiM9","close":"sign__close___2TYJ7","submit":"sign__submit___3Stcb"};
+	module.exports = {"sign-frame":"index__sign-frame___10CnV","sign":"index__sign___rvOy-","content":"index__content___3xnSS","sign-in-up":"index__sign-in-up___axlxB","username":"index__username___2o6y1","password":"index__password___2k6Yi","password-pointer":"index__password-pointer___2eh1q","select":"index__select___1SlVe","no-select":"index__no-select___jnn-u","otherSignWay":"index__otherSignWay___1CMRA","inputName":"index__inputName___1xoT7","inputUsername":"index__inputUsername___Bccsk","inputPassword":"index__inputPassword___3Wo4d","close":"index__close___fovad","submit":"index__submit___2VuM1"};
 
 /***/ },
-/* 452 */,
-/* 453 */
+/* 450 */,
+/* 451 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -36869,7 +36776,7 @@
 	exports.default = { signup: signup, signin: signin };
 
 /***/ },
-/* 454 */
+/* 452 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36894,11 +36801,11 @@
 	
 	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
 	
-	var _sideBar = __webpack_require__(455);
+	var _index = __webpack_require__(453);
 	
-	var _sideBar2 = _interopRequireDefault(_sideBar);
+	var _index2 = _interopRequireDefault(_index);
 	
-	var _common = __webpack_require__(444);
+	var _common = __webpack_require__(443);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
@@ -36976,14 +36883,14 @@
 	  }
 	};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(SideBar, _sideBar2.default));
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(SideBar, _index2.default));
 
 /***/ },
-/* 455 */
+/* 453 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
-	module.exports = {"phone":"(max-width: 600px)","tablet-portrait":"(min-width: 601px) and (max-width: 999px)","tablet-landscape":"(min-width: 1000px) and (max-width: 1299px)","desktop":"(min-width: 1300px) and (max-width: 1799px)","sidebar-profile":"url(\"data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M512 614.4C342.6304 614.4 204.8 476.637867 204.8 307.268267s137.8304-307.2 307.2-307.2S819.2 137.898667 819.2 307.268267 681.3696 614.4 512 614.4zM512 68.334933c-131.754667 0-238.933333 107.178667-238.933333 238.933333s107.178667 238.933333 238.933333 238.933333 238.933333-107.178667 238.933333-238.933333S643.754667 68.334933 512 68.334933zM921.6 1024c-18.8416 0-34.133333-15.223467-34.133333-34.133333C887.466667 744.2432 757.623467 614.4 512 614.4 266.376533 614.4 136.533333 744.2432 136.533333 989.866667 136.533333 1008.776533 121.2416 1024 102.4 1024S68.266667 1008.776533 68.266667 989.866667c0-282.0096 161.723733-443.665067 443.733333-443.665067S955.733333 707.857067 955.733333 989.866667C955.733333 1008.776533 940.4416 1024 921.6 1024z'/></svg>\")","sidebar-post":"url(\"data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M800 960 224 960c-52.928 0-96-43.072-96-96L128 224c0-52.928 43.072-96 96-96l448 0c17.696 0 32 14.336 32 32s-14.304 32-32 32L224 192C206.368 192 192 206.368 192 224l0 640c0 17.664 14.368 32 32 32l576 0c17.664 0 32-14.336 32-32L832 352c0-17.664 14.304-32 32-32s32 14.336 32 32l0 512C896 916.928 852.928 960 800 960zM511.68 542.72c-8.256 0-16.512-3.168-22.752-9.504-12.416-12.576-12.32-32.832 0.256-45.248L907.488 74.24c12.608-12.448 32.832-12.288 45.248 0.256 12.448 12.576 12.32 32.832-0.256 45.248L534.176 533.472C527.936 539.648 519.808 542.72 511.68 542.72z'/></svg>\")","sidebar-message":"url(\"data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M520 924q0-8-8-8-29.5 0-50.75-21.25t-21.25-50.75q0-8-8-8t-8 8q0 36.5 25.75 62.25t62.25 25.75q8 0 8-8zM187 780l650 0q-133-150-133-416 0-25.5-12-52.5t-34.5-51.5-60.75-40.25-84.75-15.75-84.75 15.75-60.75 40.25-34.5 51.5-12 52.5q0 266-133 416zM928 780q0 26-19 45t-45 19l-224 0q0 53-37.5 90.5t-90.5 37.5-90.5-37.5-37.5-90.5l-224 0q-26 0-45-19t-19-45q25-21 45.5-44t42.5-59.75 37.25-79.25 25-103 9.75-130q0-76 58.5-141.25t153.5-79.25q-4-9.5-4-19.5 0-20 14-34t34-14 34 14 14 34q0 10-4 19.5 95 14 153.5 79.25t58.5 141.25q0 69.5 9.75 130t25 103 37.25 79.25 42.5 59.75 45.5 44z'/></svg>\")","sidebar-logout":"url(\"data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><path fill='#808080' d='M896.976 60.608 544.672 60.608c-70.672 0-128.112 50.864-128.112 113.424l0 141.76c0 15.664 14.336 28.352 32.048 28.352 17.68 0 32.016-12.704 32.016-28.352l0-141.76c0-31.28 28.752-56.72 64.048-56.72l352.304 0c35.344 0 64.032 25.456 64.032 56.72L961.008 854.56c0 31.216-28.688 56.688-64.032 56.688L544.672 911.248c-35.312 0-64.048-25.472-64.048-56.688l0-141.792c0-15.664-14.336-28.336-32.016-28.336-17.712 0-32.048 12.656-32.048 28.336l0 141.792c0 62.528 57.456 113.408 128.112 113.408l352.304 0c8.848 0 17.472-0.8 25.776-2.32 58.32-10.592 102.32-56.368 102.32-111.088L1025.072 174.032C1025.024 111.472 967.6 60.608 896.976 60.608zM294.144 679.984 109.696 516.656l567.712-0.048c8.848 0 16.88-3.136 22.64-8.256 5.824-5.184 9.376-12.272 9.376-20.064 0-15.664-14.336-28.352-32.016-28.352L110.88 460.096l186.592-164.464c6.112-5.408 10.032-13.216 10.032-22.016 0-16.304-13.216-29.52-29.52-29.52-7.824 0-14.912 3.104-20.192 8.08-1.648 1.008-3.296 2.224-4.944 3.68L9.872 468.112c-0.592 0.544-1.136 1.056-1.68 1.584-4.256 4.32-6.784 9.536-7.584 14.96-0.272 1.84-0.336 3.776-0.192 5.68 0.56 6.496 3.616 12.912 9.264 17.952 0 0 0.016 0.016 0.048 0.064l243.12 215.248c2.336 2.096 5.008 3.664 7.808 4.96 4.816 3.424 10.672 5.488 17.04 5.488 16.304 0 29.52-13.216 29.52-29.52C307.216 694.288 302.032 685.28 294.144 679.984z'/></svg>\")","sideBar":"sideBar__sideBar___3cIgV","sideBar-hide":"sideBar__sideBar-hide___1Gm8m","profile":"sideBar__profile___vsaDD","post":"sideBar__post___318e_","message":"sideBar__message___HefEe","logout":"sideBar__logout___2cDpt"};
+	module.exports = {"path":"'../../global/styles/'","phone":"from '../../global/styles/'+'breakpoints.css'","tablet-portrait":"from '../../global/styles/'+'breakpoints.css'","tablet-landscape":"from '../../global/styles/'+'breakpoints.css'","desktop":"from '../../global/styles/'+'breakpoints.css'","big-desktop":"from '../../global/styles/'+'breakpoints.css'","sidebar-profile":"from '../../global/styles/'+'icon.css'","sidebar-post":"from '../../global/styles/'+'icon.css'","sidebar-message":"from '../../global/styles/'+'icon.css'","sidebar-logout":"from '../../global/styles/'+'icon.css'","sideBar":"index__sideBar___2U1Bm","sideBar-hide":"index__sideBar-hide___OVqZh","item":"index__item___1gmvt","profile":"index__profile___2eW2- index__item___1gmvt","post":"index__post___1Kbf_ index__item___1gmvt","message":"index__message___v0n9V index__item___1gmvt","logout":"index__logout___1Emyq index__item___1gmvt"};
 
 /***/ }
 /******/ ]);

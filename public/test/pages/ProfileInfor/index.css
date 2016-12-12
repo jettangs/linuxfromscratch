@@ -1,0 +1,32 @@
+.profileInfor label {
+    height: 22px;
+    width:100%;
+    margin-top: 10px;
+}
+
+.profileInfor label input{
+    display: none;
+}
+
+.profileInfor label span{
+    background-color:#fff;
+    border:1px solid rgba(0,0,0,0.15);
+    border-radius:0;
+    display:inline-block;
+    height:18px;
+    margin-right:10px;
+    margin-top:-1px;
+    vertical-align:middle;
+    width:18px;
+    line-height:1
+}
+
+.profileInfor label input:checked + span:after{
+    background-color:#57ad68;
+    border-radius:0;
+    content:"";
+    display:inline-block;
+    height:12px;
+    margin:2px;
+    width:12px
+}

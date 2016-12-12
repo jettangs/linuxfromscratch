@@ -1,0 +1,72 @@
+@value phone from '../../global/styles/breakpoints.css';
+@value tablet-portrait from '../../global/styles/breakpoints.css';
+@value tablet-landscape from '../../global/styles/breakpoints.css';
+@value desktop from '../../global/styles/breakpoints.css';
+@value big-desktop from '../../global/styles/breakpoints.css';
+
+@value profile from '../../global/styles/icon.css';
+@value post from '../../global/styles/icon.css';
+@value message from '../../global/styles/icon.css';
+@value logout from '../../global/styles/icon.css';
+
+.sideBar{
+    top: 34.5%;
+    cursor: pointer;
+    width:50px; 
+    height:200px;
+    border-radius: 5px;
+    background: white;
+    position: fixed;
+    z-index: 11;
+    left: -5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+    border-radius: 5px;
+}
+
+.sideBar-hide {
+    display: none;
+}
+
+
+.sideBar ul li {
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    /*border-bottom: 2px solid #F0F0F0;*/
+}
+
+.item {
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.profile {
+    composes: item;
+    background-size: 28px;
+    background-image: profile;
+}
+
+.post {
+    composes: item;
+    background-size: 30px;
+    background-image: post;
+}
+
+.message {
+    composes: item;
+    background-size: 30px;
+    background-image: message;
+}
+
+.logout {
+    composes: item;
+    background-size: 28px;
+    background-image: logout;
+}
+
+
+

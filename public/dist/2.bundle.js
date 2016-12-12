@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([2],{
 
-/***/ 460:
+/***/ 458:
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -84,7 +84,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 463:
+/***/ 461:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -107,31 +107,31 @@ webpackJsonp([2],{
 	
 	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
 	
-	var _reactMarkdown = __webpack_require__(464);
+	var _reactMarkdown = __webpack_require__(462);
 	
 	var _reactMarkdown2 = _interopRequireDefault(_reactMarkdown);
 	
-	var _lodash = __webpack_require__(490);
+	var _lodash = __webpack_require__(488);
 	
 	var _lodash2 = _interopRequireDefault(_lodash);
 	
-	var _codeBlock = __webpack_require__(501);
+	var _codeBlock = __webpack_require__(499);
 	
 	var _codeBlock2 = _interopRequireDefault(_codeBlock);
 	
-	var _markdownControls = __webpack_require__(505);
+	var _markdownControls = __webpack_require__(503);
 	
 	var _markdownControls2 = _interopRequireDefault(_markdownControls);
 	
-	var _news = __webpack_require__(506);
+	var _index = __webpack_require__(504);
+	
+	var _index2 = _interopRequireDefault(_index);
+	
+	var _news = __webpack_require__(458);
 	
 	var _news2 = _interopRequireDefault(_news);
 	
-	var _news3 = __webpack_require__(460);
-	
-	var _news4 = _interopRequireDefault(_news3);
-	
-	var _ss = __webpack_require__(508);
+	var _ss = __webpack_require__(506);
 	
 	var _ss2 = _interopRequireDefault(_ss);
 	
@@ -158,7 +158,7 @@ webpackJsonp([2],{
 	      var _this2 = this;
 	
 	      var newsObj = void 0;
-	      _news4.default.map(function (item, index) {
+	      _news2.default.map(function (item, index) {
 	        if (item._id == _this2.state.id) newsObj = item;
 	      });
 	      return newsObj;
@@ -193,18 +193,18 @@ webpackJsonp([2],{
 	
 	var mapDispatchToProps = {};
 	
-	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(News, _news2.default));
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(News, _index2.default));
 
 /***/ },
 
-/***/ 464:
+/***/ 462:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
-	var Parser = __webpack_require__(465).Parser;
-	var ReactRenderer = __webpack_require__(485);
+	var Parser = __webpack_require__(463).Parser;
+	var ReactRenderer = __webpack_require__(483);
 	
 	var parser = new Parser();
 	var propTypes = React.PropTypes;
@@ -275,7 +275,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 465:
+/***/ 463:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -292,15 +292,15 @@ webpackJsonp([2],{
 	// console.log(renderer.render(parser.parse('Hello *world*')));
 	
 	module.exports.version = '0.24.0'
-	module.exports.Node = __webpack_require__(466);
-	module.exports.Parser = __webpack_require__(467);
-	module.exports.HtmlRenderer = __webpack_require__(483);
-	module.exports.XmlRenderer = __webpack_require__(484);
+	module.exports.Node = __webpack_require__(464);
+	module.exports.Parser = __webpack_require__(465);
+	module.exports.HtmlRenderer = __webpack_require__(481);
+	module.exports.XmlRenderer = __webpack_require__(482);
 
 
 /***/ },
 
-/***/ 466:
+/***/ 464:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -578,15 +578,15 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 467:
+/***/ 465:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var Node = __webpack_require__(466);
-	var unescapeString = __webpack_require__(468).unescapeString;
-	var OPENTAG = __webpack_require__(468).OPENTAG;
-	var CLOSETAG = __webpack_require__(468).CLOSETAG;
+	var Node = __webpack_require__(464);
+	var unescapeString = __webpack_require__(466).unescapeString;
+	var OPENTAG = __webpack_require__(466).OPENTAG;
+	var CLOSETAG = __webpack_require__(466).CLOSETAG;
 	
 	var CODE_INDENT = 4;
 	
@@ -597,7 +597,7 @@ webpackJsonp([2],{
 	var C_SPACE = 32;
 	var C_OPEN_BRACKET = 91;
 	
-	var InlineParser = __webpack_require__(479);
+	var InlineParser = __webpack_require__(477);
 	
 	var reHtmlBlockOpen = [
 	   /./, // dummy for 0
@@ -1455,17 +1455,17 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 468:
+/***/ 466:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var encode = __webpack_require__(469);
-	var decode = __webpack_require__(470);
+	var encode = __webpack_require__(467);
+	var decode = __webpack_require__(468);
 	
 	var C_BACKSLASH = 92;
 	
-	var decodeHTML = __webpack_require__(471).decodeHTML;
+	var decodeHTML = __webpack_require__(469).decodeHTML;
 	
 	var ENTITY = "&(?:#x[a-f0-9]{1,8}|#[0-9]{1,8}|[a-z][a-z0-9]{1,31});";
 	
@@ -1565,7 +1565,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 469:
+/***/ 467:
 /***/ function(module, exports) {
 
 	
@@ -1670,7 +1670,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 470:
+/***/ 468:
 /***/ function(module, exports) {
 
 	
@@ -1799,11 +1799,11 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 471:
+/***/ 469:
 /***/ function(module, exports, __webpack_require__) {
 
-	var encode = __webpack_require__(472),
-	    decode = __webpack_require__(475);
+	var encode = __webpack_require__(470),
+	    decode = __webpack_require__(473);
 	
 	exports.decode = function(data, level){
 		return (!level || level <= 0 ? decode.XML : decode.HTML)(data);
@@ -1839,15 +1839,15 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 472:
+/***/ 470:
 /***/ function(module, exports, __webpack_require__) {
 
-	var inverseXML = getInverseObj(__webpack_require__(473)),
+	var inverseXML = getInverseObj(__webpack_require__(471)),
 	    xmlReplacer = getInverseReplacer(inverseXML);
 	
 	exports.XML = getInverse(inverseXML, xmlReplacer);
 	
-	var inverseHTML = getInverseObj(__webpack_require__(474)),
+	var inverseHTML = getInverseObj(__webpack_require__(472)),
 	    htmlReplacer = getInverseReplacer(inverseHTML);
 	
 	exports.HTML = getInverse(inverseHTML, htmlReplacer);
@@ -1919,7 +1919,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 473:
+/***/ 471:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -1932,7 +1932,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 474:
+/***/ 472:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4065,13 +4065,13 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 475:
+/***/ 473:
 /***/ function(module, exports, __webpack_require__) {
 
-	var entityMap = __webpack_require__(474),
-	    legacyMap = __webpack_require__(476),
-	    xmlMap    = __webpack_require__(473),
-	    decodeCodePoint = __webpack_require__(477);
+	var entityMap = __webpack_require__(472),
+	    legacyMap = __webpack_require__(474),
+	    xmlMap    = __webpack_require__(471),
+	    decodeCodePoint = __webpack_require__(475);
 	
 	var decodeXMLStrict  = getStrictDecoder(xmlMap),
 	    decodeHTMLStrict = getStrictDecoder(entityMap);
@@ -4143,7 +4143,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 476:
+/***/ 474:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4257,10 +4257,10 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 477:
+/***/ 475:
 /***/ function(module, exports, __webpack_require__) {
 
-	var decodeMap = __webpack_require__(478);
+	var decodeMap = __webpack_require__(476);
 	
 	module.exports = decodeCodePoint;
 	
@@ -4290,7 +4290,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 478:
+/***/ 476:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -4326,20 +4326,20 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 479:
+/***/ 477:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var Node = __webpack_require__(466);
-	var common = __webpack_require__(468);
-	var normalizeReference = __webpack_require__(480);
+	var Node = __webpack_require__(464);
+	var common = __webpack_require__(466);
+	var normalizeReference = __webpack_require__(478);
 	
 	var normalizeURI = common.normalizeURI;
 	var unescapeString = common.unescapeString;
-	var fromCodePoint = __webpack_require__(481);
-	var decodeHTML = __webpack_require__(471).decodeHTML;
-	__webpack_require__(482); // Polyfill for String.prototype.repeat
+	var fromCodePoint = __webpack_require__(479);
+	var decodeHTML = __webpack_require__(469).decodeHTML;
+	__webpack_require__(480); // Polyfill for String.prototype.repeat
 	
 	// Constants for character codes:
 	
@@ -5264,7 +5264,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 480:
+/***/ 478:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5313,7 +5313,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 481:
+/***/ 479:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5379,7 +5379,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 482:
+/***/ 480:
 /***/ function(module, exports) {
 
 	/*! http://mths.be/repeat v0.2.0 by @mathias */
@@ -5436,12 +5436,12 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 483:
+/***/ 481:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var escapeXml = __webpack_require__(468).escapeXml;
+	var escapeXml = __webpack_require__(466).escapeXml;
 	
 	// Helper function to produce an HTML tag.
 	var tag = function(name, attrs, selfclosing) {
@@ -5729,12 +5729,12 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 484:
+/***/ 482:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var escapeXml = __webpack_require__(468).escapeXml;
+	var escapeXml = __webpack_require__(466).escapeXml;
 	
 	// Helper function to produce an XML tag.
 	var tag = function(name, attrs, selfclosing) {
@@ -5913,16 +5913,16 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 485:
+/***/ 483:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
-	var assign = __webpack_require__(486);
-	var isPlainObject = __webpack_require__(487);
-	var xssFilters = __webpack_require__(488);
-	var pascalCase = __webpack_require__(489);
+	var assign = __webpack_require__(484);
+	var isPlainObject = __webpack_require__(485);
+	var xssFilters = __webpack_require__(486);
+	var pascalCase = __webpack_require__(487);
 	
 	var typeAliases = {
 	    blockquote: 'block_quote',
@@ -6324,7 +6324,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 486:
+/***/ 484:
 /***/ function(module, exports) {
 
 	/**
@@ -6968,7 +6968,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 487:
+/***/ 485:
 /***/ function(module, exports) {
 
 	/**
@@ -7114,7 +7114,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 488:
+/***/ 486:
 /***/ function(module, exports) {
 
 	/*
@@ -8220,7 +8220,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 489:
+/***/ 487:
 /***/ function(module, exports) {
 
 	/*!
@@ -8248,7 +8248,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 490:
+/***/ 488:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8259,9 +8259,9 @@ webpackJsonp([2],{
 	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var baseAssign = __webpack_require__(491),
-	    createAssigner = __webpack_require__(497),
-	    keys = __webpack_require__(493);
+	var baseAssign = __webpack_require__(489),
+	    createAssigner = __webpack_require__(495),
+	    keys = __webpack_require__(491);
 	
 	/**
 	 * A specialized version of `_.assign` for customizing assigned values without
@@ -8335,7 +8335,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 491:
+/***/ 489:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8346,8 +8346,8 @@ webpackJsonp([2],{
 	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var baseCopy = __webpack_require__(492),
-	    keys = __webpack_require__(493);
+	var baseCopy = __webpack_require__(490),
+	    keys = __webpack_require__(491);
 	
 	/**
 	 * The base implementation of `_.assign` without support for argument juggling,
@@ -8369,7 +8369,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 492:
+/***/ 490:
 /***/ function(module, exports) {
 
 	/**
@@ -8408,7 +8408,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 493:
+/***/ 491:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -8419,9 +8419,9 @@ webpackJsonp([2],{
 	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var getNative = __webpack_require__(494),
-	    isArguments = __webpack_require__(495),
-	    isArray = __webpack_require__(496);
+	var getNative = __webpack_require__(492),
+	    isArguments = __webpack_require__(493),
+	    isArray = __webpack_require__(494);
 	
 	/** Used to detect unsigned integer values. */
 	var reIsUint = /^\d+$/;
@@ -8651,7 +8651,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 494:
+/***/ 492:
 /***/ function(module, exports) {
 
 	/**
@@ -8795,7 +8795,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 495:
+/***/ 493:
 /***/ function(module, exports) {
 
 	/**
@@ -9031,7 +9031,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 496:
+/***/ 494:
 /***/ function(module, exports) {
 
 	/**
@@ -9218,7 +9218,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 497:
+/***/ 495:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9229,9 +9229,9 @@ webpackJsonp([2],{
 	 * Copyright 2009-2015 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 	 * Available under MIT license <https://lodash.com/license>
 	 */
-	var bindCallback = __webpack_require__(498),
-	    isIterateeCall = __webpack_require__(499),
-	    restParam = __webpack_require__(500);
+	var bindCallback = __webpack_require__(496),
+	    isIterateeCall = __webpack_require__(497),
+	    restParam = __webpack_require__(498);
 	
 	/**
 	 * Creates a function that assigns properties of source object(s) to a given
@@ -9277,7 +9277,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 498:
+/***/ 496:
 /***/ function(module, exports) {
 
 	/**
@@ -9349,7 +9349,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 499:
+/***/ 497:
 /***/ function(module, exports) {
 
 	/**
@@ -9488,7 +9488,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 500:
+/***/ 498:
 /***/ function(module, exports) {
 
 	/**
@@ -9562,13 +9562,13 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 501:
+/***/ 499:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	var React = __webpack_require__(1);
-	var PureRenderMixin = __webpack_require__(502);
+	var PureRenderMixin = __webpack_require__(500);
 	var hljs = window.hljs;
 	var h = React.createElement;
 	
@@ -9604,14 +9604,14 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 502:
+/***/ 500:
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(503);
+	module.exports = __webpack_require__(501);
 
 /***/ },
 
-/***/ 503:
+/***/ 501:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9626,7 +9626,7 @@ webpackJsonp([2],{
 	
 	'use strict';
 	
-	var shallowCompare = __webpack_require__(504);
+	var shallowCompare = __webpack_require__(502);
 	
 	/**
 	 * If your React component's render function is "pure", e.g. it will render the
@@ -9664,7 +9664,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 504:
+/***/ 502:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9694,7 +9694,7 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 505:
+/***/ 503:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9752,13 +9752,13 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 506:
+/***/ 504:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(507);
+	var content = __webpack_require__(505);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(439)(content, {});
@@ -9767,8 +9767,8 @@ webpackJsonp([2],{
 	if(true) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept(507, function() {
-				var newContent = __webpack_require__(507);
+			module.hot.accept(505, function() {
+				var newContent = __webpack_require__(505);
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -9779,36 +9779,37 @@ webpackJsonp([2],{
 
 /***/ },
 
-/***/ 507:
+/***/ 505:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(438)();
 	// imports
-	exports.i(__webpack_require__(442), undefined);
+	
 	
 	// module
-	exports.push([module.id, ".news__news___3K8sa {\r\n    position: absolute;\r\n    top: 0;\r\n    width: 100%;\r\n    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);\r\n    background: white;\r\n    border-radius: 5px;\r\n    margin-left: -50%;\r\n    margin-bottom: 30px;\r\n    padding: 20px 30px;\r\n    left: 50%;\r\n    overflow: visible;\r\n}\r\n\r\n.news__news___3K8sa code {\r\n    font-size: 0.9rem;\r\n    background: white;\r\n}\r\n\r\n\r\n/*---------------news img-------------*/\r\n\r\n@media " + __webpack_require__(442).locals["phone"] + " {\r\n    .news__news___3K8sa img {\r\n        width:100%;\r\n    }\r\n}\r\n\r\n@media " + __webpack_require__(442).locals["tablet-portrait"] + " {\r\n    .news__news___3K8sa img {\r\n        width:100%;\r\n    }\r\n}\r\n\r\n.news__title___1ipre {\r\n    text-align: center;\r\n    margin: 50px auto 30px;\r\n    font-size: 1.4rem;\r\n    color: #1B1C1D;\r\n}\r\n\r\n.news__author-date___Ut-Mp {\r\n    display: inline-block;\r\n}\r\n\r\n.news__author___2Xdnj {\r\n    margin-left: 20px;\r\n    float:left;\r\n    color:grey;\r\n    font-size: 0.9rem;\r\n}\r\n\r\n.news__refName___3AHm_ {\r\n    display: block;\r\n    margin-left: 20px;\r\n    float:left;\r\n    color:grey;\r\n    font-size: 0.9rem;\r\n}\r\n\r\n.news__date___GiVD3 {\r\n    margin-left: 20px;\r\n    float:left;\r\n    color:grey;\r\n    font-size: 0.9rem;\r\n}\r\n\r\n.news__content___1G8i0 {\r\n    margin-top: 20px;\r\n    clear: both;\r\n}\r\n\r\n.news__result-pane___3VJPO {\r\n    top: 57px;\r\n    right: 0;\r\n    left: 50%;\r\n    bottom: 0;\r\n    overflow: auto;\r\n    padding: 10px;\r\n    padding-left: 20px;\r\n    color: #444;\r\n    font-size: 16px;\r\n    line-height: 1.5em;\r\n}\r\n\r\n", ""]);
+	exports.push([module.id, ".index__news___-EbSi {\r\n    position: absolute;\r\n    top: 0;\r\n    width: 100%;\r\n    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);\r\n    background: white;\r\n    border-radius: 5px;\r\n    margin-left: -50%;\r\n    margin-bottom: 30px;\r\n    padding: 20px 30px;\r\n    left: 50%;\r\n    overflow: visible;\r\n}\r\n\r\n.index__news___-EbSi code {\r\n    font-size: 0.9rem;\r\n    background: white;\r\n}\r\n\r\n\r\n/*---------------news img-------------*/\r\n\r\n@media from '../../global/styles/'+'breakpoints.css' {\r\n    .index__news___-EbSi img {\r\n        width:100%;\r\n    }\r\n}\r\n\r\n@media from '../../global/styles/'+'breakpoints.css' {\r\n    .index__news___-EbSi img {\r\n        width:100%;\r\n    }\r\n}\r\n\r\n.index__title___wN3U5 {\r\n    text-align: center;\r\n    margin: 50px auto 30px;\r\n    font-size: 1.4rem;\r\n    color: #1B1C1D;\r\n}\r\n\r\n.index__author-date___KTqyc {\r\n    display: inline-block;\r\n}\r\n\r\n.index__author___32cHc {\r\n    margin-left: 20px;\r\n    float:left;\r\n    color:grey;\r\n    font-size: 0.9rem;\r\n}\r\n\r\n.index__refName___xn65w {\r\n    display: block;\r\n    margin-left: 20px;\r\n    float:left;\r\n    color:grey;\r\n    font-size: 0.9rem;\r\n}\r\n\r\n.index__date____r8v7 {\r\n    margin-left: 20px;\r\n    float:left;\r\n    color:grey;\r\n    font-size: 0.9rem;\r\n}\r\n\r\n.index__content___KkaBO {\r\n    margin-top: 20px;\r\n    clear: both;\r\n}\r\n\r\n.index__result-pane___jMiW4 {\r\n    top: 57px;\r\n    right: 0;\r\n    left: 50%;\r\n    bottom: 0;\r\n    overflow: auto;\r\n    padding: 10px;\r\n    padding-left: 20px;\r\n    color: #444;\r\n    font-size: 16px;\r\n    line-height: 1.5em;\r\n}\r\n\r\n", ""]);
 	
 	// exports
 	exports.locals = {
-		"phone": "" + __webpack_require__(442).locals["phone"] + "",
-		"tablet-portrait": "" + __webpack_require__(442).locals["tablet-portrait"] + "",
-		"tablet-landscape": "" + __webpack_require__(442).locals["tablet-landscape"] + "",
-		"desktop": "" + __webpack_require__(442).locals["desktop"] + "",
-		"big-desktop": "" + __webpack_require__(442).locals["big-desktop"] + "",
-		"news": "news__news___3K8sa",
-		"title": "news__title___1ipre",
-		"author-date": "news__author-date___Ut-Mp",
-		"author": "news__author___2Xdnj",
-		"refName": "news__refName___3AHm_",
-		"date": "news__date___GiVD3",
-		"content": "news__content___1G8i0",
-		"result-pane": "news__result-pane___3VJPO"
+		"path": "'../../global/styles/'",
+		"phone": "from '../../global/styles/'+'breakpoints.css'",
+		"tablet-portrait": "from '../../global/styles/'+'breakpoints.css'",
+		"tablet-landscape": "from '../../global/styles/'+'breakpoints.css'",
+		"desktop": "from '../../global/styles/'+'breakpoints.css'",
+		"big-desktop": "from '../../global/styles/'+'breakpoints.css'",
+		"news": "index__news___-EbSi",
+		"title": "index__title___wN3U5",
+		"author-date": "index__author-date___KTqyc",
+		"author": "index__author___32cHc",
+		"refName": "index__refName___xn65w",
+		"date": "index__date____r8v7",
+		"content": "index__content___KkaBO",
+		"result-pane": "index__result-pane___jMiW4"
 	};
 
 /***/ },
 
-/***/ 508:
+/***/ 506:
 /***/ function(module, exports) {
 
 	module.exports = "\r\n# UE4 Learning  四、新建工程\r\n\r\n启动UE4Editor会出现：\r\n\r\n![](http://7xqhly.com1.z0.glb.clouddn.com/1263.PNG)\r\n\r\n下方有三个灰色的选项框，可选项分别是，PC平台/移动平台，最高画质/自定义画质，是否将基本素材/材质加入到新建的项目中（有助于场景的快速搭建）。\r\n点击create Project后，会自动启动Visual Studio和UE4 Editor，但UE4 Editor并非Visual Studio debug运行的\r\n\r\n```js\r\nvar React = require('react');\r\nvar Markdown = require('react-markdown');\r\nReact.render(\r\n    <Markdown source=\"# Your markdown here\" />, \r\n    document.getElementById('content')\r\n)\r\n```";

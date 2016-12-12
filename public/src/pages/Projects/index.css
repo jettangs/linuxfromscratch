@@ -1,0 +1,43 @@
+@value phone from '../../global/styles/breakpoints.css';
+@value tablet-portrait from '../../global/styles/breakpoints.css';
+@value tablet-landscape from '../../global/styles/breakpoints.css';
+@value desktop from '../../global/styles/breakpoints.css';
+@value big-desktop from '../../global/styles/breakpoints.css';
+
+.projects{
+    width: 100%;
+    padding: 50px 100px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+@media phone {
+    .projects {
+        padding: 20px;
+    }
+}
+
+@media tablet-portrait {
+    .projects {
+        padding: 30px 50px;
+    }
+}
+
+.projects a {
+    color: deepskyblue;
+}
+
+.header{
+    margin-left: 2rem;
+}
+
+.item {
+    margin-top: 10px;
+}
+
+.link {
+    margin-left: 2rem;
+    color: deepskyblue;
+    cursor: pointer;
+}

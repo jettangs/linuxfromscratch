@@ -1,0 +1,91 @@
+
+.community {
+    width: 100%;
+    top:0px;
+    bottom: 30px;
+    position: absolute;
+}
+
+.postList {
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+
+.postContent {
+    top: 0;
+    overflow: hidden;
+    right: 0px;
+    left: 42%;
+    bottom: 0;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);
+}
+
+
+.row:first-child {
+    padding-top: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.row {
+    padding-bottom: 15px;
+    margin: 10px 15px 5px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.post-title {
+    font-size: 0.95rem;
+    display: block;
+    margin-left: 5px;
+}
+
+.post-title:hover{
+    color:gray;
+}
+
+.post-buttom {
+    margin-top: 2px;
+}
+
+.help {
+    margin-left: 5px;
+    color: orange;
+    font-size: 0.7rem;
+    padding: 1px;
+    border-radius: 4px;
+    border:1px solid orange;
+}
+
+.solve {
+    margin-left: 5px;
+    color: limegreen;
+    font-size: 0.7rem;
+    padding: 1px;
+    border-radius: 4px;
+    border:1px solid limegreen;
+}
+
+.author {
+    margin-top: 5px;
+    margin-right: 5px;
+    color: grey;
+    float: right;
+    font-size: 0.8rem;
+}
+
+.answers-views {
+    margin-left: 5px;
+    margin-top: 6px;
+    font-size: 0.8rem;
+    float: right;
+    color: deepskyblue;
+}
