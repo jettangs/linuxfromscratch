@@ -8,8 +8,13 @@ import content from '../../assets/jsons/global.json'
 import news from '../../assets/jsons/home/news.json'
 import tutorials from '../../assets/jsons/home/tutorials.json'
 import solutions from '../../assets/jsons/home/solutions.json'
+import comAction from '../../actions/common'
 
 class Home extends React.Component{
+  
+  componentDidMount() {
+    this.props.switNavItem('home')
+  }
 
   render() {
     let cont = content[this.props.language].home
@@ -101,7 +106,7 @@ const mapStateToProps = (state,prop)=>{
 }
 
 const mapDispatchToProps = {
-
+  switNavItem: (item) => comAction.switNavItem(item)
 }
 
 export default connect(

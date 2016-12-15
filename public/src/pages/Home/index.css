@@ -95,6 +95,26 @@
     }
 }
 
+@media tablet-portrait {
+    .content {
+        font-size: 0.95rem;
+        margin: 0 30px;
+    }
+}
+
+@media desktop {
+    .content {
+        width: 830px
+    }
+}
+
+@media big-desktop {
+    .content {
+        width: 1330px
+    }
+}
+
+
 /*------------------------ul-------------------------*/
 
 .ul {
@@ -117,6 +137,12 @@
 @media phone {
     .part {
         margin-left: 1.2rem;
+    }
+}
+
+@media big-desktop {
+    .part {
+        margin-left: 330px;
     }
 }
 

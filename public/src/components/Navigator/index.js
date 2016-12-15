@@ -6,7 +6,6 @@ import CSSModules from 'react-css-modules-simply'
 import styles from './index.css'
 import content from '../../assets/jsons/global.json'
 import comAction from '../../actions/common'
-import navAction from '../../actions/navigator'
 
 class Navigator extends Component{
 
@@ -59,13 +58,13 @@ class Navigator extends Component{
 const mapStateToProps = (state)=>{
     return {
       language: state.common.language,
-      actvNavIt: state.navigator.actvNavIt,
+      actvNavIt: state.common.actvNavIt,
     }
 }
 
 const mapDispatchToProps = {
     switLan : (lan) => comAction.switLan(lan),
-    switNavItem: (item) => navAction.switNavItem(item)
+    switNavItem: (item) => comAction.switNavItem(item)
 }
 
 export default connect(

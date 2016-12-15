@@ -21,6 +21,7 @@
     background: white;
     margin: 130px auto auto;
     border:5px solid grey;
+    border-radius: 10px;
 }
 
 .content{

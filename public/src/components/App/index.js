@@ -7,46 +7,23 @@ import CSSModules from 'react-css-modules-simply'
 
 import global from '../../global/styles/main.css'
 import styles from './index.css'
-import navAction from '../../actions/navigator'
 import comAction from '../../actions/common'
 
 import Navigator from '../Navigator'
 import Sign from '../Sign'
 import SideBar from '../SideBar'
-
+import { chkURLToHomeAndSign } from '../../global/scripts/setting'
 
 class App extends Component {
 
   componentDidMount() {
-    //window.history.length == 8
+    this.props.chkUsrSgi(data => {
+      this.props.setUsrIsSgi(data.code == 10000)
+    })
 
-    //激活对应的navigator item
-    let pana = this.props.location.pathname
-
-    // if(!this.props.usrIsSgi && pana.indexOf('profile') >= 0){
-    //   window.location.replace('#/home')
-    //   console.log(pana.indexOf('profile'))
-    //   this.props.dispSignBox(true)
-    //   return
-    // }
-    pana = pana.substr(1,pana.length)
-    //处理类似http://localhost:3000/#/community/posting/b1c98675-8b29-4的情况
-    if(pana.indexOf('/') >= 0) pana = pana.substr(0,pana.indexOf('/'))
-    this.props.switNavItem(pana)
-  }
-  
-  componentWillReceiveProps({ location },nextProps) {
-    let pana = location.pathname
-    if(pana.indexOf("home") >= 0) {
-      this.props.switNavItem("home")
-    }else if(pana.indexOf("projects") >= 0) {
-      this.props.switNavItem("projects")
-    }else if(pana.indexOf("community") >= 0) {
-      this.props.switNavItem("community")
-    }else if(pana.indexOf("tutorials") >= 0) {
-      this.props.switNavItem("tutorials")
-    }else {
-      this.props.switNavItem(null)
+    if(!this.props.usrIsSgi && chkURLToHomeAndSign(this.props.location.pathname)){
+      window.location.replace('#/home')
+      this.props.dispSignBox(true)
     }
   }
 
@@ -67,14 +44,15 @@ class App extends Component {
 const mapStateToProps = (state)=>{
     return {
       signBoxIsDisp:state.common.signBoxIsDisp,
-      actvNavIt: state.navigator.actvNavIt,
+      actvNavIt: state.common.actvNavIt,
       usrIsSgi: state.common.usrIsSgi 
     }
 }
 
 const mapDispatchToProps = {
-   switNavItem: (item) => navAction.switNavItem(item),
-   dispSignBox: (bool) => comAction.dispSignBox(bool)
+   dispSignBox: (bool) => comAction.dispSignBox(bool),
+   chkUsrSgi : (cb) => comAction.chkUsrSgi(cb),
+   setUsrIsSgi : (bool) => comAction.setUsrIsSgi(bool)
 }
 
 export default connect(

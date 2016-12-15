@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([6],{
 
-/***/ 517:
+/***/ 530:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20,19 +20,19 @@ webpackJsonp([6],{
 	
 	var _reactRedux = __webpack_require__(267);
 	
-	var _reactCssModulesSimply = __webpack_require__(285);
+	var _reactCssModulesSimply = __webpack_require__(284);
 	
 	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
 	
-	var _index = __webpack_require__(518);
+	var _index = __webpack_require__(531);
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var _posting = __webpack_require__(520);
+	var _posting = __webpack_require__(533);
 	
 	var _posting2 = _interopRequireDefault(_posting);
 	
-	var _common = __webpack_require__(443);
+	var _common = __webpack_require__(442);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
@@ -56,11 +56,7 @@ webpackJsonp([6],{
 	  _createClass(Community, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      var _this2 = this;
-	
-	      this.props.getUsrInf(function (data) {
-	        _this2.props.setUsrIsSgi(data.code == 10000 ? true : false);
-	      });
+	      this.props.switNavItem('community');
 	    }
 	  }, {
 	    key: 'render',
@@ -68,7 +64,7 @@ webpackJsonp([6],{
 	      var postingList = _posting2.default.map(function (posting) {
 	        return _react2.default.createElement(
 	          'div',
-	          { style: "row", key: posting._id },
+	          { key: posting._id, style: 'row' },
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { style: 'post-title', to: { pathname: "/community/posting/" + posting._id } },
@@ -130,17 +126,8 @@ webpackJsonp([6],{
 	};
 	
 	var mapDispatchToProps = {
-	  dispSignBox: function dispSignBox(dat) {
-	    return _common2.default.dispSignBox(dat);
-	  },
-	  getUsrInf: function getUsrInf(cb) {
-	    return _common2.default.getUsrInf(cb);
-	  },
-	  setUsrIsSgi: function setUsrIsSgi(val) {
-	    return _common2.default.setUsrIsSgi(val);
-	  },
-	  setUsrInf: function setUsrInf(dat) {
-	    return _common2.default.setUsrInf(dat);
+	  switNavItem: function switNavItem(item) {
+	    return _common2.default.switNavItem(item);
 	  }
 	};
 	
@@ -148,23 +135,23 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 518:
+/***/ 531:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(519);
+	var content = __webpack_require__(532);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(439)(content, {});
+	var update = __webpack_require__(438)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(true) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept(519, function() {
-				var newContent = __webpack_require__(519);
+			module.hot.accept(532, function() {
+				var newContent = __webpack_require__(532);
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -175,18 +162,23 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 519:
+/***/ 532:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(438)();
+	exports = module.exports = __webpack_require__(437)();
 	// imports
-	
+	exports.i(__webpack_require__(441), undefined);
 	
 	// module
-	exports.push([module.id, "\r\n.index__community___1jexh {\r\n    width: 100%;\r\n    top:0px;\r\n    bottom: 30px;\r\n    position: absolute;\r\n}\r\n\r\n.index__postList___3EBHY {\r\n    width: 40%;\r\n    height: 100%;\r\n    position: absolute;\r\n    border-radius: 5px;\r\n    background-color: white;\r\n    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);\r\n}\r\n\r\n\r\n.index__postContent___Lzkue {\r\n    top: 0;\r\n    overflow: hidden;\r\n    right: 0px;\r\n    left: 42%;\r\n    bottom: 0;\r\n    position: absolute;\r\n    background-color: white;\r\n    border-radius: 5px;\r\n    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);\r\n}\r\n\r\n\r\n.index__row___-Ms59:first-child {\r\n    padding-top: 5px;\r\n    padding-bottom: 15px;\r\n    margin-bottom: 15px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__row___-Ms59 {\r\n    padding-bottom: 15px;\r\n    margin: 10px 15px 5px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__post-title___3p6-X {\r\n    font-size: 0.95rem;\r\n    display: block;\r\n    margin-left: 5px;\r\n}\r\n\r\n.index__post-title___3p6-X:hover{\r\n    color:gray;\r\n}\r\n\r\n.index__post-buttom___1CVdt {\r\n    margin-top: 2px;\r\n}\r\n\r\n.index__help___21VK2 {\r\n    margin-left: 5px;\r\n    color: orange;\r\n    font-size: 0.7rem;\r\n    padding: 1px;\r\n    border-radius: 4px;\r\n    border:1px solid orange;\r\n}\r\n\r\n.index__solve___-6xgn {\r\n    margin-left: 5px;\r\n    color: limegreen;\r\n    font-size: 0.7rem;\r\n    padding: 1px;\r\n    border-radius: 4px;\r\n    border:1px solid limegreen;\r\n}\r\n\r\n.index__author___2fyOK {\r\n    margin-top: 5px;\r\n    margin-right: 5px;\r\n    color: grey;\r\n    float: right;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__answers-views___Wtb54 {\r\n    margin-left: 5px;\r\n    margin-top: 6px;\r\n    font-size: 0.8rem;\r\n    float: right;\r\n    color: deepskyblue;\r\n}\r\n", ""]);
+	exports.push([module.id, ".index__community___1jexh {\r\n    width: 100%;\r\n    height: 600px;\r\n}\r\n\r\n.index__postList___3EBHY {\r\n    width: 40%;\r\n    height: 100%;\r\n    float: left;\r\n    border-radius: 5px;\r\n    background-color: white;\r\n    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);\r\n}\r\n\r\n@media " + __webpack_require__(441).locals["phone"] + " {\r\n    .index__postList___3EBHY {\r\n        width: 100%;\r\n    }\r\n}\r\n\r\n.index__postContent___Lzkue {\r\n    overflow: hidden;\r\n    width: 58%;\r\n    height: 100%;\r\n    float: right;\r\n    background-color: white;\r\n    border-radius: 5px;\r\n    box-shadow: 0 1px 4px rgba(0, 0, 0, .15);\r\n}\r\n\r\n@media " + __webpack_require__(441).locals["phone"] + " {\r\n    .index__postContent___Lzkue {\r\n        display: none;\r\n    }\r\n}\r\n\r\n.index__row___-Ms59:first-child {\r\n    padding-top: 5px;\r\n    padding-bottom: 15px;\r\n    margin-bottom: 15px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__row___-Ms59 {\r\n    padding-bottom: 15px;\r\n    margin: 10px 15px 5px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__post-title___3p6-X {\r\n    font-size: 0.95rem;\r\n    display: block;\r\n    margin-left: 5px;\r\n}\r\n\r\n.index__post-title___3p6-X:hover{\r\n    color:gray;\r\n}\r\n\r\n.index__post-buttom___1CVdt {\r\n    margin-top: 2px;\r\n}\r\n\r\n.index__help___21VK2 {\r\n    margin-left: 5px;\r\n    color: orange;\r\n    font-size: 0.7rem;\r\n    padding: 1px;\r\n    border-radius: 4px;\r\n    border:1px solid orange;\r\n}\r\n\r\n.index__solve___-6xgn {\r\n    margin-left: 5px;\r\n    color: limegreen;\r\n    font-size: 0.7rem;\r\n    padding: 1px;\r\n    border-radius: 4px;\r\n    border:1px solid limegreen;\r\n}\r\n\r\n.index__author___2fyOK {\r\n    margin-top: 5px;\r\n    margin-right: 5px;\r\n    color: grey;\r\n    float: right;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__answers-views___Wtb54 {\r\n    margin-left: 5px;\r\n    margin-top: 6px;\r\n    font-size: 0.8rem;\r\n    float: right;\r\n    color: deepskyblue;\r\n}\r\n", ""]);
 	
 	// exports
 	exports.locals = {
+		"phone": "" + __webpack_require__(441).locals["phone"] + "",
+		"tablet-portrait": "" + __webpack_require__(441).locals["tablet-portrait"] + "",
+		"tablet-landscape": "" + __webpack_require__(441).locals["tablet-landscape"] + "",
+		"desktop": "" + __webpack_require__(441).locals["desktop"] + "",
+		"big-desktop": "" + __webpack_require__(441).locals["big-desktop"] + "",
 		"community": "index__community___1jexh",
 		"postList": "index__postList___3EBHY",
 		"postContent": "index__postContent___Lzkue",
@@ -201,7 +193,7 @@ webpackJsonp([6],{
 
 /***/ },
 
-/***/ 520:
+/***/ 533:
 /***/ function(module, exports) {
 
 	module.exports = [

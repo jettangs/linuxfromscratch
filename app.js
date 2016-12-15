@@ -15,6 +15,7 @@ mongoose.connect('mongodb://localhost:27017/lfs');
 mongoose.Promise = require('bluebird');
 
 // uncomment after placing your favicon in /public
+
 app.use(favicon(path.join(__dirname, 'public/dist', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -25,11 +26,12 @@ app.use(express.static(path.join(__dirname, 'public/dist')));
 app.use(session({
     secret:'lfs',
     key:'lfs',
-    cookie:{ maxAge: 1000 * 60 * 3 }, //1000 * 60 * 60 * 24 * 5 = 5days / 1000 * 60 = 1min
+    cookie:{ maxAge: 1000 * 60 * 30 }, //1000 * 60 * 60 * 24 * 5 = 5days / 1000 * 60 = 1min
     // store:new mongoConnect({
     //     url: 'mongodb://localhost/blog'
     // })
 }))
+
 
 app.use('/', users);
 

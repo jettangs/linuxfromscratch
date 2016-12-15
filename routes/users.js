@@ -3,6 +3,20 @@ var User = require('../models/user');
 
 var router = express.Router();
 
+//获取cookies
+router.get('/',function(req,res) {
+  var user = req.session.user
+  console.log(user)
+})
+
+router.get('/:any',function (req, res, next){
+  if(req.session.user){
+		res.json({code:10002,message:"Fail: user haven't log in yet"});
+    return
+  }
+  next()
+})
+
 //用户登录
 router.post('/session', function(req, res) {
   var findCondition;
@@ -16,16 +30,15 @@ router.post('/session', function(req, res) {
   }
   User.findOne(findCondition,function(err, user) {
     if (err) {
-      res.json({code:10002,message:'Fail: '+ err});
+      res.json({code:10006,message:'Fail: '+ err});
       return 
     }
     if(!user) {
-      res.json({code:10002,message:'Fail: user not existed'});
+      res.json({code:10012,message:'Fail: user not existed'});
       return 
     }
     if(user.password == req.body.password) {
       req.session.user=user
-      //console.log(req.session.user)
       res.json({code:10000,message:'Success: user login',user:user});
     }else {
       res.json({code:10005,message:'Fail: password incorrect'});
@@ -36,12 +49,7 @@ router.post('/session', function(req, res) {
 //用户是否登录
 router.get('/session',function (req, res){
   var user = req.session.user
-  if(user) {
-    var info={name:user.name}
-    return res.json({code:10000,messgage:"Success: user logged in",user:info})
-  }else {
-    return res.json({code:10002,messgage:"Fail: user haven't log in yet"})
-  }
+  return res.json({code:10000,messgage:"Success: user log in",_id:user._id})
 })
 
 //用户退出
@@ -86,7 +94,7 @@ router.post('/user', function(req, res) {
 router.get('/user',function (req, res){
 	User.find(function(err, user) {
     if( err) {
-      res.json({code:10002,message:'Fail: '+ err});
+      res.json({code:10006,message:'Fail: '+ err});
       return 
     }
 		res.json({code:10000,message:'Success: get user informations',user:user});
@@ -95,28 +103,32 @@ router.get('/user',function (req, res){
 
 //获取用户信息
 router.get('/user/:id',function (req, res){
-  if(!req.session.user){
-		res.json({code:10002,message:"Fail: user haven't log in yet",user:user});
-    return
-  }
 	User.findOne({ _id: req.params.id },function(err, user) {
 		if (err) {
-      res.json({code:10002,message:'Fail: '+ err});
+      res.json({code:10006,message:'Fail: '+ err});
       return 
 		}
+    user.password = undefined
 		res.json({code:10000,message:'Success: get user informations',user:user});
+	});
+})
+
+//获取用户密码
+router.get('/user/:id/password',function (req, res){
+	User.findOne({ _id: req.params.id },function(err, user) {
+		if (err) {
+      res.json({code:10006,message:'Fail: '+ err});
+      return 
+		}
+		res.json({code:10000,message:'Success: get user informations',password:user.password});
 	});
 })
 
 //更新用户信息
 router.put('/user/:id',function (req, res){
-  if(!req.session.user){
-		res.json({code:10002,message:"Fail: user haven't log in yet",user:user});
-    return
-  }
   User.findOne({ _id: req.params.id }, function(err, user) {
       if(err) {
-        res.json({code:10002,message:'Fail: '+ err});
+        res.json({code:10006,message:'Fail: '+ err});
         return 
       }
       for (prop in req.body) {
@@ -138,6 +150,24 @@ router.put('/user/:id',function (req, res){
         }else {
           res.json({code:10000,message: 'Success: update user informations',user:user});
         }
+      });
+	});
+})
+
+//更新用户密码
+router.put('/user/:id/password',function (req, res){
+  User.findOne({ _id: req.params.id }, function(err, user) {
+      if(err) {
+        res.json({code:10006,message:'Fail: '+ err});
+        return 
+      }
+      user.password = req.body.password;
+      user.save(function(err) {
+        if(err) {
+          res.json({code:10006,message:'Fail: '+ err});
+          return 
+        }
+        res.json({code:10000,message: 'Success: reset user password'});
       });
 	});
 })

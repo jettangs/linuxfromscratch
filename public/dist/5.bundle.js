@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([5],{
 
-/***/ 511:
+/***/ 524:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22,27 +22,27 @@ webpackJsonp([5],{
 	
 	var _reactRedux = __webpack_require__(267);
 	
-	var _reactCssModulesSimply = __webpack_require__(285);
+	var _reactCssModulesSimply = __webpack_require__(284);
 	
 	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
 	
-	var _b1c986758b29481e8b94A86ef15ed8cc = __webpack_require__(512);
+	var _b1c986758b29481e8b94A86ef15ed8cc = __webpack_require__(525);
 	
 	var _b1c986758b29481e8b94A86ef15ed8cc2 = _interopRequireDefault(_b1c986758b29481e8b94A86ef15ed8cc);
 	
-	var _reply = __webpack_require__(513);
+	var _reply = __webpack_require__(526);
 	
 	var _reply2 = _interopRequireDefault(_reply);
 	
-	var _index = __webpack_require__(514);
+	var _index = __webpack_require__(527);
 	
 	var _index2 = _interopRequireDefault(_index);
 	
-	var _common = __webpack_require__(443);
+	var _common = __webpack_require__(442);
 	
 	var _common2 = _interopRequireDefault(_common);
 	
-	var _dom = __webpack_require__(516);
+	var _dom = __webpack_require__(529);
 	
 	var _dom2 = _interopRequireDefault(_dom);
 	
@@ -75,30 +75,30 @@ webpackJsonp([5],{
 	  }, {
 	    key: 'favIcoClk',
 	    value: function favIcoClk(cmtUid) {
-	      this.props.setUsrIsSgi(true);
-	      // this.props.getUsrInf(
-	      //   data => {
-	      //     if(data.code == 10000) {
-	      //       console.log(cmtUid)
-	      //     } else {
-	      //       this.props.dispSignBox(true)
-	      //     }
-	      //   }
-	      // )
+	      var _this2 = this;
+	
+	      //this.props.setUsrIsSgi(true)
+	      this.props.chkUsrSgi(function (data) {
+	        if (data.code == 10000) {
+	          console.log(cmtUid);
+	        } else {
+	          _this2.props.dispSignBox(true);
+	        }
+	      });
 	    }
 	  }, {
 	    key: 'reIcoClk',
 	    value: function reIcoClk(cmtUid) {
-	      this.props.setUsrIsSgi(true);
-	      // this.props.getUsrInf(
-	      //   data => {
-	      //     if(data.code == 10000) {
-	      //       console.log(cmtUid)
-	      //     } else {
-	      //       this.props.dispSignBox(true)
-	      //     }
-	      //   }
-	      // )
+	      var _this3 = this;
+	
+	      //this.props.setUsrIsSgi(true)
+	      this.props.chkUsrSgi(function (data) {
+	        if (data.code == 10000) {
+	          console.log(cmtUid);
+	        } else {
+	          _this3.props.dispSignBox(true);
+	        }
+	      });
 	    }
 	  }, {
 	    key: 'pstSco',
@@ -109,12 +109,12 @@ webpackJsonp([5],{
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var _this2 = this;
+	      var _this4 = this;
 	
 	      var replyList = _reply2.default.map(function (item, index) {
 	        var replyPrefix = "";
 	        if (item.ref != _b1c986758b29481e8b94A86ef15ed8cc2.default.id) {
-	          replyPrefix = "@" + _this2.getUsrnamRe(item.ref) + " ";
+	          replyPrefix = "@" + _this4.getUsrnamRe(item.ref) + " ";
 	        }
 	        return _react2.default.createElement(
 	          'div',
@@ -144,8 +144,8 @@ webpackJsonp([5],{
 	              _react2.default.createElement(
 	                'span',
 	                { style: 'right-items' },
-	                _react2.default.createElement('div', { onClick: _this2.reIcoClk.bind(_this2, item._id), style: 'reply' }),
-	                _react2.default.createElement('div', { onClick: _this2.favIcoClk.bind(_this2, item._id), style: 'like' }),
+	                _react2.default.createElement('div', { onClick: _this4.reIcoClk.bind(_this4, item._id), style: 'reply' }),
+	                _react2.default.createElement('div', { onClick: _this4.favIcoClk.bind(_this4, item._id), style: 'like' }),
 	                _react2.default.createElement(
 	                  'div',
 	                  { style: 'floor' },
@@ -258,8 +258,8 @@ webpackJsonp([5],{
 	  dispSignBox: function dispSignBox(data) {
 	    return _common2.default.dispSignBox(data);
 	  },
-	  getUsrInf: function getUsrInf(cb) {
-	    return _common2.default.getUsrInf(cb);
+	  chkUsrSgi: function chkUsrSgi(cb) {
+	    return _common2.default.chkUsrSgi(cb);
 	  },
 	  getDomValue: function getDomValue(name, param) {
 	    return _common2.default.getDomValue(name, param);
@@ -276,7 +276,7 @@ webpackJsonp([5],{
 
 /***/ },
 
-/***/ 512:
+/***/ 525:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -297,7 +297,7 @@ webpackJsonp([5],{
 
 /***/ },
 
-/***/ 513:
+/***/ 526:
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -345,23 +345,23 @@ webpackJsonp([5],{
 
 /***/ },
 
-/***/ 514:
+/***/ 527:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(515);
+	var content = __webpack_require__(528);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(439)(content, {});
+	var update = __webpack_require__(438)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(true) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept(515, function() {
-				var newContent = __webpack_require__(515);
+			module.hot.accept(528, function() {
+				var newContent = __webpack_require__(528);
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -372,24 +372,26 @@ webpackJsonp([5],{
 
 /***/ },
 
-/***/ 515:
+/***/ 528:
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(438)();
+	exports = module.exports = __webpack_require__(437)();
 	// imports
-	
+	exports.i(__webpack_require__(441), undefined);
+	exports.i(__webpack_require__(446), undefined);
 	
 	// module
-	exports.push([module.id, ".index__post-frame___Kh6B5{\r\n    top: 0px;\r\n    font-size:0.9rem;\r\n    overflow: auto !important;\r\n    position: absolute;\r\n    padding: 15px;\r\n    right: 0;\r\n    bottom: 0;\r\n}\r\n.index__scrollBarContainer___2yaf0 {\r\n    right: 0;\r\n    left: auto;\r\n    width: 4px;\r\n    position: absolute;\r\n    top: 0px;\r\n    bottom: 0px;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    padding-right: 0px;\r\n    background-color: transparent;\r\n}\r\n\r\n.index__scrollBarContainer___2yaf0.index__animated___3Edso .index__scrollBar___2ph43{\r\n    transition: 2s opacity ease;\r\n    opacity: 0;\r\n}\r\n\r\n.index__scrollBarContainer___2yaf0:hover .index__scrollBar___2ph43{\r\n    opacity: 0.5;\r\n    transition: none;\r\n}\r\n\r\n.index__scrollBar___2ph43 {\r\n    height: 1px;\r\n    top: 5px;\r\n    border-radius: 5px;\r\n    opacity: 0.5;\r\n    background-color: gray;\r\n    left: 0px;\r\n    right: 0px;\r\n    user-select: none;\r\n    position: absolute;\r\n}\r\n\r\n.index__post-info___3B9VY{\r\n    height: 48px;\r\n}\r\n\r\n.index__post-author___NiPjM {\r\n    float: left;\r\n    clear: left;\r\n}\r\n\r\n.index__head-img___3aAUc{\r\n    width: 48px;\r\n    height: 48px;\r\n    margin-right:5px;\r\n    float:left;\r\n}\r\n\r\n.index__head-img___3aAUc img{\r\n    width: 100%;\r\n    border-radius: 5px;\r\n}\r\n\r\n.index__right___3BCnU{\r\n    margin-left: 48px;\r\n}\r\n\r\n.index__title___1gvwo{\r\n    overflow: hidden;\r\n    margin-left:10px;\r\n    height: 26px;\r\n    line-height: 26px;\r\n    font-size: 1.2rem;\r\n}\r\n\r\n.index__buttom___3Jgeg {\r\n    height:22px;\r\n    line-height: 22px;\r\n    margin-left: 10px;\r\n}\r\n\r\n.index__author___1aOyX{\r\n    color: grey;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__date___aKTI6{\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__views___1xh7H{\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__post-body___N6aXt {\r\n    \r\n}\r\n\r\n.index__post-content___2cSph {\r\n    font-size: 0.9rem;\r\n    margin-top: 15px;\r\n    clear: both;\r\n    padding-bottom: 15px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__reply-list___1BiVf{\r\n    margin-top:5px;\r\n}\r\n\r\n.index__item___2gGgR{\r\n    margin-top: 20px;\r\n    padding-bottom: 20px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__item___2gGgR:first-child{\r\n    margin-top: 20px;\r\n    padding-bottom: 15px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__reply-list___1BiVf .index__item___2gGgR .index__hend-img___2gxr0{\r\n    float:left;\r\n    width: 48px;\r\n}\r\n\r\n.index__reply-list___1BiVf .index__right___3BCnU{\r\n    margin-left:53px;\r\n}\r\n\r\n.index__item___2gGgR .index__author___1aOyX{\r\n    margin-left: 5px;\r\n    color: grey;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__item___2gGgR .index__content___1EXX6{\r\n    font-size: 0.9rem;\r\n    margin-left: 5px;\r\n    margin-top: 5px;\r\n}\r\n\r\n.index__item___2gGgR .index__date___aKTI6{\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__right-items___13x_B{\r\n    float:right;\r\n    height: 17px;\r\n    margin-right: 10px;\r\n}\r\n\r\n.index__top___3GMUB {\r\n    height:22px;\r\n    line-height: 22px;\r\n}\r\n\r\n.index__like___31CJ3{\r\n    float:left;\r\n    cursor: pointer;\r\n    height: 13px;\r\n    width:14px;\r\n    line-height: 13px;\r\n    margin: 3px 5px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n    vertical-align: middle;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    background-image: url(\"data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><'../../global/styles/' fill='#808080' d='M979.834379 696.157256c20.985362-26.767043 31.04977-55.461313 29.764952-85.012129-1.284818-32.548724-15.84609-58.030949-27.837725-73.662903 13.918862-34.690088 19.272271-89.294856-27.195316-131.693852-34.047679-31.04977-91.864492-44.968632-171.951485-41.114178-56.317859 2.569636-103.427854 13.062317-105.355082 13.49059l-0.214136 0c-10.706817 1.927227-22.056043 4.282727-33.619406 6.852363-0.856545-13.704726 1.498954-47.752405 26.767043-124.413216 29.979088-91.222083 28.265997-161.030531-5.567545-207.712254-35.546633-49.037223-92.292765-52.891677-108.995399-52.891677-16.060226 0-30.835634 6.638227-41.328315 18.843998-23.769134 27.623588-20.985362 78.588038-17.987453 102.143036-28.265997 75.804266-107.496445 261.674613-174.521121 313.281472-1.284818 0.856545-2.3555 1.927227-3.426182 2.997909-19.700544 20.771225-32.976997 43.255542-41.970724 62.956085-12.634044-6.852363-26.981179-10.706817-42.398996-10.706817l-130.62317 0c-49.251359 0-89.080719 40.043496-89.080719 89.080719l0 347.97156c0 49.251359 40.043496 89.080719 89.080719 89.080719l130.62317 0c19.058135 0 36.831451-5.995818 51.392723-16.274362l50.322041 5.995818c7.708908 1.070682 144.756169 18.415726 285.443747 15.631953 25.482225 1.927227 49.465496 2.997909 71.735675 2.997909 38.330406 0 71.735675-2.997909 99.5734-8.993726 65.525721-13.918862 110.280217-41.756587 132.97867-82.656629 17.345044-31.263906 17.345044-62.313676 14.561271-82.01422 42.613133-38.544542 50.107905-81.157675 48.60895-111.136763C987.757424 721.853618 983.902969 707.07821 979.834379 696.157256zM103.37432 957.83187c-17.345044 0-31.263906-14.132999-31.263906-31.263906L72.110414 578.382267c0-17.345044 14.132999-31.263906 31.263906-31.263906l130.62317 0c17.345044 0 31.263906 14.132999 31.263906 31.263906l0 347.97156c0 17.345044-14.132999 31.263906-31.263906 31.263906l-130.62317 0L103.37432 957.83187zM925.015475 671.103304c-8.993726 9.421999-10.706817 23.769134-3.854454 34.904224 0 0.214136 8.77959 15.20368 9.850272 35.76077 1.498954 28.051861-11.991635 52.891677-40.257633 74.091175-10.064408 7.708908-14.132999 20.985362-9.850272 32.976997 0 0.214136 9.207863 28.480134-5.781681 55.247177-14.347135 25.696361-46.25345 44.112087-94.648264 54.390632-38.758678 8.351317-91.436219 9.850272-156.105395 4.711-0.856545 0-1.927227 0-2.997909 0-137.68967 2.997909-276.878294-14.989544-278.377248-15.20368l-0.214136 0-21.627771-2.569636c1.284818-5.995818 1.927227-12.419908 1.927227-18.843998L323.07821 578.382267c0-9.207863-1.498954-18.201589-4.068591-26.552907 3.854454-14.347135 14.561271-46.25345 39.82936-73.448766 96.147219-76.232539 190.153074-333.410289 194.221665-344.545379 1.713091-4.496863 2.141363-9.421999 1.284818-14.347135-3.640318-23.983271-2.3555-53.31995 2.783772-62.09954 11.349226 0.214136 41.970724 3.426182 60.386449 28.908407 21.841907 30.193225 20.985362 84.155583-2.569636 155.677123-35.974906 108.995399-38.972815 166.38394-10.492681 191.652028 14.132999 12.634044 32.976997 13.276453 46.681723 8.351317 13.062317-2.997909 25.482225-5.567545 37.259724-7.494772 0.856545-0.214136 1.927227-0.428273 2.783772-0.642409 65.739858-14.347135 183.514847-23.126725 224.414889 14.132999 34.690088 31.692179 10.064408 73.662903 7.280636 78.159766-7.923045 11.991635-5.567545 27.623588 5.139272 37.259724 0.214136 0.214136 22.698453 21.413634 23.769134 49.893768C952.639063 632.344626 943.645337 651.831033 925.015475 671.103304z'/></svg>\");\r\n}\r\n\r\n.index__reply___dumT7{\r\n    float:left;\r\n    cursor: pointer;\r\n    width:16px;\r\n    height: 16px;\r\n    margin: 2px 5px;\r\n    line-height: 16px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n    vertical-align: middle;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    background-image: url(\"data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'><'../../global/styles/' fill='#808080' d='M844.91496 861.747976 286.745678 861.747976c-61.397022 0-111.641851-50.244829-111.641851-111.641851l0-55.820925 0-19.546318L71.836115 546.368742c-5.576097-5.596083-8.374138-11.172179-8.374138-19.546318 0-8.374138 2.798041-13.950235 8.374138-19.526332l103.267713-128.370141 0-19.546318 0-55.820925c0-61.397022 50.244829-111.641851 111.641851-111.641851l558.189268 0c61.397022 0 111.621865 50.244829 111.621865 111.641851l0 446.547417C956.536824 811.503148 906.311982 861.747976 844.91496 861.747976zM900.735885 303.558709c0-30.698511-25.122414-55.820925-55.820925-55.820925L286.745678 247.737784c-30.698511 0-55.820925 25.122414-55.820925 55.820925l0 55.820925 0 25.122414c0 2.798041 0 8.374138-2.798041 11.172179 0 5.576097-2.798041 8.374138-5.576097 11.172179l-94.893574 120.015989 94.893574 120.015989c2.798041 2.778055 5.576097 5.576097 5.576097 11.152193 2.798041 2.798041 2.798041 5.576097 2.798041 11.172179l0 25.122414 0 55.820925c0 30.698511 25.122414 55.820925 55.820925 55.820925l558.189268 0c30.698511 0 55.820925-25.122414 55.820925-55.820925L900.755871 303.558709zM733.273109 582.64335c-30.698511 0-55.820925-25.122414-55.820925-55.820925 0-30.698511 25.122414-55.820925 55.820925-55.820925 30.698511 0 55.820925 25.122414 55.820925 55.820925C789.094034 557.540921 763.97162 582.64335 733.273109 582.64335zM565.830319 582.64335c-30.698511 0-55.820925-25.122414-55.820925-55.820925 0-30.698511 25.122414-55.820925 55.820925-55.820925s55.820925 25.122414 55.820925 55.820925C621.631258 557.540921 596.52883 582.64335 565.830319 582.64335zM398.367543 582.64335c-30.698511 0-55.820925-25.122414-55.820925-55.820925 0-30.698511 25.122414-55.820925 55.820925-55.820925s55.820925 25.122414 55.820925 55.820925C454.188468 557.540921 429.066054 582.64335 398.367543 582.64335z'/></svg>\");\r\n}\r\n\r\n.index__floor___2zCVL{\r\n    float:left;\r\n    cursor: pointer;\r\n    width:10px;\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__reply-box___2IoDT {\r\n    padding:10px;\r\n    background-color: #fff;\r\n    border-radius: 3px;\r\n}\r\n\r\n.index__reply-box___2IoDT textarea {\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    border-radius: 3px;\r\n    font-size: 14px;\r\n    border: 1px solid #ccc;\r\n    display: block;\r\n    width: 100%;\r\n    overflow: hidden;\r\n    word-wrap: break-word;\r\n    resize: none;\r\n    height: 112px;\r\n    outline: none;\r\n}\r\n\r\n.index__replyPrefix___1QvQY {\r\n    color:deepskyblue;\r\n}", ""]);
+	exports.push([module.id, ".index__post-frame___Kh6B5{\r\n    font-size:0.9rem;\r\n    overflow: auto !important;\r\n    padding: 15px;\r\n}\r\n.index__scrollBarContainer___2yaf0 {\r\n    right: 0;\r\n    left: auto;\r\n    width: 4px;\r\n    position: absolute;\r\n    top: 0px;\r\n    bottom: 0px;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    padding-right: 0px;\r\n    background-color: transparent;\r\n}\r\n\r\n.index__scrollBarContainer___2yaf0.index__animated___3Edso .index__scrollBar___2ph43{\r\n    transition: 2s opacity ease;\r\n    opacity: 0;\r\n}\r\n\r\n.index__scrollBarContainer___2yaf0:hover .index__scrollBar___2ph43{\r\n    opacity: 0.5;\r\n    transition: none;\r\n}\r\n\r\n.index__scrollBar___2ph43 {\r\n    height: 1px;\r\n    top: 5px;\r\n    border-radius: 5px;\r\n    opacity: 0.5;\r\n    background-color: gray;\r\n    left: 0px;\r\n    right: 0px;\r\n    user-select: none;\r\n    position: absolute;\r\n}\r\n\r\n.index__post-info___3B9VY{\r\n    height: 48px;\r\n}\r\n\r\n.index__post-author___NiPjM {\r\n    float: left;\r\n    clear: left;\r\n}\r\n\r\n.index__head-img___3aAUc{\r\n    width: 48px;\r\n    height: 48px;\r\n    margin-right:5px;\r\n    float:left;\r\n}\r\n\r\n.index__head-img___3aAUc img{\r\n    width: 100%;\r\n    border-radius: 5px;\r\n}\r\n\r\n.index__right___3BCnU{\r\n    margin-left: 48px;\r\n}\r\n\r\n.index__title___1gvwo{\r\n    overflow: hidden;\r\n    margin-left:10px;\r\n    height: 26px;\r\n    line-height: 26px;\r\n    font-size: 1.2rem;\r\n}\r\n\r\n.index__buttom___3Jgeg {\r\n    height:22px;\r\n    line-height: 22px;\r\n    margin-left: 10px;\r\n}\r\n\r\n.index__author___1aOyX{\r\n    color: grey;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__date___aKTI6{\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__views___1xh7H{\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__post-body___N6aXt {\r\n    \r\n}\r\n\r\n.index__post-content___2cSph {\r\n    font-size: 0.9rem;\r\n    margin-top: 15px;\r\n    clear: both;\r\n    padding-bottom: 15px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__reply-list___1BiVf{\r\n    margin-top:5px;\r\n}\r\n\r\n.index__item___2gGgR{\r\n    margin-top: 20px;\r\n    padding-bottom: 20px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__item___2gGgR:first-child{\r\n    margin-top: 20px;\r\n    padding-bottom: 15px;\r\n    border-bottom: 1px solid #F0F0F0;\r\n}\r\n\r\n.index__reply-list___1BiVf .index__item___2gGgR .index__hend-img___2gxr0{\r\n    float:left;\r\n    width: 48px;\r\n}\r\n\r\n.index__reply-list___1BiVf .index__right___3BCnU{\r\n    margin-left:53px;\r\n}\r\n\r\n.index__item___2gGgR .index__author___1aOyX{\r\n    margin-left: 5px;\r\n    color: grey;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__item___2gGgR .index__content___1EXX6{\r\n    font-size: 0.9rem;\r\n    margin-left: 5px;\r\n    margin-top: 5px;\r\n}\r\n\r\n.index__item___2gGgR .index__date___aKTI6{\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__right-items___13x_B{\r\n    float:right;\r\n    height: 17px;\r\n    margin-right: 10px;\r\n}\r\n\r\n.index__top___3GMUB {\r\n    height:22px;\r\n    line-height: 22px;\r\n}\r\n\r\n.index__like___31CJ3{\r\n    float:left;\r\n    cursor: pointer;\r\n    height: 13px;\r\n    width:14px;\r\n    line-height: 13px;\r\n    margin: 3px 5px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n    vertical-align: middle;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    background-image: " + __webpack_require__(446).locals["agree"] + ";\r\n}\r\n\r\n.index__reply___dumT7{\r\n    float:left;\r\n    cursor: pointer;\r\n    width:16px;\r\n    height: 16px;\r\n    margin: 2px 5px;\r\n    line-height: 16px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n    vertical-align: middle;\r\n    background-repeat: no-repeat;\r\n    background-position: center center;\r\n    background-image: " + __webpack_require__(446).locals["reply"] + ";\r\n}\r\n\r\n.index__floor___2zCVL{\r\n    float:left;\r\n    cursor: pointer;\r\n    width:10px;\r\n    margin-left: 10px;\r\n    color: #CFCFDA;\r\n    font-size: 0.8rem;\r\n}\r\n\r\n.index__reply-box___2IoDT {\r\n    padding:10px;\r\n    background-color: #fff;\r\n    border-radius: 3px;\r\n}\r\n\r\n.index__reply-box___2IoDT textarea {\r\n    padding: 5px;\r\n    box-sizing: border-box;\r\n    border-radius: 3px;\r\n    font-size: 14px;\r\n    border: 1px solid #ccc;\r\n    display: block;\r\n    width: 100%;\r\n    overflow: hidden;\r\n    word-wrap: break-word;\r\n    resize: none;\r\n    height: 112px;\r\n    outline: none;\r\n}\r\n\r\n.index__replyPrefix___1QvQY {\r\n    color:deepskyblue;\r\n}\r\n", ""]);
 	
 	// exports
 	exports.locals = {
-		"path": "'../../global/styles/'",
-		"phone": "from '../../global/styles/'+'breakpoints.css'",
-		"tablet-portrait": "from '../../global/styles/'+'breakpoints.css'",
-		"tablet-landscape": "from '../../global/styles/'+'breakpoints.css'",
-		"desktop": "from '../../global/styles/'+'breakpoints.css'",
-		"big-desktop": "from '../../global/styles/'+'breakpoints.css'",
+		"phone": "" + __webpack_require__(441).locals["phone"] + "",
+		"tablet-portrait": "" + __webpack_require__(441).locals["tablet-portrait"] + "",
+		"tablet-landscape": "" + __webpack_require__(441).locals["tablet-landscape"] + "",
+		"desktop": "" + __webpack_require__(441).locals["desktop"] + "",
+		"big-desktop": "" + __webpack_require__(441).locals["big-desktop"] + "",
+		"agree": "" + __webpack_require__(446).locals["agree"] + "",
+		"reply": "index__reply___dumT7",
 		"post-frame": "index__post-frame___Kh6B5",
 		"scrollBarContainer": "index__scrollBarContainer___2yaf0",
 		"animated": "index__animated___3Edso",
@@ -412,7 +414,6 @@ webpackJsonp([5],{
 		"right-items": "index__right-items___13x_B",
 		"top": "index__top___3GMUB",
 		"like": "index__like___31CJ3",
-		"reply": "index__reply___dumT7",
 		"floor": "index__floor___2zCVL",
 		"reply-box": "index__reply-box___2IoDT",
 		"replyPrefix": "index__replyPrefix___1QvQY"
@@ -420,7 +421,7 @@ webpackJsonp([5],{
 
 /***/ },
 
-/***/ 516:
+/***/ 529:
 /***/ function(module, exports) {
 
 	"use strict";

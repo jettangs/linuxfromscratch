@@ -14,7 +14,7 @@ class SideBar extends Component {
   }
 
   chkUsrSgi(nextState,replace) {
-    // this.props.getUsrInf(data=>{
+    // this.props.chkUsrSgi(data=>{
     //   if(data.code==10002){
     //    // this.dispSignBox(true)
     //     //this.props.setUsrIsSgi(false)
@@ -43,7 +43,7 @@ const mapStateToProps = (state)=>{
 }
 
 const mapDispatchToProps = {
-   getUsrInf : () => comAction.getUsrInf(),
+   chkUsrSgi : () => comAction.chkUsrSgi(),
    dispSignBox : (bool) => comAction.dispSignBox(bool),
    setUsrIsSgi : (bool) => comAction.setUsrIsSgi(bool)
 }

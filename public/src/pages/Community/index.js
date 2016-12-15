@@ -10,10 +10,7 @@ import comAction from '../../actions/common'
 class Community extends Component{
 
   componentDidMount() {
-
-    // this.props.getUsrInf(data => {
-    //   this.props.setUsrIsSgi(data.code == 10000? true : false)
-    // })
+    this.props.switNavItem('community')
   }
 
   render() {
@@ -51,10 +48,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = {
-    dispSignBox : (dat) => comAction.dispSignBox(dat),
-    getUsrInf : (cb) => comAction.getUsrInf(cb),
-    setUsrIsSgi : (val) => comAction.setUsrIsSgi(val),
-    setUsrInf : (dat) => comAction.setUsrInf(dat)
+    switNavItem: (item) => comAction.switNavItem(item)
 }
 
 export default connect(

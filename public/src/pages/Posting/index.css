@@ -4,7 +4,7 @@
 @value desktop from '../../global/styles/breakpoints.css';
 @value big-desktop from '../../global/styles/breakpoints.css';
 
-@value agreen from '../../global/styles/icon.css';
+@value agree from '../../global/styles/icon.css';
 @value reply from '../../global/styles/icon.css';
 
 .post-frame{
@@ -181,7 +181,7 @@
     vertical-align: middle;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: like;
+    background-image: agree;
 }
 
 .reply{

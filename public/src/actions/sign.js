@@ -1,4 +1,4 @@
-export const signup = (data,cb) => {
+const signup = (data,cb) => {
     return (dispatch) => {
         fetch("user",{ 
             method:"POST",
@@ -10,7 +10,6 @@ export const signup = (data,cb) => {
             response => response.json()
         ).then(
             data => {
-                console.log(data)
                 if(cb) cb(data)
             }
         ).catch(
@@ -19,7 +18,7 @@ export const signup = (data,cb) => {
     }
 }
 
-export const signin = (data,cb) => {
+const signin = (data,cb) => {
     return (dispatch) => {
         let name;
         if(data.username) {
@@ -39,7 +38,6 @@ export const signin = (data,cb) => {
             response => response.json()
         ).then(
             data => {
-                console.log(data)
                 if(cb) cb(data)
             }
         ).catch(
@@ -49,4 +47,5 @@ export const signin = (data,cb) => {
 }
 
 
-export default { signup, signin }
+
+export default {signup, signin}

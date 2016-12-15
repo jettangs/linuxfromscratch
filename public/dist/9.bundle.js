@@ -1,7 +1,7 @@
 /*! Copyright @linux from scratch. contact:jettangs@gmail.com */
 webpackJsonp([9],{
 
-/***/ 527:
+/***/ 540:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18,6 +18,20 @@ webpackJsonp([9],{
 	
 	var _reactRouter = __webpack_require__(178);
 	
+	var _reactRedux = __webpack_require__(267);
+	
+	var _reactCssModulesSimply = __webpack_require__(284);
+	
+	var _reactCssModulesSimply2 = _interopRequireDefault(_reactCssModulesSimply);
+	
+	var _sign = __webpack_require__(451);
+	
+	var _sign2 = _interopRequireDefault(_sign);
+	
+	var _index = __webpack_require__(541);
+	
+	var _index2 = _interopRequireDefault(_index);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -26,35 +40,101 @@ webpackJsonp([9],{
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
-	var PageNotFound = function (_Component) {
-	  _inherits(PageNotFound, _Component);
+	var Dashboard = function (_Component) {
+	  _inherits(Dashboard, _Component);
 	
-	  function PageNotFound() {
-	    _classCallCheck(this, PageNotFound);
+	  function Dashboard() {
+	    _classCallCheck(this, Dashboard);
 	
-	    return _possibleConstructorReturn(this, (PageNotFound.__proto__ || Object.getPrototypeOf(PageNotFound)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (Dashboard.__proto__ || Object.getPrototypeOf(Dashboard)).apply(this, arguments));
 	  }
 	
-	  _createClass(PageNotFound, [{
+	  _createClass(Dashboard, [{
+	    key: 'submit',
+	    value: function submit() {
+	      var username = this.refs.usernameInput.value;
+	      var password = this.refs.passwordInput.value;
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement('h3', null),
+	        { style: 'dashboard' },
+	        'Username: ',
+	        _react2.default.createElement('input', { ref: 'usernameInput', type: 'text' }),
+	        'Password: ',
+	        _react2.default.createElement('input', { type: 'password' }),
 	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          '404'
+	          'button',
+	          { onClick: this.submit.bind(this) },
+	          'Login'
 	        )
 	      );
 	    }
 	  }]);
 	
-	  return PageNotFound;
+	  return Dashboard;
 	}(_react.Component);
 	
-	exports.default = PageNotFound;
+	var mapStateToProps = function mapStateToProps(state, prop) {
+	  return {
+	    language: state.common.language
+	  };
+	};
+	
+	var mapDispatchToProps = {
+	  signin: function signin(data, cb) {
+	    return _sign2.default.signin(data, cb);
+	  }
+	
+	};
+	
+	exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)((0, _reactCssModulesSimply2.default)(Dashboard, _index2.default));
+
+/***/ },
+
+/***/ 541:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(542);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(438)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(true) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept(542, function() {
+				var newContent = __webpack_require__(542);
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 542:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(437)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".index__dashboard___BYIPa {\r\n    position: absolute;\r\n    top: 0;\r\n    bottom: 0;\r\n    width: 100%;\r\n    background: white;\r\n}", ""]);
+	
+	// exports
+	exports.locals = {
+		"dashboard": "index__dashboard___BYIPa"
+	};
 
 /***/ }
 

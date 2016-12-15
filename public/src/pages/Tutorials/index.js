@@ -10,8 +10,14 @@ import MarkdownControls from '../../global/scripts/plugins/markdown-controls';
 
 import tutorials from '../../assets/markdown/tutorials.md'
 import styles from './index.css'
+import comAction from '../../actions/common'
 
 class Tutorials extends Component{
+
+  componentDidMount() {
+    this.props.switNavItem('tutorials')
+  }
+
   render() {
     return (
         <Markdown style="tutorials" source={tutorials} renderers={assign({}, Markdown.renderers, {CodeBlock: CodeBlock})}/>
@@ -26,9 +32,7 @@ const mapStateToProps = (state,prop)=>{
 }
 
 const mapDispatchToProps = {
-    //switLan : (lan) => navAction.switLan(lan),
-    //switNavItem: (item) => navAction.switNavItem(item)
-    //getUsrInf : comAction.getUsrInf()
+  switNavItem: (item) => comAction.switNavItem(item)
 }
 
 export default connect(

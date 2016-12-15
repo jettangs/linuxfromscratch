@@ -22,29 +22,29 @@ class Posting extends Component{
   }
 
   favIcoClk(cmtUid) {
-    this.props.setUsrIsSgi(true)
-    // this.props.getUsrInf(
-    //   data => {
-    //     if(data.code == 10000) {
-    //       console.log(cmtUid)
-    //     } else {
-    //       this.props.dispSignBox(true)
-    //     }
-    //   }
-    // )
+    //this.props.setUsrIsSgi(true)
+    this.props.chkUsrSgi(
+      data => {
+        if(data.code == 10000) {
+          console.log(cmtUid)
+        } else {
+          this.props.dispSignBox(true)
+        }
+      }
+    )
   }
 
   reIcoClk(cmtUid) {
-    this.props.setUsrIsSgi(true)
-    // this.props.getUsrInf(
-    //   data => {
-    //     if(data.code == 10000) {
-    //       console.log(cmtUid)
-    //     } else {
-    //       this.props.dispSignBox(true)
-    //     }
-    //   }
-    // )
+    //this.props.setUsrIsSgi(true)
+    this.props.chkUsrSgi(
+      data => {
+        if(data.code == 10000) {
+          console.log(cmtUid)
+        } else {
+          this.props.dispSignBox(true)
+        }
+      }
+    )
   }
 
   pstSco() {
@@ -146,7 +146,7 @@ const mapStateToProps = (state)=>{
 
 const mapDispatchToProps = {
     dispSignBox : (data) => comAction.dispSignBox(data),
-    getUsrInf : (cb) => comAction.getUsrInf(cb),
+    chkUsrSgi : (cb) => comAction.chkUsrSgi(cb),
     getDomValue : (name, param) => comAction.getDomValue(name, param),
     setDomValue : (name, param, value) => comAction.setDomValue(name, param, value),
     setUsrIsSgi : (bool) => comAction.setUsrIsSgi(bool)

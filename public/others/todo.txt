@@ -12,3 +12,6 @@ pagenotfound返回上一个页面
 project的路由
 CLFS.md的表格
 community phone布局
+profile 点击修改邮箱 下面的部位会上移
+
+API改为密码单独发送

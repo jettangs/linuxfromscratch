@@ -20,7 +20,7 @@ class Sign extends Component{
     }
 
     dispPwdEmHod(str) {
-        this.refs.passwdEmailInput.placeholder = str
+        this.refs.passwdemInp.placeholder = str
     }
 
     clnUsna(){
@@ -36,7 +36,7 @@ class Sign extends Component{
     }
 
     getPwdEmInp() {
-        return this.refs.passwdEmailInput.value
+        return this.refs.passwdemInp.value
     }
 
     setUsnaInp(val) {
@@ -44,7 +44,7 @@ class Sign extends Component{
     }
 
     setPwdEmInp(val) {
-        this.refs.passwdEmailInput.value = val
+        this.refs.passwdemInp.value = val
     }
 
     sgiCb(lbl,val) {
@@ -230,7 +230,7 @@ class Sign extends Component{
                             <span ref="emailLabel" onClick={this.switPwdOrEmail.bind(this,"email")} style={this.state.passwdEmail == "email"? "select" : "no-select"}>{signWay == "signup" ? "Email" : ""} </span>
                         </div>
                         <div style="inputPassword">
-                            <input ref="passwdEmailInput" type={this.state.passwdEmail == "password"? "password" : "text"}/>
+                            <input ref="passwdemInp" type={this.state.passwdEmail == "password"? "password" : "text"}/>
                         </div>
                         <div onClick={this.switSignWay.bind(this)} style="otherSignWay">
                             {signWay=="signin" ? "Sign up" : "Sign in"}
@@ -256,7 +256,6 @@ const mapDispatchToProps = {
     signin : (data,cb) => signAction.signin(data,cb),
     setUsrIsSgi : (val) => comAction.setUsrIsSgi(val),
     dispSignBox: (bool) => comAction.dispSignBox(bool),
-    getUsrInf : () => comAction.getUsrInf()
 }
 
 export default connect(

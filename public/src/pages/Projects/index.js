@@ -8,6 +8,7 @@ import Markdown from 'react-markdown';
 import CodeBlock from '../../global/scripts/plugins/code-block';
 import MarkdownControls from '../../global/scripts/plugins/markdown-controls';
 
+import comAction from '../../actions/common'
 import styles from './index.css'
 import content from '../../assets/jsons/global.json'
 
@@ -20,6 +21,9 @@ import HLFS from '../../assets/markdown/project/HLFS.md'
 import Hints from '../../assets/markdown/project/Hints.md'
 import LiveCD from '../../assets/markdown/project/LiveCD.md'
 import Patches from '../../assets/markdown/project/Patches.md'
+
+let dict = {LFS: LFS, ALFS: ALFS, BLFS: BLFS, CLFS: CLFS, HLFS: HLFS, 
+  Hints: Hints,LiveCD: LiveCD, Patches: Patches, projects: index}
 
 class Projects extends Component{
 
@@ -39,58 +43,26 @@ class Projects extends Component{
   }
 
   componentDidMount() {
+    this.props.switNavItem('projects')
     let path = this.props.location.pathname
     path = path.substr(path.lastIndexOf('/')+1)
     this.proItClick(path)
   }
 
   proItClick(item) {
-    let src;
-    switch(item) {
-      case 'LFS':
-        src = LFS
-        break
-      case 'ALFS':
-        src = ALFS
-        break
-      case 'BLFS':
-        src = BLFS
-        break
-      case 'CLFS':
-        src = CLFS
-        break
-      case 'HLFS':
-        src = HLFS
-        break
-      case 'Hints':
-        src = Hints
-        break
-      case 'LiveCD':
-        src = LiveCD
-        break
-      case 'Patches':
-        src = Patches
-        break
-      case 'projects':
-        src = index
-        break
-      default:
-        this.context.router.replace('/404')
-        return
+    let src = dict[item]  
+    if(!src) {
+      this.context.router.replace('/404')
+      return
     }
-    
     this.setState({path: item, src:src})
-
     if(item != 'projects') 
       this.context.router.replace('/projects/'+item)
   }
 
   render() {
     let cont = content[this.props.language].projects
-
-    return (
-        <Markdown style="projects" source={this.state.src} renderers={assign({}, Markdown.renderers, {CodeBlock: CodeBlock})}/>
-    )
+    return  <Markdown style="projects" source={this.state.src} renderers={assign({}, Markdown.renderers, {CodeBlock: CodeBlock})}/>
   }
 }
 
@@ -105,22 +77,10 @@ const mapStateToProps = (state,prop)=>{
 }
 
 const mapDispatchToProps = {
-    //switLan : (lan) => navAction.switLan(lan),
-    //switNavItem: (item) => navAction.switNavItem(item)
-    //getUsrInf : comAction.getUsrInf()
+  switNavItem: (item) => comAction.switNavItem(item)
 }
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CSSModules(Projects,styles))
-
-
-// render() {
-//           {this.state.path == "projects" &&
-//           <div style="projects">
-//             <span style="header">{cont.header}</span><br/>
-//               {items}
-//           </div>
-//         }
-// }
